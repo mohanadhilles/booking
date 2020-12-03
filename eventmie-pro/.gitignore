@@ -1,0 +1,29 @@
+/public/hot
+/public/storage
+/storage/*.key
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# OSX Specific files
+.DS_Store
+/__MACOXS
+
+# Vscode Specific files
+/.vscode
+
+v1.2.0_change.md
+v1.3.0_change.md
+
+.env
+.env_1
+.env_2
+/vendor
+/vendor_1
+/vendor_2
+/node_modules
+/node_modules_1
+/node_modules_2
+package-lock.json
