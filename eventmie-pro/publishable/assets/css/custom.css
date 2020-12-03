@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai&display=swap');
+
+h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label{
+    font-family: 'Almarai', sans-serif !important;
+}
+:-ms-input-placeholder{
+    font-family: 'Almarai', sans-serif !important;
+}
+.brand-name, .brand-slogan{
+    left: 120px !important;
+}
+
+.sponsors-area-colorfull-border .single:first-child {
+    border: 2px solid #00192f !important;
+}
+.sponsors-area-colorfull-border .single:first-child:hover {
+    border: 2px solid #ffffff !important;
+}
+
+.main-search {
+    border: 2px solid #00192f !important;
+    border-radius: 5px !important;
+    /* box-shadow: 0 8px 6px -6px rgba(50,51,51,.4); */
+}
+.main-search-container .lgx-inner {
+    padding: 4rem 0 4rem 0 !important;
+}
+.single-name-sub {
+    line-height: 3 !important;
+    left: 50px !important;
+    right: 50px !important;
+    color: #0b0b0c !important;
+    background: hsl(0deg 0% 100% / 0%) !important;
+}
+
+.sponsors-area .single {
+    box-shadow: none !important;
+    width: 40% !important;
+}
+.sponsors-area .single-name {
+    text-shadow: 0 0 0 #00192f00 !important;
+}
+
+.lgx-single-news {
+    padding: 0.6rem 0.6rem 2.6rem !important;
+    border-radius: 2px !important;
+    box-shadow: 0 1px 1px 1px rgba(52,40,104,.1) !important;
+}
+.lgx-single-news .single-news-info {
+    padding: 20px 1rem !important;
+}
+.lgx-banner-info .subtitle {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #ec398b;
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0) !important;
+    letter-spacing: 3px;
+}
+
+.breadcrumb-area .breadcrumb {
+    background-color:  #E49D23 !important;
+    border-radius: 2px !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 0 0 rgb(27 137 239 / 0%), 0 0 0 rgb(27 137 239 / 0%) !important;
+}
+.lgx-btn-red {
+    background: #E49D23 !important;
+}
+
+.lgx-registration-form-box input.form-control, .lgx-registration-form-box input.wpcf7-form-control {
+    border-radius: 2px !important;
+    height: 50px !important;
+}
+.lgx-registration-form-box {
+    background: #E49D23 !important;
+}
+.lgx-registration-form form > .lgx-btn-white{
+    width: 50% !important;
+}
+.lgx-btn-white {
+    color: #090c0e !important;
+}
+
+.lgx-page-wrapper > .container-fluid > .row > .col-lg-3{
+    background: #f4f4f461 !important;
+    border-radius: 2px !important;
+    padding: 20px 30px !important;
+}
+
+.form-control{
+    height: 45px !important;
+    list-style: 40px !important;
+}
+.lgx-header .menu-onscroll, .lgx-footer-black .lgx-inner-footer, .lgx-schedule, .lgx-schedule-dark{
+    background: rgb(25 28 30 / 95%) !important;
+}
+.lgx-heading .heading, .lgx-footer-bottom p{
+    color: #ffffff !important;
+}
+.lgx-footer-single .date, .lgx-footer-single .map-link i,
+ .lgx-footer-single .map-link:hover,
+  .lgx-footer-bottom p a, .lgx-footer-bottom p span{
+    color: #E49D23 !important;
+}
+
+.col-grey, .lgx-footer-single > address,
+.lgx-footer-single > .footer-title,
+.lgx-footer-single > .text,
+.lgx-footer-single > .footer-brand-slogan{
+    color: hsl(0deg 0% 100% / 86%)!important;
+}
