@@ -219,3 +219,6 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 .lgx-btn, button, a{
     box-shadow: none !important;
 }
+.lgx-panel .lgx-single-schedule.expired-event .schedule-info .time.event-ended span, .lgx-panel .lgx-single-schedule.expired-event .schedule-info .time.event-outofstock span, .lgx-panel .lgx-single-schedule.outofstock-event .schedule-info .time.event-ended span, .lgx-panel .lgx-single-schedule.outofstock-event .schedule-info .time.event-outofstock span{
+    color: #000000 !important;
+}
