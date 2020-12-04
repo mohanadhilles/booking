@@ -186,3 +186,33 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 .lgx-photo-gallery-black, .lgx-photo-gallery-black .lgx-inner{
     background: #181c1e !important;
 }
+.lgx-event__tag span:nth-child(1n){
+    background: rgb(228 157 35) !important;
+    border-top-left-radius: 2px !important;
+
+}
+.lgx-event__tag span:nth-child(2n) {
+    background: rgba(0,25,47,.6) !important;
+    border-bottom-left-radius: 2px !important;
+    border-top-left-radius: 0 !important;
+    color: #fff !important;
+    border-bottom: 2px solid #fff !important;
+}
+
+.lgx-tab .nav-pills li a p{
+    color: #ececec !important;
+}
+ .lgx-tab .nav-pills .active p{
+    color:  #181c1e !important;;
+}
+
+.breadcrumb-area .breadcrumb .active{
+    color: #ffffff !important;
+}
+.lgx-contactform .form-control {
+    background-color: #251d1d00 !important;
+    background-image: none;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+    transition: none !important;
+}
