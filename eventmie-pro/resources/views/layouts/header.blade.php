@@ -192,12 +192,9 @@
                             <li>
                                 @if (config('app.locale') == 'en')
                                 <a class="dropdown-item {{ config('app.locale') ? 'active' : '' }}" href="{{ route('eventmie.change_lang', ['lang' => 'ar']) }}">@lang('eventmie-pro::em.lang_ar')</a>
-                                <i class="fas fa-globe"></i> 
 
                                 @else
                                 <a class="dropdown-item {{ config('app.locale') ? 'active' : '' }}" href="{{ route('eventmie.change_lang', ['lang' => 'en']) }}">@lang('eventmie-pro::em.lang_en')</a>
-                                <i class="fas fa-globe"></i> 
-
                                 @endif
                               </li>
 

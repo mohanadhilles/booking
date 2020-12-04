@@ -194,12 +194,9 @@
                             <li>
                                 <?php if(config('app.locale') == 'en'): ?>
                                 <a class="dropdown-item <?php echo e(config('app.locale') ? 'active' : ''); ?>" href="<?php echo e(route('eventmie.change_lang', ['lang' => 'ar'])); ?>"><?php echo app('translator')->get('eventmie-pro::em.lang_ar'); ?></a>
-                                <i class="fas fa-globe"></i> 
 
                                 <?php else: ?>
                                 <a class="dropdown-item <?php echo e(config('app.locale') ? 'active' : ''); ?>" href="<?php echo e(route('eventmie.change_lang', ['lang' => 'en'])); ?>"><?php echo app('translator')->get('eventmie-pro::em.lang_en'); ?></a>
-                                <i class="fas fa-globe"></i> 
-
                                 <?php endif; ?>
                               </li>
 
