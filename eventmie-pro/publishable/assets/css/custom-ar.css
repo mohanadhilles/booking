@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Almarai&display=swap');
 
-h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label{
+h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     font-family: 'Almarai', sans-serif !important;
 }
 :-ms-input-placeholder{
