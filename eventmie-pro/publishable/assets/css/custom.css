@@ -127,5 +127,6 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label{
     background: #252829 !important;
 }
 .lgx-header .menu-onscroll {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0) !important;
     height: 85px !important;
 }
