@@ -192,18 +192,18 @@
                             <?php endif; ?>
 
                             <li>
-                                <a id="navbarDropdown" class="dropdown-toggle active" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <i class="fas fa-globe"></i> 
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <?php $__currentLoopData = lang_selector(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $val): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <li>
-                                        <a class="dropdown-item <?php echo e($val == config('app.locale') ? 'active' : ''); ?>" href="<?php echo e(route('eventmie.change_lang', ['lang' => $val])); ?>"><?php echo app('translator')->get('eventmie-pro::em.lang_'.$val); ?></a>
-                                    </li>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                </ul>
-                            </li>
+                                <?php if(config('app.locale') == 'en'): ?>
+                                <a class="dropdown-item <?php echo e(config('app.locale') ? 'active' : ''); ?>" href="<?php echo e(route('eventmie.change_lang', ['lang' => 'ar'])); ?>"><?php echo app('translator')->get('eventmie-pro::em.lang_ar'); ?></a>
+                                <i class="fas fa-globe"></i> 
+
+                                <?php else: ?>
+                                <a class="dropdown-item <?php echo e(config('app.locale') ? 'active' : ''); ?>" href="<?php echo e(route('eventmie.change_lang', ['lang' => 'en'])); ?>"><?php echo app('translator')->get('eventmie-pro::em.lang_en'); ?></a>
+                                <i class="fas fa-globe"></i> 
+
+                                <?php endif; ?>
+                              </li>
+
+                            
 
                         </ul>
                     </div><!--/.nav-collapse -->

@@ -109,3 +109,17 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label{
 .lgx-footer-single > .footer-brand-slogan{
     color: hsl(0deg 0% 100% / 86%)!important;
 }
+.lgx-header .lgx-navbar .lgx-nav .dropdown-menu li a{
+    color: #e49d23!important;
+    border-left: 2px solid #e49d23 !important;
+}
+.lgx-header .lgx-navbar .lgx-nav .dropdown-menu{
+    border-radius: 2px !important;
+}
+.dropdown-menu{
+    top: 55px !important;
+}
+
+.welcome-slider {
+    background: #252829 !important;
+}

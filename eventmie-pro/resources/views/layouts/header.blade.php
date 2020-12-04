@@ -190,6 +190,18 @@
                             @endguest
 
                             <li>
+                                @if (config('app.locale') == 'en')
+                                <a class="dropdown-item {{ config('app.locale') ? 'active' : '' }}" href="{{ route('eventmie.change_lang', ['lang' => 'ar']) }}">@lang('eventmie-pro::em.lang_ar')</a>
+                                <i class="fas fa-globe"></i> 
+
+                                @else
+                                <a class="dropdown-item {{ config('app.locale') ? 'active' : '' }}" href="{{ route('eventmie.change_lang', ['lang' => 'en']) }}">@lang('eventmie-pro::em.lang_en')</a>
+                                <i class="fas fa-globe"></i> 
+
+                                @endif
+                              </li>
+
+                            {{-- <li>
                                 <a id="navbarDropdown" class="dropdown-toggle active" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <i class="fas fa-globe"></i> 
                                     <span class="caret"></span>
@@ -201,7 +213,7 @@
                                     </li>
                                     @endforeach
                                 </ul>
-                            </li>
+                            </li> --}}
 
                         </ul>
                     </div><!--/.nav-collapse -->
