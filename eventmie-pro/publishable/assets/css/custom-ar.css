@@ -36,6 +36,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label{
 .sponsors-area .single {
     box-shadow: none !important;
     width: 40% !important;
+    border-radius: 2px !important;
 }
 .sponsors-area .single-name {
     text-shadow: 0 0 0 #00192f00 !important;
@@ -118,4 +119,14 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label{
 
 .lgx-header .menu-onscroll {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+}
+.sponsors-area-colorfull .single{
+    border-radius: 2px !important;
+    background: none !important;
+}
+.lgx-btn, button, .sponsors-area .single a img {
+    border-radius: 2px !important;
+}
+.form-check a{
+    color: #ffffff!important;
 }
