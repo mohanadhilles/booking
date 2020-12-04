@@ -228,3 +228,6 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     box-shadow: none !important;
     transition: none !important;
 }
+.lgx-btn, button, a{
+    box-shadow: none !important;
+}
