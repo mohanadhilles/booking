@@ -130,3 +130,59 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 .form-check a{
     color: #ffffff!important;
 }
+.lgx-event{
+    border-radius: 2px !important;
+    box-shadow: 0 0 0 0 #eee !important;
+}
+.lgx-badge{
+    border: 4px double #fff;
+    border-radius: 2px;
+}
+.lgx-about-content-area .lgx-heading .subheading{
+    color: #181b1c;
+}
+.lgx-about-service .lgx-single-service-color{
+    background: #1b89ef !important;
+    background-image: linear-gradient(to right top,#1b89ef,#3395f1,#e49d23,#e49d23,#e49d23) !important;
+    box-shadow: 0 15px 35px rgba(27,137,239,.3), 0 5px 15px rgba(227,65,154,.2) !important;
+    border-radius: 2px !important;
+    height: 185px !important;
+}
+
+.lgx-tab-content {
+    border: none !important;
+    border-radius: 0 2px 2px 2px !important;
+    box-shadow: none !important;
+}
+.lgx-panel .lgx-single-schedule .schedule-info {
+    background: #e49d23 !important;
+    border: none !important;
+    border-radius: 2px !important;
+    box-shadow:none !important;
+}
+.lgx-panel .lgx-single-schedule .schedule-info .time {
+    color: #000000 !important;
+    border-radius: 2px !important;
+    background: #fff !important;
+    border: none !important;
+}
+.lgx-panel .lgx-single-schedule .schedule-info:hover {
+    transition-duration: .3s;
+    background: #E49D23 !important;
+}
+.lgx-banner-info .location{
+    border-radius: 2px 2px 2px 2px !important;
+    color: #ffffff !important;
+}
+.lgx-tab .nav-pills {
+    background: #e49d23 !important;
+    border-radius: 2px 0 2px 2px !important;
+    box-shadow: 0 13px 35px rgba(0,25,47,.2) !important; 
+}
+.lgx-tab .nav-pills li {
+    border-radius: 2px 0 0 2px !important;
+}
+
+.lgx-photo-gallery-black, .lgx-photo-gallery-black .lgx-inner{
+    background: #181c1e !important;
+}
