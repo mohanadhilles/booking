@@ -100,7 +100,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 .lgx-schedule-ligh .lgx-heading > .heading, .lgx-footer-bottom > p{
     color: #181b1c !important;
 }
-.lgx-heading-white .heading{
+.lgx-heading-white .heading, .lgx-schedule-cities_events .heading{
     color: #ffffff !important;
 }
 .lgx-schedule-light .heading{
