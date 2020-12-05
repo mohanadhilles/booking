@@ -260,13 +260,19 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 #lgx-travelinfo > .lgx-inner > .container > .row > .col-xs-12 > .lgx-heading > .heading{
     color: #251d1d !important;
 }
-.lgx-schedule-categories{
-    background: linear-gradient(158deg, #e8e8e8, #cfcfcf) !important;
-    background-size: 400% 400% !important;
-    animation: categories 59s ease infinite !important; 
+.lgx-schedule-light{
+    background: linear-gradient(-45deg, #ffffff, #ececec, #f0f8fc, #dbf6ff);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 }
 @keyframes categories {
-    0%{background-position:0% 17%}
-    50%{background-position:100% 84%}
-    100%{background-position:0% 17%}
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
