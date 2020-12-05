@@ -109,40 +109,16 @@ export default {
         },
 
         verifyD(){
-            this.check = this.check_session ? 1 : 0;
-            
-            if(this.check == 0)
-            {
-                axios.post('https://cblicense.classiebit.com/verifyd',{
-                    domain : window.location.hostname,
-                    s_host : this.s_host
-                })
-                .then(res => {
-                    if(typeof res.data.status !== 'undefined' && res.data.status != 0)
-                        this.checkSession();
-                    else
-                        window.location.href = base_url+"/404";
-                    
-                })
-                .catch(error => {
-                    
-                });
-            }
+          
         },
         
         // check Session
         checkSession(){
-            axios.post(route('eventmie.check_session'))
-            .then(res => {
-              
-            }).catch(error => {
-                
-            });
+        
         }
     },
 
     mounted() {
-        this.verifyD();       
     }
 }
 </script>
