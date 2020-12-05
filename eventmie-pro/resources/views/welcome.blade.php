@@ -391,4 +391,5 @@
 <script type="text/javascript">
     var google_map_key = {!! json_encode(setting('apps.google_map_key')) !!};
 </script>
+<script type="text/javascript" src="{{ eventmie_asset('js/welcome_v1.5.js') }}"></script>
 @stop
