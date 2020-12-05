@@ -223,6 +223,17 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 .lgx-panel .lgx-single-schedule.expired-event .schedule-info .time.event-ended span, .lgx-panel .lgx-single-schedule.expired-event .schedule-info .time.event-outofstock span, .lgx-panel .lgx-single-schedule.outofstock-event .schedule-info .time.event-ended span, .lgx-panel .lgx-single-schedule.outofstock-event .schedule-info .time.event-outofstock span{
     color: #000000 !important;
 }
-.lgx-inner{
-    padding: 0 !important;
+
+.lgx-registration-form-box input.form-control, .lgx-registration-form-box input.wpcf7-form-control{
+    background: #e8e8e8 !important;
+    color: #251d1d !important;
+}
+
+.lgx-registration-form-box input.form-control, .lgx-registration-form-box input.wpcf7-form-control:active{
+    background: #e8e8e8 !important;
+    color: #251d1d !important;
+}
+
+.sponsors-area-colorfull-border > .single > a > img{
+    height: 280px !important;
 }
