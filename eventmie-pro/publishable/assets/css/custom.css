@@ -253,3 +253,13 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 #lgx-travelinfo > .lgx-inner > .container > .row > .col-xs-12 > .lgx-heading > .heading{
     color: #251d1d !important;
 }
+.lgx-schedule{
+    background: linear-gradient(158deg, #e8e8e8, #cfcfcf);
+    background-size: 400% 400%;
+    animation: categories 59s ease infinite;   
+}
+@keyframes categories {
+    0%{background-position:0% 17%}
+    50%{background-position:100% 84%}
+    100%{background-position:0% 17%}
+}
