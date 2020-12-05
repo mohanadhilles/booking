@@ -29,8 +29,9 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     line-height: 3 !important;
     left: 50px !important;
     right: 50px !important;
-    color: #0b0b0c !important;
+    color: #e49d23 !important;
     background: hsl(0deg 0% 100% / 0%) !important;
+    font-size: 2.5rem !important;
 }
 
 .sponsors-area .single {
