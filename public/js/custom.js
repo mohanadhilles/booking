@@ -24,7 +24,10 @@
                     verifyD: 1,
                     checkSession: 1,
                 }),
+                methods: {
+                    getRoute: s => route(s),
             },
+         
                 n = e(1),
                 o = Object(n.a)(i, (function () {
                     var s = this,
