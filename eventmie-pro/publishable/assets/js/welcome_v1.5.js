@@ -20,16 +20,10 @@
                 },
                 props: ["banners", "is_logged", "is_customer", "is_organiser", "is_admin", "is_multi_vendor", "demo_mode", "check_session", "s_host"],
                 data: () => ({
-                    check: 0,
+                    check: 1,
                     checkSession: 1,
                     verifyD: 1,
                 }),
-                methods: {
-                    getRoute: s => route(s),
-                },
-                mounted() {
-                    this.verifyD()
-                }
             },
                 n = e(1),
                 o = Object(n.a)(i, (function () {
