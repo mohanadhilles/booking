@@ -103,6 +103,9 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 .lgx-heading-white .heading{
     color: #ffffff !important;
 }
+.lgx-schedule-light .heading{
+    color: #181b1c !important;
+}
 
 .lgx-footer-single .date, .lgx-footer-single .map-link i,
  .lgx-footer-single .map-link:hover,
