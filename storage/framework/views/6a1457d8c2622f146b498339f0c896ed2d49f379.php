@@ -175,8 +175,8 @@
 <!--Categories-->
 <?php if(!empty($categories)): ?>
 <section>
-    <div id="lgx-schedule" class="lgx-schedule lgx-schedule-dark">
-        <div class="lgx-inner" style="background-image: url(<?php echo e(eventmie_asset('img/bg-pattern.png')); ?>);">
+    <div id="lgx-schedule" class="lgx-schedule lgx-schedule-light lgx-schedule lgx-schedule-categories">
+        <div class="lgx-inner">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -212,7 +212,7 @@
 <!--cities_events-->
 <?php if(!empty($cities_events)): ?>
 <section>
-    <div id="lgx-schedule" class="lgx-schedule lgx-schedule-light">
+    <div id="lgx-schedule" class="lgx-schedule lgx-schedule-dark lgx-schedule-cities_events">
         <div class="lgx-inner" style="background-image: url(<?php echo e(eventmie_asset('img/bg-pattern.png')); ?>);">
             <div class="container">
                 <div class="row">
