@@ -454,7 +454,7 @@ return [
     'total_bookings'                    => "مجموع حجوزات",
     'total_commission'                  => "إجمالي العمولة",
     'total_profit'                      => "اجمالي الربح",
-    'search_event'                      => "البحث عن فعالية",
+    'search_event'                      => "البحث",
     'search_event_by'                   => "اكتب اسم الفعالية / المكان / المدينة / الولاية",
     'date_filter'                       => "مرشح التاريخ",
     'any_price'                         => "اي سعر",
