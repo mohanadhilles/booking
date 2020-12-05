@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    if(file_exists(storage_path()."/installed")) {
+    if(!file_exists(storage_path()."/installed")) {
         header('location:license');die;
     }
 
