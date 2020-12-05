@@ -98,7 +98,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     background: rgb(25 28 30 / 95%) !important;
 }
 .lgx-heading > .heading, .lgx-footer-bottom > p{
-    color: #ffffff !important;
+    color: #181b1c !important;
 }
 .lgx-footer-single .date, .lgx-footer-single .map-link i,
  .lgx-footer-single .map-link:hover,
@@ -152,7 +152,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     border-radius: 2px;
 }
 .lgx-about-content-area .lgx-heading .subheading{
-    color: #181b1c;
+    color: #181b1c !important;
 }
 .lgx-about-service .lgx-single-service-color{
     background: #1b89ef !important;
