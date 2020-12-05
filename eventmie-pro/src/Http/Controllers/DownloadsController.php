@@ -126,7 +126,7 @@ class DownloadsController extends Controller
         if (! \File::exists(public_path().$path))
             \File::makeDirectory(public_path().$path, 0755, true);
 
-        $pdf_file    = public_path().$path.'/'.$data['id'].'-'.$data['order_number'].'.png';
+        $pdf_file    = public_path().$path.'/'.$data['id'].'-'.$data['order_number'].'.pdf';
         
         // only create if not already created
         // if (\File::exists($pdf_file))
@@ -147,7 +147,6 @@ class DownloadsController extends Controller
             'isHtml5ParserEnabled' => TRUE,
             'enable_html5_parser' => TRUE,
         ];
-       
         \PDF::setOptions($options)
         ->loadHTML($html)
         ->setWarnings(false)
