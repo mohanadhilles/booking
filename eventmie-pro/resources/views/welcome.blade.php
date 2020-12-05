@@ -177,7 +177,7 @@
 <!--Categories-->
 @if(!empty($categories))
 <section>
-    <div id="lgx-schedule" class="lgx-schedule lgx-schedule-dark">
+    <div id="lgx-schedule" class="lgx-schedule lgx-schedule-light lgx-schedule lgx-schedule-categories">
         <div class="lgx-inner" style="background-image: url({{ eventmie_asset('img/bg-pattern.png') }});">
             <div class="container">
                 <div class="row">
