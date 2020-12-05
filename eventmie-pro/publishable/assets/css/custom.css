@@ -38,6 +38,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     box-shadow: none !important;
     width: 40% !important;
     border-radius: 2px !important;
+    height: 240px !important;
 }
 .sponsors-area .single-name {
     text-shadow: 0 0 0 #00192f00 !important;
@@ -234,4 +235,14 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 }
 .lgx-panel .lgx-single-schedule.expired-event .schedule-info .time.event-ended span, .lgx-panel .lgx-single-schedule.expired-event .schedule-info .time.event-outofstock span, .lgx-panel .lgx-single-schedule.outofstock-event .schedule-info .time.event-ended span, .lgx-panel .lgx-single-schedule.outofstock-event .schedule-info .time.event-outofstock span{
     color: #000000 !important;
+}
+
+.lgx-registration-form-box input.form-control, .lgx-registration-form-box input.wpcf7-form-control{
+    background: #e8e8e8 !important;
+    color: #251d1d00 !important;
+}
+
+.lgx-registration-form-box input.form-control, .lgx-registration-form-box input.wpcf7-form-control:active{
+    background: #e8e8e8 !important;
+    color: #251d1d00 !important;
 }
