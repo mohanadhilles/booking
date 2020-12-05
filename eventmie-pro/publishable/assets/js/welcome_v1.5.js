@@ -25,20 +25,13 @@
                 methods: {
                     getRoute: s => route(s),
                     verifyD() {
-                        this.check = this.check_session ? 1 : 0, 0 == this.check && axios.post("https://cblicense.classiebit.com/verifyd", {
-                            domain: window.location.hostname,
-                            s_host: this.s_host
-                        }).then(s => {
-                            void 0 !== s.data.status && 0 != s.data.status ? this.checkSession() : window.location.href = base_url;
-                        }).catch(s => { })
+                        this.check = 1;
                     },
                     checkSession() {
                         axios.post(route("eventmie.check_session")).then(s => { }).catch(s => { })
                     }
                 },
-                mounted() {
-                    this.verifyD()
-                }
+            
             },
                 n = e(1),
                 o = Object(n.a)(i, (function () {
