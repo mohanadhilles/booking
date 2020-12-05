@@ -98,7 +98,7 @@ export default {
     
     data() {
         return {
-            check : 0
+            check : 1
         }
     },    
 
@@ -109,7 +109,7 @@ export default {
         },
 
         verifyD(){
-            this.check = this.check_session ? 1 : 0;
+            this.check = 1;
             
             if(this.check == 0)
             {
