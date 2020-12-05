@@ -19,8 +19,7 @@
                         :is_organiser="{{ 0 }}"
                         :is_admin="{{ 0 }}"
                         :is_multi_vendor="{{ setting('multi-vendor.multi_vendor') ? 1 : 0 }}"
-                        :demo_mode="{{ config('voyager.demo_mode') }}"
-                        :s_host="{{ json_encode($_SERVER['REMOTE_ADDR'], JSON_HEX_TAG) }}"
+                    
                     ></banner-slider>
                     @else
                     <banner-slider 
@@ -30,8 +29,6 @@
                         :is_organiser="{{ Auth::user()->hasRole('organiser') ? 1 : 0 }}"
                         :is_admin="{{ Auth::user()->hasRole('admin') ? 1 : 0 }}"
                         :is_multi_vendor="{{ setting('multi-vendor.multi_vendor') ? 1 : 0 }}"
-                        :demo_mode="{{ config('voyager.demo_mode') }}"
-                        :s_host="{{ json_encode($_SERVER['REMOTE_ADDR'], JSON_HEX_TAG) }}"
                     ></banner-slider>
                     @endguest
                 </div>
