@@ -96,7 +96,11 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 .lgx-header .menu-onscroll, .lgx-footer-black .lgx-inner-footer, .lgx-schedule, .lgx-schedule-dark{
     background: rgb(25 28 30 / 95%) !important;
 }
-.lgx-heading .heading, .lgx-footer-bottom p{
+
+.lgx-schedule-ligh .lgx-heading > .heading, .lgx-footer-bottom > p{
+    color: #181b1c !important;
+}
+.lgx-heading-white .heading{
     color: #ffffff !important;
 }
 .lgx-footer-single .date, .lgx-footer-single .map-link i,
