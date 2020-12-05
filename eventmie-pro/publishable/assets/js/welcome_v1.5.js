@@ -14,17 +14,10 @@
             Vue.prototype.base_url = window.base_url;
             var i = {
                     components: { Carousel: a.Carousel, Slide: a.Slide },
-                    props: ["banners", "is_logged", "is_customer", "is_organiser", "is_admin", "is_multi_vendor", "demo_mode", "check_session", "s_host"],
+                    props: ["banners", "is_logged", "is_customer", "is_organiser", "is_admin", "is_multi_vendor", "demo_mode", "s_host"],
                     data: () => ({ check: 1 }),
                     methods: {
                         getRoute: (s) => route(s),
-        
-                        checkSession() {
-                            axios
-                                .post(route("eventmie.check_session"))
-                                .then((s) => {})
-                                .catch((s) => {});
-                        },
                     },
         
                 },
