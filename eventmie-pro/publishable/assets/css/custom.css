@@ -261,7 +261,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     color: #251d1d !important;
 }
 .lgx-schedule-light, .lgx-schedule-categories{
-    background: linear-gradient(-45deg, #ffffff, #ececec, #f0f8fc, #dbf6ff) !important;
+    background: linear-gradient(-45deg, #ffffff, #ffffffe1, #ffffff, #ffffffe5) !important;
 	background-size: 400% 400% !important;
 	animation: gradient 15s ease infinite !important;
 }
