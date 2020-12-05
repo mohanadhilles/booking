@@ -1,35 +1,47 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
     [12], {
-        563: function (s, t, e) {
+        563: function(s, t, e) {
             s.exports = e(564)
         },
-        564: function (s, t, e) {
+        564: function(s, t, e) {
             e(23), window.moment = e(24), window.VueCarousel = e(84), Vue.use(VueCarousel), Vue.component("event-listing", e(128).default), Vue.component("banner-slider", e(580).default), window.app = new Vue({
                 el: "#eventmie_app"
             })
         },
-        580: function (s, t, e) {
+        580: function(s, t, e) {
             "use strict";
             e.r(t);
             var a = e(84);
             Vue.prototype.base_url = window.base_url;
             var i = {
-                components: {
-                    Carousel: a.Carousel,
-                    Slide: a.Slide
+                    components: {
+                        Carousel: a.Carousel,
+                        Slide: a.Slide
+                    },
+                    props: ["banners", "is_logged", "is_customer", "is_organiser", "is_admin", "is_multi_vendor", "demo_mode", "check_session", "s_host"],
+                    data: () => ({
+                        check: 0
+                    }),
+                    methods: {
+                        getRoute: s => route(s),
+                        verifyD() {
+                            this.check = this.check_session ? 1 : 0, 0 == this.check && axios.post("https://cblicense.classiebit.com/verifyd", {
+                                domain: window.location.hostname,
+                                s_host: this.s_host
+                            }).then(s => {
+                                void 0 !== s.data.status && 0 != s.data.status ? this.checkSession() : window.location.href = base_url + "/404"
+                            }).catch(s => {})
+                        },
+                        checkSession() {
+                            axios.post(route("eventmie.check_session")).then(s => {}).catch(s => {})
+                        }
+                    },
+                    mounted() {
+                        this.verifyD()
+                    }
                 },
-                props: ["banners", "is_logged", "is_customer", "is_organiser", "is_admin", "is_multi_vendor"],
-                data: () => ({
-                    check: 1,
-                    verifyD: 1,
-                    checkSession: 1,
-                }),
-                methods: {
-                    getRoute: s => route(s),
-            },
-         
                 n = e(1),
-                o = Object(n.a)(i, (function () {
+                o = Object(n.a)(i, (function() {
                     var s = this,
                         t = s.$createElement,
                         e = s._self._c || t;
@@ -41,7 +53,7 @@
                             perPage: 1,
                             paginationEnabled: !1
                         }
-                    }, s._l(s.banners, (function (t, a) {
+                    }, s._l(s.banners, (function(t, a) {
                         return e("slide", {
                             key: a,
                             class: "lgx-item-common",
