@@ -214,7 +214,7 @@
 <!--cities_events-->
 @if(!empty($cities_events))
 <section>
-    <div id="lgx-schedule" class="lgx-schedule lgx-schedule-light">
+    <div id="lgx-schedule" class="lgx-schedule lgx-schedule-dark">
         <div class="lgx-inner" style="background-image: url({{ eventmie_asset('img/bg-pattern.png') }});">
             <div class="container">
                 <div class="row">
