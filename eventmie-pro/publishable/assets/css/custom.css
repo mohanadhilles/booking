@@ -254,9 +254,9 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     color: #251d1d !important;
 }
 .lgx-schedule{
-    background: linear-gradient(158deg, #e8e8e8, #cfcfcf);
-    background-size: 400% 400%;
-    animation: categories 59s ease infinite;   
+    background: linear-gradient(158deg, #e8e8e8, #cfcfcf) !important;
+    background-size: 400% 400% !important;
+    animation: categories 59s ease infinite !important; 
 }
 @keyframes categories {
     0%{background-position:0% 17%}
