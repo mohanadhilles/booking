@@ -10,10 +10,10 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     left: 120px !important;
 }
 
-.sponsors-area-colorfull-border .single:first-child {
+.sponsors-area-colorfull-border .single {
     border: 2px solid #00192f !important;
 }
-.sponsors-area-colorfull-border .single:first-child:hover {
+.sponsors-area-colorfull-border .single:hover {
     border: 2px solid #ffffff !important;
 }
 

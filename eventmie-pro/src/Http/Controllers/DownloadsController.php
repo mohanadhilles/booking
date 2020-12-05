@@ -147,7 +147,7 @@ class DownloadsController extends Controller
             'isHtml5ParserEnabled' => TRUE,
             'enable_html5_parser' => TRUE,
         ];
-        dd($pdf_file);
+       
         \PDF::setOptions($options)
         ->loadHTML($html)
         ->setWarnings(false)
