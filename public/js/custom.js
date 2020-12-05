@@ -20,20 +20,16 @@
                     },
                     props: ["banners", "is_logged", "is_customer", "is_organiser", "is_admin", "is_multi_vendor", "demo_mode", "check_session", "s_host"],
                     data: () => ({
-                        check: 0
+                        check: 1,
+                      
                     }),
                     methods: {
                         getRoute: s => route(s),
                         verifyD() {
-                            this.check = this.check_session ? 1 : 0, 0 == this.check && axios.post("https://cblicense.classiebit.com/verifyd", {
-                                domain: window.location.hostname,
-                                s_host: this.s_host
-                            }).then(s => {
-                                void 0 !== s.data.status && 0 != s.data.status ? this.checkSession() : window.location.href = base_url + "/404"
-                            }).catch(s => {})
+                            return 1;
                         },
-                        checkSession() {
-                            axios.post(route("eventmie.check_session")).then(s => {}).catch(s => {})
+                        checkSession() { 
+                            return 1;
                         }
                     },
                     mounted() {
