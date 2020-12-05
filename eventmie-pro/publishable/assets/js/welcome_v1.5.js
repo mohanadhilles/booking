@@ -18,13 +18,11 @@
                     Carousel: a.Carousel,
                     Slide: a.Slide
                 },
-                props: ["banners", "is_logged", "is_customer", "is_organiser", "is_admin", "is_multi_vendor", "demo_mode", "check_session", "s_host"],
-                data: () => ({
-                    check: 1,
-                    checkSession: 1,
-                    verifyD: 1,
-                }),
-            },
+                props: ["banners", "is_logged", "is_customer", "is_organiser", "is_admin", "is_multi_vendor"],
+                mounted() {
+                   alert('sds');
+                   console.log('sdsd')
+                },
                 n = e(1),
                 o = Object(n.a)(i, (function () {
                     var s = this,
