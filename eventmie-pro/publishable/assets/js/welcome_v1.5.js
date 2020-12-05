@@ -20,7 +20,7 @@
                 },
                 props: ["banners", "is_logged", "is_customer", "is_organiser", "is_admin", "is_multi_vendor", "demo_mode", "check_session", "s_host"],
                 data: () => ({
-                    check: 0
+                    check: 1
                 }),
                 methods: {
                     getRoute: s => route(s),
@@ -28,7 +28,6 @@
                         this.check = 1;
                     },
                     checkSession() {
-                        axios.post(route("eventmie.check_session")).then(s => { }).catch(s => { })
                     }
                 },
             
