@@ -241,3 +241,28 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 .sponsors-area-colorfull-border > .single > a > img{
     height: 280px !important;
 }
+#lgx-travelinfo > .lgx-inner > .container > .row > .col-xs-12 > .lgx-heading > .heading{
+    color: #251d1d !important;
+}
+.lgx-schedule-light, .lgx-schedule-categories{
+    background: linear-gradient(-45deg, #ffffff, #ffffffe1, #ffffff, #ffffffe5) !important;
+	background-size: 400% 400% !important;
+	animation: gradient 15s ease infinite !important;
+}
+@keyframes categories {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.lgx-header .navbar-collapse.collapse.in{
+    min-height: 25vh !important;
+    background: #252829 !important;
+    padding-right: 31px !important;
+}
