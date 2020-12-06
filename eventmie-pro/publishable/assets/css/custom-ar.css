@@ -264,5 +264,4 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 .lgx-header .navbar-collapse.collapse.in{
     min-height: 25vh !important;
     background: #252829 !important;
-    padding-right: 31px !important;
 }
