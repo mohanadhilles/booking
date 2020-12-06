@@ -284,3 +284,13 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     background: #252829 !important;
     padding-left: 31px !important;
 }
+
+@media(max-width:767px){
+    .sponsors-area.cities .single-name-sub{
+            bottom: 75% !important;
+            font-size: 0.5rem !important;
+    }
+}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}
