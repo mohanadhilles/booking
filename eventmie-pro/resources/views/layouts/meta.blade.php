@@ -15,7 +15,10 @@
 
 <!-- Google map key -->
 <meta name="google_map_key" content="{{ setting('apps.google_map_key') }}"/>
+
 <!-- The above meta tags *must* come first in the head -->
+
+<meta name="google-site-verification" content="RSqvclQGRBvlEFuS9ybWLPjgFsADh_wJpcWZa1o3Djk"/>
 
 <!-- SITE TITLE -->
 <title>{{ setting('site.site_name') ? setting('site.site_name') : config('app.name') }} - @yield('title', __('eventmie-pro::em.home'))</title>
