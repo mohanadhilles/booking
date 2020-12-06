@@ -1,5 +1,6 @@
 <?php
 return [
+    'lang_en'                           => "English",
     'reset'                             => "إعادة تعيين" ,
     'forgot'                            => "نسيت" ,
     'send'                              => "إرسال" ,
