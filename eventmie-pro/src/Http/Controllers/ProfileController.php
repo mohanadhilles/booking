@@ -23,8 +23,9 @@ class ProfileController extends Controller
 
     public function index($view = 'eventmie::profile.profile', $extra = [])
     {
+        $cities = $this->get_cities();
         $user  = $this->getAuthUser();
-        return Eventmie::view($view, compact('user', 'extra'));
+        return Eventmie::view($view, compact('user', 'extra','cities'));
     }
     
     // get login user
@@ -44,6 +45,14 @@ class ProfileController extends Controller
         
         $this->validate($request, [
             'name' => 'required|string',
+            'gender' => 'required',
+            'age' => 'required',
+
+            'linkedin' => 'required',
+            'company' => 'required|string',
+            'answer_1' => 'required',
+            'answer_2' => 'required',
+            'preferred' => 'required',
             'email' => 'required|email|unique:users,email,'.Auth::id()
         ]);
         
@@ -62,10 +71,16 @@ class ProfileController extends Controller
         $user->name                  = $request->name;
         $user->email                 = $request->email;
         $user->address               = $request->address;
+        $user->gender                = $request->gender;
+        $user->age                   = $request->age;
+        $user->linkedin              = $request->linkedin;
+        $user->company               = $request->company;
+        $user->answer_1              = $request->answer_1;
+        $user->answer_2              = $request->answer_2;
+        $user->preferred             = $request->preferred;
+        $user->cities                = $request->cities;
         $user->phone                 = $request->phone;
-        
         $this->updatebankDetails($request, $user);
-        
         $user->save();
 
         // redirect no matter what so that it never turns back
@@ -130,4 +145,14 @@ class ProfileController extends Controller
         $user->bank_account_number   = $request->bank_account_number;
         $user->bank_account_phone    = $request->bank_account_phone;
     }
+
+    function get_cities()
+        {
+            return [
+                'riyadh'  => 'الرياض',
+                'jadda'   => 'جدة',
+                'maddena' => 'المدينة المنوره',
+                'sharqya' => 'الشرقية',
+        ];
+        }
 }

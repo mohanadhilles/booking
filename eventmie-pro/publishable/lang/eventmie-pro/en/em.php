@@ -599,6 +599,20 @@ return [
     'admin_tax'                         => 'Admin Tax',
     'total_admin_commission'            => 'Total Admin Commission',
     'total_admin_tax'                   => 'Total Admin Tax',
-    
+    'age'                               => "العمر",
+    'linkedin'                          => "LinkedIn Account",
+    'company'                           => "Company",
+    'preferred'                         => "Preferred Date",
+    'answer_1'                          => "Question one",
+    'answer_2'                          => "Question two",
+    'cities'                            => "City",
+    'gender'                            => "Gender",
+    'male'                              => "Male",
+    'female'                            => "Female",
+    'yes'                               => "Yes",
+    'no'                                => "No",
+    'question_1'                        => "Is it a group reservation ? There is special discount for the groups how many are joining?",
+    'question_2'                        => "There is sleepover at the resort, room capacity 4 person checkout time 12 PM, Would you like to sleepover?",
+
 ];
 

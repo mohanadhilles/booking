@@ -57,6 +57,112 @@
                                             @endif
                                         </div>
                                     </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-3">@lang('eventmie-pro::em.gender')</label>
+                                        <div class="col-md-9">
+                                            <input  name="gender" type="radio" value="1" @if($user->gender == 1) checked @endif> 
+                                            @lang('eventmie-pro::em.male')
+                                            @if ($errors->has('gender'))
+                                                <div class="error">{{ $errors->first('gender') }}</div>
+                                            @endif
+                                            <br/>
+                                         
+                                            <input  name="gender" type="radio" value="0" @if($user->gender == 0) checked @endif>
+                                            @lang('eventmie-pro::em.female')
+                                            @if ($errors->has('gender'))
+                                                <div class="error">{{ $errors->first('gender') }}</div>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-3">@lang('eventmie-pro::em.age')</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control" name="age" type="number"  value="{{$user->age}}">
+                                            @if ($errors->has('age'))
+                                                <div class="error">{{ $errors->first('age') }}</div>
+                                            @endif
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-md-3">@lang('eventmie-pro::em.linkedin')</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control" name="linkedin" type="text"  value="{{$user->linkedin}}">
+                                            @if ($errors->has('linkedin'))
+                                                <div class="error">{{ $errors->first('linkedin') }}</div>
+                                            @endif
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-md-3">@lang('eventmie-pro::em.cities')</label>
+                                        <div class="col-md-9">
+                                            <select class="form-control" name="cities" type="text">
+                                                <option value="">@lang('eventmie-pro::em.choose_cities')</option>
+                                                @foreach($cities as $key => $value)
+                                            <option value={{$key}} @if(isset($user->cities) && $user->cities == $key) selected @endif>{{$value}}</option>
+                                                @endforeach
+                                            </select>
+                                            @if ($errors->has('cities'))
+                                                <div class="error">{{ $errors->first('cities') }}</div>
+                                            @endif
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-md-3">@lang('eventmie-pro::em.company')</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control" name="company" type="text"  value="{{$user->company}}">
+                                            @if ($errors->has('company'))
+                                                <div class="error">{{ $errors->first('company') }}</div>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-3">@lang('eventmie-pro::em.preferred')</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control" name="preferred" type="date"  value="{{$user->preferred}}">
+                                            @if ($errors->has('preferred'))
+                                                <div class="error">{{ $errors->first('preferred') }}</div>
+                                            @endif
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-md-9">@lang('eventmie-pro::em.question_1')</label>
+                                        <div class="col-md-3">
+                                            <input  name="answer_1" type="radio" value="1" @if($user->answer_1 == 1) checked @endif > 
+                                            @lang('eventmie-pro::em.yes')
+                                            @if ($errors->has('answer_1'))
+                                                <div class="error">{{ $errors->first('answer_1') }}</div>
+                                            @endif
+                                            <br/>
+                                         
+                                            <input  name="answer_1" type="radio" value="0" @if($user->answer_1 == 0) checked @endif>
+                                            @lang('eventmie-pro::em.no')
+                                            @if ($errors->has('answer_1'))
+                                                <div class="error">{{ $errors->first('answer_1') }}</div>
+                                            @endif
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-md-9">@lang('eventmie-pro::em.question_2')</label>
+                                        <div class="col-md-3">
+                                            <input  name="answer_2" type="radio" value="1" @if($user->answer_2 == 1) checked @endif> 
+                                            @lang('eventmie-pro::em.yes')
+                                            @if ($errors->has('answer_2'))
+                                                <div class="error">{{ $errors->first('answer_2') }}</div>
+                                            @endif
+                                            <br/>
+                                         
+                                            <input  name="answer_2" type="radio" value="0" @if($user->answer_2 == 0) checked @endif>
+                                            @lang('eventmie-pro::em.no')
+                                            @if ($errors->has('answer_2'))
+                                                <div class="error">{{ $errors->first('answer_2') }}</div>
+                                            @endif
+                                        </div>
+                                    </div>
 
                                     <hr>
                                     <h4>@lang('eventmie-pro::em.update_password') </h4>

@@ -180,7 +180,6 @@ if (!function_exists('checkMailCreds'))
 
         return true;
     }
+
 }
 
-
-    

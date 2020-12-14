@@ -124,4 +124,14 @@ class User extends \TCG\Voyager\Models\User  implements MustVerifyEmail
             }])->where(['id' => $params['organizer_id'] ])->first()->tags;
        
     }
+
+    public function get_cities()
+{
+    return [
+        'riyadh'  => 'الرياض',
+        'jadda'   => 'جدة',
+        'maddena' => 'المدينة المنوره',
+        'sharqya' => 'الشرقية',
+];
+}
 }

@@ -188,6 +188,16 @@
                                 @endif
 
                             @endguest
+                              <li>
+                                <a class="lgx-scroll" href="{{ route('eventmie.page', ['page' => 'about']) }}">@lang('eventmie-pro::em.about')</a>
+                            </li>
+                            <li>
+                                <a class="lgx-scroll" href="{{ route('eventmie.page', ['page' => 'terms']) }}">@lang('eventmie-pro::em.terms')</a>
+
+                            </li>
+                            <li>
+                                <a class="lgx-scroll" href="{{ route('eventmie.page', ['page' => 'privacy']) }}">@lang('eventmie-pro::em.privacy')</a>
+                            </li>
 
                             <li>
                                 @if (config('app.locale') == 'en')
@@ -197,23 +207,9 @@
                                 <a class="dropdown-item {{ config('app.locale') ? 'active' : '' }}" href="{{ route('eventmie.change_lang', ['lang' => 'en']) }}">@lang('eventmie-pro::em.lang_en')</a>
                                 @endif
                               </li>
-
-                            {{-- <li>
-                                <a id="navbarDropdown" class="dropdown-toggle active" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <i class="fas fa-globe"></i> 
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    @foreach(lang_selector() as $val)
-                                    <li>
-                                        <a class="dropdown-item {{ $val == config('app.locale') ? 'active' : '' }}" href="{{ route('eventmie.change_lang', ['lang' => $val]) }}">@lang('eventmie-pro::em.lang_'.$val)</a>
-                                    </li>
-                                    @endforeach
-                                </ul>
-                            </li> --}}
-
                         </ul>
-                    </div><!--/.nav-collapse -->
+                    </div>
+                    <!--/.nav-collapse -->
                 </nav>
             </div>
             <!-- //.CONTAINER -->

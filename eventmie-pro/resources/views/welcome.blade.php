@@ -37,8 +37,25 @@
 </section>
 <!--Banner slider end-->
 
-<!--Event Search start-->
 <section class="main-search-container">
+    <div >
+        <div class="lgx-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/klZNNUz4wPQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              </div>
+                              
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Event Search start-->
+{{-- <section class="main-search-container">
     <div >
         <div class="lgx-inner">
             <div class="container">
@@ -58,7 +75,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!--Event Search end-->
 
 
@@ -68,7 +85,7 @@
 <!--Event Featured Start-->
 @if(!empty($featured_events))
 <section>
-    <div >
+    <div>
         <div class="lgx-inner">
             <div class="container-fluid">
                 <div class="row">
@@ -80,7 +97,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="offset-1 col-10 col-lg-offset-1 col-lg-10">
+                    <div class="offset-1 col-10 col-lg-offset-1 col-lg-10 section-m">
                         <event-listing :events="{{ json_encode($featured_events, JSON_HEX_APOS) }}"
                                         :currency="{{ json_encode($currency, JSON_HEX_APOS) }}"
                         >
@@ -114,7 +131,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="offset-1 col-10 col-lg-offset-1 col-lg-10">
+                    <div class="offset-1 col-10 col-lg-offset-1 col-lg-10 section-m">
                         <event-listing :events="{{ json_encode($top_selling_events, JSON_HEX_APOS) }}"
                             :currency="{{ json_encode($currency, JSON_HEX_APOS) }}"
                         >
@@ -148,7 +165,7 @@
                 </div>
                 
                 <div class="row">
-                    <div class="offset-1 col-10 col-lg-offset-1 col-lg-10">
+                    <div class="offset-1 col-10 col-lg-offset-1 col-lg-10 section-m">
                         <event-listing :events="{{ json_encode($upcomming_events, JSON_HEX_APOS) }}" 
                             :currency="{{ json_encode($currency, JSON_HEX_APOS) }}"    
                         >

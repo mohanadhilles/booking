@@ -56,6 +56,7 @@ class ComposerStaticInit019588a89b7fbc027bd4b879380d5fb3
         array (
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
             'Tightenco\\Ziggy\\' => 16,
+            'Tests\\' => 6,
             'TCG\\Voyager\\' => 12,
         ),
         'S' => 
@@ -232,6 +233,10 @@ class ComposerStaticInit019588a89b7fbc027bd4b879380d5fb3
         'Tightenco\\Ziggy\\' => 
         array (
             0 => __DIR__ . '/..' . '/tightenco/ziggy/src',
+        ),
+        'Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
         ),
         'TCG\\Voyager\\' => 
         array (
@@ -3645,7 +3650,7 @@ class ComposerStaticInit019588a89b7fbc027bd4b879380d5fb3
         'Monolog\\Handler\\DoctrineCouchDBHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/DoctrineCouchDBHandler.php',
         'Monolog\\Handler\\DynamoDbHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/DynamoDbHandler.php',
         'Monolog\\Handler\\ElasticaHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/ElasticaHandler.php',
-        'Monolog\\Handler\\ElasticsearchHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/ElasticsearchHandler.php',
+        'Monolog\\Handler\\ElasticsearchHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/ElasticSearchHandler.php',
         'Monolog\\Handler\\ErrorLogHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/ErrorLogHandler.php',
         'Monolog\\Handler\\FallbackGroupHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/FallbackGroupHandler.php',
         'Monolog\\Handler\\FilterHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/FilterHandler.php',
@@ -5423,6 +5428,10 @@ class ComposerStaticInit019588a89b7fbc027bd4b879380d5fb3
         'TCG\\Voyager\\Widgets\\PostDimmer' => __DIR__ . '/..' . '/tcg/voyager/src/Widgets/PostDimmer.php',
         'TCG\\Voyager\\Widgets\\UserDimmer' => __DIR__ . '/..' . '/tcg/voyager/src/Widgets/UserDimmer.php',
         'TaxesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/TaxesTableSeeder.php',
+        'Tests\\CreatesApplication' => __DIR__ . '/../..' . '/tests/CreatesApplication.php',
+        'Tests\\Feature\\ExampleTest' => __DIR__ . '/../..' . '/tests/Feature/ExampleTest.php',
+        'Tests\\TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
+        'Tests\\Unit\\ExampleTest' => __DIR__ . '/../..' . '/tests/Unit/ExampleTest.php',
         'TicketsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/TicketsTableSeeder.php',
         'Tightenco\\Ziggy\\BladeRouteGenerator' => __DIR__ . '/..' . '/tightenco/ziggy/src/BladeRouteGenerator.php',
         'Tightenco\\Ziggy\\CommandRouteGenerator' => __DIR__ . '/..' . '/tightenco/ziggy/src/CommandRouteGenerator.php',

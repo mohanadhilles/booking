@@ -29,7 +29,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     line-height: 3 !important;
     left: 50px !important;
     right: 50px !important;
-    color: #e49d23 !important;
+    color: #F15928 !important;
     background: hsl(0deg 0% 100% / 0%) !important;
     font-size: 2.5rem !important;
 }
@@ -61,7 +61,8 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 }
 
 .breadcrumb-area .breadcrumb {
-    background-color:  #E49D23 !important;
+    background-color: #F15928 !important;
+    color: #ffffff !important;
     border-radius: 2px !important;
     margin-bottom: 20px !important;
     box-shadow: 0 0 0 rgb(27 137 239 / 0%), 0 0 0 rgb(27 137 239 / 0%) !important;
@@ -110,7 +111,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 .lgx-footer-single .date, .lgx-footer-single .map-link i,
  .lgx-footer-single .map-link:hover,
   .lgx-footer-bottom p a, .lgx-footer-bottom p span{
-    color: #E49D23 !important;
+    color: #F15928 !important;
 }
 
 .col-grey, .lgx-footer-single > address,
@@ -120,8 +121,8 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     color: hsl(0deg 0% 100% / 86%)!important;
 }
 .lgx-header .lgx-navbar .lgx-nav .dropdown-menu li a{
-    color: #e49d23!important;
-    border-left: 2px solid #e49d23 !important;
+    color: #777!important;
+    border-left: 2px solid #999 !important;
 }
 .lgx-header .lgx-navbar .lgx-nav .dropdown-menu{
     border-radius: 2px !important;
@@ -162,8 +163,8 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     color: #181b1c !important;
 }
 .lgx-about-service .lgx-single-service-color{
-    background: #1b89ef !important;
-    background-image: linear-gradient(to right top,#1b89ef,#3395f1,#e49d23,#e49d23,#e49d23) !important;
+    background: #6E3480 !important;
+    background-image: linear-gradient(to right top,#6E3480,#3395f1,#e49d23,#e49d23,#e49d23) !important;
     box-shadow: 0 15px 35px rgba(27,137,239,.3), 0 5px 15px rgba(227,65,154,.2) !important;
     border-radius: 2px !important;
     height: 185px !important;
@@ -208,8 +209,9 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 }
 
 .lgx-event__tag span:nth-child(1n){
-    background: rgb(228 157 35) !important;
+    background: #F15928 !important;
     border-top-left-radius: 2px !important;
+    color: #ffffff !important;
 
 }
 .lgx-event__tag span:nth-child(2n) {
@@ -278,6 +280,10 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 	}
 }
 
+.lgx-btn-red {
+    background: #F15928 !important;
+    color: #ffffff !important;
+}
 
 .lgx-header .navbar-collapse.collapse.in{
     min-height: 25vh !important;
@@ -285,12 +291,39 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     padding-left: 31px !important;
 }
 
+.breadcrumb > li a, .breadcrumb > li:before,  .breadcrumb > li >  a > i{
+    color: #ffffff !important;
+}
+
+.video-container {
+    overflow: hidden;
+    position: relative;
+    width:100%;
+}
+
+.video-container::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 @media(max-width:767px){
     .sponsors-area.cities .single-name-sub{
             bottom: 75% !important;
             font-size: 0.5rem !important;
     }
+    .section-m{
+        margin-right: 8.5% !important;
+    }
 }
 @media(min-width:768px){}
 @media(min-width:992px){}
 @media(min-width:1200px){}
+
