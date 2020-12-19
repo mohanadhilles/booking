@@ -262,7 +262,7 @@
 
     
 <!--Blogs-->
-@if(!empty($posts))
+{{-- @if(!empty($posts))
 <section>
     <div>
         <div class="lgx-inner">
@@ -303,11 +303,11 @@
         </div><!-- //.INNER -->
     </div>
 </section>
-@endif    
+@endif     --}}
 <!--Blogs END-->
 
 <!--Organiser section-->
-<section>
+{{-- <section>
     <div id="lgx-schedule" class="lgx-schedule lgx-schedule-dark">
         <div class="lgx-inner" style="background-image: url({{ eventmie_asset('img/bg-pattern.png') }});">
             <div class="container">
@@ -347,7 +347,7 @@
             <!-- //.CONTAINER -->
         </div>
     </div>
-</section>
+</section> --}}
 <!--TRAVEL INFO END-->
 
 <!--TRAVEL INFO-->
