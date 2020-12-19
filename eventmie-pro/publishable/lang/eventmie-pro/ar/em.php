@@ -465,7 +465,7 @@ return [
     'event_name'                        => "اسم لفعالية ",
     'event_url'                         => "عنوان URL للحدث",
     'more_event_info'                   => "المزيد من معلومات الفعالية",
-    'event_featured'                    => "فعالية مميزة",
+    'event_featured'                    => "فعالية دبليو",
     'event_status'                      => "حالة الفعالية",
     'event_save_success'                => "تم حفظ الفعالية بنجاح",
     'online_location'                   => "الموقع على الإنترنت",
