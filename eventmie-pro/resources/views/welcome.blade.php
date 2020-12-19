@@ -186,7 +186,7 @@
 
 
 <!--Categories-->
-@if(!empty($categories))
+{{-- @if(!empty($categories))
 <section>
     <div id="lgx-schedule" class="lgx-schedule lgx-schedule-light lgx-schedule lgx-schedule-categories">
         <div class="lgx-inner">
@@ -219,7 +219,7 @@
         </div>
     </div>
 </section>
-@endif   
+@endif    --}}
 <!--Categories END-->
 
 <!--cities_events-->
