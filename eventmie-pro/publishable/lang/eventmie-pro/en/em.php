@@ -613,6 +613,6 @@ return [
     'no'                                => "No",
     'question_1'                        => "Is it a group reservation ? There is special discount for the groups how many are joining?",
     'question_2'                        => "There is sleepover at the resort, room capacity 4 person checkout time 12 PM, Would you like to sleepover?",
-
+    'best_place'                        => "Dabliu Restor"
 ];
 

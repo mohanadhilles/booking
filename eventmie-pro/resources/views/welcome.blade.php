@@ -43,6 +43,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
+                        <div class="lgx-heading">
+                            <h2 class="heading"><i class="fas fa-star"></i>@lang('eventmie-pro::em.best_place')</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
                             <div class="video-container">
                                 <iframe src="https://www.youtube.com/embed/WnNfN1a6o34" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                               </div>
@@ -151,7 +158,7 @@
 <!--Event Top-selling END-->
 
 <!--Event Upcoming Start-->
-@if(!empty($upcomming_events))
+{{-- @if(!empty($upcomming_events))
 <section>
     <div>
         <div class="lgx-inner">
@@ -181,7 +188,7 @@
         </div><!-- //.INNER -->
     </div>
 </section>
-@endif
+@endif --}}
 <!--Event Upcoming END-->
 
 
@@ -223,7 +230,7 @@
 <!--Categories END-->
 
 <!--cities_events-->
-@if(!empty($cities_events))
+{{-- @if(!empty($cities_events))
 <section>
     <div id="lgx-schedule" class="lgx-schedule lgx-schedule-dark lgx-schedule-cities_events">
         <div class="lgx-inner" style="background-image: url({{ eventmie_asset('img/bg-pattern.png') }});">
@@ -257,7 +264,7 @@
         </div>
     </div>
 </section>
-@endif   
+@endif    --}}
 <!--cities_events END-->
 
     
