@@ -2,8 +2,11 @@
 
 h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     font-family: 'Almarai', sans-serif !important;
+}
+.lgx-about-content > h3, .lgx-about-content > ul >li, .lgx-heading > .heading{
     text-align: right !important;
 }
+
 
 :-ms-input-placeholder{
     font-family: 'Almarai', sans-serif !important;
