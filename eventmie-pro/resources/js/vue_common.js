@@ -4,9 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-/** 
+/**
  * This is the default file for initiating a Vue instance
- * All the common vue components and common plugins will be 
+ * All the common vue components and common plugins will be
  * declared here except auth
  */
 
@@ -15,7 +15,7 @@ require('./bootstrap');
 // for using time
 window.moment   = require('moment-timezone');
 
-moment.locale(my_lang); 
+moment.locale(my_lang);
 
 
 window.Vue = require('vue');
@@ -35,7 +35,7 @@ Vue.config.devtools = true;
 window.VueProgressBar = require('vue-progressbar');
 const options = {
     color: '#ec398b',
-    failedColor: '#1b89ef',
+    failedColor: '#f15928',
     thickness: '4px',
     transition: {
         speed: '1s',
@@ -83,7 +83,7 @@ Vue.prototype.$vue2_datepicker_lang = {
 };
 
 /**
- * Axios Interceptors 
+ * Axios Interceptors
  * just include the file
  */
 require('./interceptors');

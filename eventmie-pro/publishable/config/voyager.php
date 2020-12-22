@@ -186,7 +186,7 @@ return [
     |
     */
 
-    'primary_color' => '#1b89ef',
+    'primary_color' => '#f15928',
 
     'show_dev_tips' => env('EVENTMIE_PKG_DEV', false) && env('DEMO_MODE', false) ? true : false, // Show development tip "How To Use:" in Menu and Settings
 
@@ -231,7 +231,7 @@ return [
     'media' => [
         // The allowed mimetypes to be uploaded through the media-manager.
         // 'allowed_mimetypes' => '*', //All types can be uploaded
-        
+
         'allowed_mimetypes' => [
             'image/jpeg',
             'image/jp',
@@ -240,7 +240,7 @@ return [
             'image/bmp',
             'video/mp4',
         ],
-       
+
        //Path for media-manager. Relative to the filesystem.
        'path'                => '/',
        'show_folders'        => true,

@@ -6,10 +6,10 @@
 }
 .custom-dashboard .panel.widget .dimmer {
     background: #fff;
-    border-top: 3px solid #1b89ef;
-}   
+    border-top: 3px solid #f15928;
+}
 .custom-dashboard .panel.widget i {
-    background: #1b89ef;
+    background: #f15928;
 }
 .custom-dashboard .panel.widget p {
     font-size: 16px;
@@ -58,23 +58,23 @@
 }
 .panel.widget h4 {
     font-size: 18px;
-    color: #1b89ef;
+    color: #f15928;
     margin-top: 18px;
 }
 .voyager .side-menu.sidebar-inverse .navbar li>a {
     color: rgba(118, 131, 143, 0.78);
 }
 .voyager .side-menu.sidebar-inverse .navbar li.active>a {
-    color: #1b89ef;
-    border-right: 3px solid #1b89ef;
+    color: #f15928;
+    border-right: 3px solid #f15928;
 }
 .voyager .side-menu.sidebar-inverse .navbar li>a:hover {
-    color: #1b89ef;
+    color: #f15928;
     background: transparent;
-    border-right: 3px solid #1b89ef;
+    border-right: 3px solid #f15928;
 }
 .voyager .navbar.navbar-default .navbar-nav>li:hover>a, .voyager .navbar .navbar-nav>li:hover>a {
-    color: #1b89ef;
+    color: #f15928;
 }
 .voyager .side-menu.sidebar-inverse .navbar li.dropdown>.panel-collapse {
     background-color: #f3f3f3;
@@ -96,7 +96,7 @@
     transform: translateY(-1px);
 }
 .btn.btn-primary {
-    background: #1b89ef;
+    background: #f15928;
 }
 
 /* Images */
@@ -118,7 +118,7 @@ form.form-edit-add select[name='user_belongstomany_role_relationship[]'],
 form.form-edit-add select[name='user_belongstomany_role_relationship[]'] + span.select2,
 form.form-edit-add label[for=locale],
 form.form-edit-add select[name=locale],
-form.form-edit-add select[name=locale] + span.select2 
+form.form-edit-add select[name=locale] + span.select2
 {
     display: none;
 }
@@ -128,7 +128,7 @@ form.form-edit-add select[name=locale] + span.select2
     color: #FFF;
 }
 .statistics .box {
-    background-color: #1b89ef;
+    background-color: #f15928;
     padding: 1rem;
     overflow: hidden;
     border-radius: 20px;

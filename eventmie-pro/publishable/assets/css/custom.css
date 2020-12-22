@@ -68,7 +68,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     box-shadow: 0 0 0 rgb(27 137 239 / 0%), 0 0 0 rgb(27 137 239 / 0%) !important;
 }
 .lgx-btn-red {
-    background: #E49D23 !important;
+    background: #F15928 !important;
 }
 
 .lgx-registration-form-box input.form-control, .lgx-registration-form-box input.wpcf7-form-control {
@@ -164,7 +164,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 }
 .lgx-about-service .lgx-single-service-color{
     background: #6E3480 !important;
-    background-image: linear-gradient(to right top,#6E3480,#3395f1,#e49d23,#e49d23,#e49d23) !important;
+    background-image: linear-gradient(to right top,#f9f9f9,#f9f9f9,#f15928,#f15928,#f15928) !important;
     box-shadow: 0 15px 35px rgba(27,137,239,.3), 0 5px 15px rgba(227,65,154,.2) !important;
     border-radius: 2px !important;
     height: 185px !important;
@@ -176,7 +176,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     box-shadow: none !important;
 }
 .lgx-panel .lgx-single-schedule .schedule-info {
-    background: #e49d23 !important;
+    background: #F15928 !important;
     border: none !important;
     border-radius: 2px !important;
     box-shadow:none !important;
@@ -189,16 +189,16 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 }
 .lgx-panel .lgx-single-schedule .schedule-info:hover {
     transition-duration: .3s;
-    background: #E49D23 !important;
+    background: #F15928 !important;
 }
 .lgx-banner-info .location{
     border-radius: 2px 2px 2px 2px !important;
     color: #ffffff !important;
 }
 .lgx-tab .nav-pills {
-    background: #e49d23 !important;
+    background: #F15928 !important;
     border-radius: 2px 0 2px 2px !important;
-    box-shadow: 0 13px 35px rgba(0,25,47,.2) !important; 
+    box-shadow: 0 13px 35px rgba(0,25,47,.2) !important;
 }
 .lgx-tab .nav-pills li {
     border-radius: 2px 0 0 2px !important;
@@ -281,8 +281,8 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 }
 
 .lgx-btn-red {
-    background: #F15928 !important;
-    color: #ffffff !important;
+    background:#F15928 !important;
+    color: #FFFFFF !important;
 }
 
 .lgx-header .navbar-collapse.collapse.in{

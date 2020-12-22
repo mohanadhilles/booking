@@ -124,7 +124,7 @@
 <!--Event Featured END-->
 
 <!--Event Top-selling Start-->
-@if(!empty($top_selling_events))
+{{-- @if(!empty($top_selling_events))
 <section>
     <div id="lgx-schedule" class="lgx-schedule lgx-schedule-dark">
         <div class="lgx-inner" style="background-image: url({{ eventmie_asset('img/bg-pattern.png') }});">
@@ -154,7 +154,7 @@
         </div><!-- //.INNER -->
     </div>
 </section>
-@endif
+@endif --}}
 <!--Event Top-selling END-->
 
 <!--Event Upcoming Start-->

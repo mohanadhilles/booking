@@ -34,7 +34,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     line-height: 3 !important;
     left: 50px !important;
     right: 50px !important;
-    color: #e49d23 !important;
+    color: #F15928 !important;
     background: hsl(0deg 0% 100% / 0%) !important;
     font-size: 2.5rem !important;
 }
@@ -65,13 +65,13 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 }
 
 .breadcrumb-area .breadcrumb {
-    background-color:  #E49D23 !important;
+    background-color:  #F15928 !important;
     border-radius: 2px !important;
     margin-bottom: 20px !important;
     box-shadow: 0 0 0 rgb(27 137 239 / 0%), 0 0 0 rgb(27 137 239 / 0%) !important;
 }
 .lgx-btn-red {
-    background: #E49D23 !important;
+    background: #F15928 !important;
 }
 
 .lgx-registration-form-box input.form-control, .lgx-registration-form-box input.wpcf7-form-control {
@@ -79,7 +79,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     height: 50px !important;
 }
 .lgx-registration-form-box {
-    background: #E49D23 !important;
+    background: #F15928 !important;
 }
 .lgx-registration-form form > .lgx-btn-white{
     width: 50% !important;
@@ -111,7 +111,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 .lgx-footer-single .date, .lgx-footer-single .map-link i,
  .lgx-footer-single .map-link:hover,
   .lgx-footer-bottom p a, .lgx-footer-bottom p span{
-    color: #E49D23 !important;
+    color: #F15928 !important;
 }
 
 .col-grey, .lgx-footer-single > address,
@@ -152,8 +152,8 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     color: #181b1c;
 }
 .lgx-about-service .lgx-single-service-color{
-    background: #1b89ef !important;
-    background-image: linear-gradient(to right top,#1b89ef,#3395f1,#e49d23,#e49d23,#e49d23) !important;
+    background: #f15928 !important;
+    background-image: linear-gradient(to right top,#f15928,#3395f1,#F15928,#F15928,#F15928) !important;
     box-shadow: 0 15px 35px rgba(27,137,239,.3), 0 5px 15px rgba(227,65,154,.2) !important;
     border-radius: 2px !important;
     height: 185px !important;
@@ -165,7 +165,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     box-shadow: none !important;
 }
 .lgx-panel .lgx-single-schedule .schedule-info {
-    background: #e49d23 !important;
+    background: #F15928 !important;
     border: none !important;
     border-radius: 2px !important;
     box-shadow:none !important;
@@ -178,16 +178,16 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 }
 .lgx-panel .lgx-single-schedule .schedule-info:hover {
     transition-duration: .3s;
-    background: #E49D23 !important;
+    background: #F15928 !important;
 }
 .lgx-banner-info .location{
     border-radius: 2px 2px 2px 2px !important;
     color: #ffffff !important;
 }
 .lgx-tab .nav-pills {
-    background: #e49d23 !important;
+    background: #F15928 !important;
     border-radius: 2px 0 2px 2px !important;
-    box-shadow: 0 13px 35px rgba(0,25,47,.2) !important; 
+    box-shadow: 0 13px 35px rgba(0,25,47,.2) !important;
 }
 .lgx-tab .nav-pills li {
     border-radius: 2px 0 0 2px !important;
