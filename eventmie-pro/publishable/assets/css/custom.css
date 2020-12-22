@@ -164,7 +164,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 }
 .lgx-about-service .lgx-single-service-color{
     background: #6E3480 !important;
-    background-image: linear-gradient(to right top,#f9f9f9,#f9f9f9,#f15928,#f15928,#f15928) !important;
+    background-image: linear-gradient(to right top,#f15928,#f15928,#f15928,#f15928,#f15928) !important;
     box-shadow: 0 15px 35px rgba(27,137,239,.3), 0 5px 15px rgba(227,65,154,.2) !important;
     border-radius: 2px !important;
     height: 185px !important;

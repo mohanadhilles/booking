@@ -7,7 +7,7 @@ use Classiebit\Eventmie\Facades\Eventmie as EventmieFacade;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Routing\Router;
 
-/* Laravel packages start*/ 
+/* Laravel packages start*/
 use TCG\Voyager\VoyagerServiceProvider as VoyagerServiceProvider;
 use TCG\Voyager\Facades\Voyager;
 use Classiebit\Eventmie\FormFields\OrganiserDropdown;
@@ -41,7 +41,7 @@ class EventmieServiceProvider extends ServiceProvider
     protected $is_facebook = false;
     protected $is_google   = false;
 
-    
+
     /**
      * Register the application services.
      */
@@ -54,14 +54,14 @@ class EventmieServiceProvider extends ServiceProvider
         $loader = AliasLoader::getInstance();
         $loader->alias('Eventmie', EventmieFacade::class);
 
-        
+
         $this->app->singleton('eventmie', function () {
             return new Eventmie();
         });
 
         // boot up all helpers
         $this->loadHelpers();
-        
+
         // boot up config file
         $this->registerConfigs();
 
@@ -71,8 +71,8 @@ class EventmieServiceProvider extends ServiceProvider
         // custom voyager formfields
         $this->voyagerFormFields();
 
-        // initialise console commands 
-        if ($this->app->runningInConsole()) 
+        // initialise console commands
+        if ($this->app->runningInConsole())
         {
             $this->registerPublishableResources();
             $this->registerConsoleCommands();
@@ -94,30 +94,30 @@ class EventmieServiceProvider extends ServiceProvider
             \Illuminate\Contracts\Debug\ExceptionHandler::class,
             \Classiebit\Eventmie\Exceptions\MyHandler::class
         );
-        
-        if (\Schema::hasTable('settings')) 
+
+        if (\Schema::hasTable('settings'))
         {
-            if (Setting::find(1)) 
+            if (Setting::find(1))
             {
                 // setup mail configs
                 $this->mailConfiguration(setting('mail'));
-                
+
                 // setup regional settings
                 $this->setRegional(setting('regional'));
-                
-                // Setup oauth 
+
+                // Setup oauth
                 $this->socialite(setting('apps'));
             }
         }
-        
+
         // load eventmie resources.views
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'eventmie');
 
         // load eventmie language files publishable.lang
         $this->loadTranslationsFrom(realpath(__DIR__.'/../publishable/lang/eventmie-pro'), 'eventmie-pro');
-        
+
         // load eventmie database migrations
-        if (config('eventmie.database.autoload_migrations', true)) 
+        if (config('eventmie.database.autoload_migrations', true))
             $this->loadMigrationsFrom(realpath(__DIR__.'/../publishable/database/migrations'));
 
         /* Pagination default: Bootstrap (for Laravel 8+) */
@@ -133,10 +133,10 @@ class EventmieServiceProvider extends ServiceProvider
     {
         // voyager serviceProvider
         $this->app->register(VoyagerServiceProvider::class);
-        
+
         // socialite serviceProvider
         $this->app->register(SocialiteServiceProvider::class);
-        
+
         // ziggy serviceProvider
         $this->app->register(ZiggyServiceProvider::class);
 
@@ -151,7 +151,7 @@ class EventmieServiceProvider extends ServiceProvider
 
         // data table service provider
         $this->app->register(DataTablesServiceProvider::class);
-        
+
     }
 
     /**
@@ -168,7 +168,7 @@ class EventmieServiceProvider extends ServiceProvider
         $this->app['router']->aliasMiddleware('verified', \Classiebit\Eventmie\Middleware\EnsureEmailIsVerified::class);
         $this->app['router']->aliasMiddleware('admin.user', \Classiebit\Eventmie\Middleware\VoyagerAdminMiddleware::class);
     }
-    
+
     /**
      * Load helpers.
      */
@@ -200,7 +200,7 @@ class EventmieServiceProvider extends ServiceProvider
                 "{$publishablePath}/dummy_content/" => storage_path('app/public')
             ],
         ];
-        
+
         foreach ($publishable as $group => $paths) {
             $this->publishes($paths, $group);
         }
@@ -216,21 +216,21 @@ class EventmieServiceProvider extends ServiceProvider
         // voyager
         $voyager_config = dirname(__DIR__).'/publishable/config/voyager.php';
         $this->app['config']->set('voyager', require $voyager_config);
-        
+
         // chart js
         $charts_config = dirname(__DIR__).'/publishable/config/charts.php';
         $this->app['config']->set('charts', require $charts_config);
-        
+
         // datatables
         $datatables_config = dirname(__DIR__).'/publishable/config/datatables.php';
         $this->app['config']->set('datatables', require $datatables_config);
         /* ================================================================================= */
-        
+
         // **** ONLY MERGE EVENTMIE CONFIG ****
         $this->mergeConfigFrom(
             dirname(__DIR__).'/publishable/config/eventmie.php', 'eventmie'
         );
-        
+
         // twice because of auto-generating locales
         // voyager
         $voyager_config = dirname(__DIR__).'/publishable/config/voyager.php';
@@ -249,7 +249,7 @@ class EventmieServiceProvider extends ServiceProvider
     /**
      * Voyager custom formFields
     */
-    public function voyagerFormFields() 
+    public function voyagerFormFields()
     {
         Voyager::addFormField(OrganiserDropdown::class);
     }
@@ -262,21 +262,21 @@ class EventmieServiceProvider extends ServiceProvider
         $this->commands(Commands\InstallCommand::class);
         $this->commands(Commands\UpdateCommand::class);
         $this->commands(Commands\ControllersCommand::class);
-        
+
         $this->commands(Commands\DataRowsSeedCommand::class);
         $this->commands(Commands\MenuItemsSeedCommand::class);
         $this->commands(Commands\SettingsSeedCommand::class);
         $this->commands(Commands\TranslateCommand::class);
-        
+
     }
-    
+
     /**
      * Set socialite configs from admin panel settings
      */
     private function socialite($apis = [])
-    {   
+    {
         // facebook auth already exists
-        if(!empty($this->app['config']['services']['facebook'])) 
+        if(!empty($this->app['config']['services']['facebook']))
         {
             // activate facebook login
             $this->is_facebook = true;
@@ -294,7 +294,7 @@ class EventmieServiceProvider extends ServiceProvider
                     'client_id' =>  $apis['facebook_app_id'],
                     'client_secret' => $apis['facebook_app_secret'],
                     'redirect' => eventmie_url('login/facebook/callback'),
-                    
+
                 ]);
 
                 // activate facebook login
@@ -303,7 +303,7 @@ class EventmieServiceProvider extends ServiceProvider
         }
 
         // google auth already exists
-        if(!empty($this->app['config']['services']['google'])) 
+        if(!empty($this->app['config']['services']['google']))
         {
             // activate google login
             $this->is_google = true;
@@ -321,10 +321,10 @@ class EventmieServiceProvider extends ServiceProvider
                     'client_id' =>  $apis['google_client_id'],
                     'client_secret' => $apis['google_client_secret'],
                     'redirect' => eventmie_url('login/google/callback'),
-                    
-                    
+
+
                 ]);
-                
+
                 // activate google login
                 $this->is_google = true;
             }
@@ -334,10 +334,10 @@ class EventmieServiceProvider extends ServiceProvider
             'is_google'     => $this->is_google,
             'is_facebook'   => $this->is_facebook,
         ];
-        
+
         View::share('apis', $data);
     }
-   
+
     /**
      *  Set mail configs from admin panel settings
      */
@@ -353,14 +353,14 @@ class EventmieServiceProvider extends ServiceProvider
         $MAIL_FROM_ADDRESS  = null;
         $MAIL_FROM_NAME     = "EventmiePro@classiebit";
         if(
-            !empty($mail['mail_host']) && 
-            !empty($mail['mail_port']) && 
-            !empty($mail['mail_driver']) && 
-            !empty($mail['mail_sender_email']) && 
-            !empty($mail['mail_sender_name']) && 
-            !empty($mail['mail_encryption']) && 
-            !empty($mail['mail_username']) && 
-            !empty($mail['mail_password'])  
+            !empty($mail['mail_host']) &&
+            !empty($mail['mail_port']) &&
+            !empty($mail['mail_driver']) &&
+            !empty($mail['mail_sender_email']) &&
+            !empty($mail['mail_sender_name']) &&
+            !empty($mail['mail_encryption']) &&
+            !empty($mail['mail_username']) &&
+            !empty($mail['mail_password'])
         )
         {
             $MAIL_MAILER        = $mail['mail_driver'];
@@ -371,8 +371,8 @@ class EventmieServiceProvider extends ServiceProvider
             $MAIL_ENCRYPTION    = $mail['mail_encryption'];
             $MAIL_FROM_ADDRESS  = $mail['mail_sender_email'];
             $MAIL_FROM_NAME     = $mail['mail_sender_name'];
-        }   
-        
+        }
+
         Config::set('mail.driver', $MAIL_MAILER);
         Config::set('mail.host', $MAIL_HOST);
         Config::set('mail.port', $MAIL_PORT);
@@ -381,11 +381,11 @@ class EventmieServiceProvider extends ServiceProvider
         Config::set('mail.encryption', $MAIL_ENCRYPTION);
         Config::set('mail.from', ['address' => $MAIL_FROM_ADDRESS, 'name' =>  $MAIL_FROM_NAME]);
     }
-     
+
     /**
      * Regional settings
      * Timezone & Language
-     * 
+     *
      * Set regional settings from admin panel settings
     */
     private function setRegional($regional = [])

@@ -1,3 +1,12 @@
 {
-    "/js/index.js": "/js/index.js"
+    "/eventmie-pro/assets/js/manifest.js": "/eventmie-pro/assets/js/manifest.js",
+    "/eventmie-pro/assets/js/vendor.js": "/eventmie-pro/assets/js/vendor.js",
+    "/eventmie-pro/assets/js/auth.js": "/eventmie-pro/assets/js/auth.js",
+    "/eventmie-pro/assets/css/app.css": "/eventmie-pro/assets/css/app.css",
+    "/eventmie-pro/assets/css/vendor.css": "/eventmie-pro/assets/css/vendor.css",
+    "/eventmie-pro/assets/js/bookings_customer.js": "/eventmie-pro/assets/js/bookings_customer.js",
+    "/eventmie-pro/assets/js/events_listing.js": "/eventmie-pro/assets/js/events_listing.js",
+    "/eventmie-pro/assets/js/events_manage.js": "/eventmie-pro/assets/js/events_manage.js",
+    "/eventmie-pro/assets/js/events_show.js": "/eventmie-pro/assets/js/events_show.js",
+    "/eventmie-pro/assets/js/welcome_v1.5.js": "/eventmie-pro/assets/js/welcome_v1.5.js"
 }

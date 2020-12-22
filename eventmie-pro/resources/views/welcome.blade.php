@@ -36,7 +36,49 @@
     </div>
 </section>
 <!--Banner slider end-->
-
+<!--TRAVEL INFO-->
+<section>
+    <div id="lgx-travelinfo" class="lgx-travelinfo">
+        <div class="lgx-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="lgx-heading">
+                            <h3 class="subheading">@lang('eventmie-pro::em.how_it_works')</h3>
+                            <h2 class="heading">@lang('eventmie-pro::em.for_customers')</h2>
+                        </div>
+                    </div>
+                    <!--//main COL-->
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="lgx-travelinfo-content">
+                             <div class="lgx-travelinfo-single">
+                                <i class="fas fa-calendar-alt fa-4x"></i>
+                                <h3 class="title">1. @lang('eventmie-pro::em.customer_1')</h3>
+                                <p class="info">@lang('eventmie-pro::em.customer_1_info')</p>
+                            </div>
+                            <div class="lgx-travelinfo-single">
+                                <i class="fas fa-ticket-alt fa-4x"></i>
+                                <h3 class="title">2. @lang('eventmie-pro::em.customer_2')</h3>
+                                <p class="info">@lang('eventmie-pro::em.customer_2_info')</p>
+                            </div>
+                            <div class="lgx-travelinfo-single">
+                                <i class="fas fa-walking fa-4x"></i>
+                                <h3 class="title">3. @lang('eventmie-pro::em.customer_3')</h3>
+                                <p class="info">@lang('eventmie-pro::em.customer_3_info')</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!--//.ROW-->
+            </div>
+            <!-- //.CONTAINER -->
+        </div>
+    </div>
+</section>
+<!--TRAVEL INFO END-->
 <section class="main-search-container">
     <div >
         <div class="lgx-inner">
@@ -357,49 +399,7 @@
 </section> --}}
 <!--TRAVEL INFO END-->
 
-<!--TRAVEL INFO-->
-<section>
-    <div id="lgx-travelinfo" class="lgx-travelinfo">
-        <div class="lgx-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="lgx-heading">
-                            <h3 class="subheading">@lang('eventmie-pro::em.how_it_works')</h3>
-                            <h2 class="heading">@lang('eventmie-pro::em.for_customers')</h2>
-                        </div>
-                    </div>
-                    <!--//main COL-->
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="lgx-travelinfo-content">
-                             <div class="lgx-travelinfo-single">
-                                <i class="fas fa-calendar-alt fa-4x"></i>
-                                <h3 class="title">1. @lang('eventmie-pro::em.customer_1')</h3>
-                                <p class="info">@lang('eventmie-pro::em.customer_1_info')</p>
-                            </div>
-                            <div class="lgx-travelinfo-single">
-                                <i class="fas fa-ticket-alt fa-4x"></i>
-                                <h3 class="title">2. @lang('eventmie-pro::em.customer_2')</h3>
-                                <p class="info">@lang('eventmie-pro::em.customer_2_info')</p>
-                            </div>
-                            <div class="lgx-travelinfo-single">
-                                <i class="fas fa-walking fa-4x"></i>
-                                <h3 class="title">3. @lang('eventmie-pro::em.customer_3')</h3>
-                                <p class="info">@lang('eventmie-pro::em.customer_3_info')</p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!--//.ROW-->
-            </div>
-            <!-- //.CONTAINER -->
-        </div>
-    </div>
-</section>
-<!--TRAVEL INFO END-->
+
 
 
 @endsection
