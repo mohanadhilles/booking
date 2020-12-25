@@ -14,6 +14,13 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 .brand-name, .brand-slogan{
     right: 120px !important
 }
+.lgx-event .sub-title{
+    font-size: 1.5rem !important;
+    color: #3d3333 !important;
+    margin-bottom: 4.5rem !important;
+    overflow: overlay !important;
+    height: auto !important;
+}
 
 .sponsors-area-colorfull-border .single {
     border: 2px solid #00192f !important;
@@ -156,7 +163,7 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     background-image: linear-gradient(to right top,#f15928,#3395f1,#F15928,#F15928,#F15928) !important;
     box-shadow: 0 15px 35px rgba(27,137,239,.3), 0 5px 15px rgba(227,65,154,.2) !important;
     border-radius: 2px !important;
-    height: 185px !important;
+    height: auto !important;
 }
 
 .lgx-tab-content {
