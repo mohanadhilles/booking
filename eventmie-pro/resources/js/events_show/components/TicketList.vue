@@ -94,13 +94,13 @@
                                 <p class="mb-0 lead lead-caption text-center">{{ trans('em.questions') }}</p>
                                 <ul class="list-group m-0">
                                    <li class="list-group-item"><p class="float-right" style="float:right">{{ trans('em.question_1') }}</p>
-                                       <p class="float-left w-60"><input type="number" v-model="em_count" name="emp_count" placeholder="عدد الموظفين" class="form-control form-input-md" /></p></li>
+                                       <p class="float-left w-60"><input type="number" v-model="em_count" name="emp_count" placeholder="عدد الموظفين" class="form-control form-input-md text-left" /></p></li>
                                    <li class="list-group-item"><p class="float-right" style="float:right">{{ trans('em.question_3') }}</p>
-                                       <p class="float-left w-60"><input type="date"   v-model="prefer_date" name="prefer_date"  placeholder="التاريخ" class="form-control form-input-md"/></p></li>
+                                       <p class="float-left w-60"><input type="date"   v-model="prefer_date" name="prefer_date"  placeholder="التاريخ" class="form-control form-input-md text-left"/></p></li>
                                    <li class="list-group-item"><p class="float-right" style="float:right">{{ trans('em.question_5') }}</p>
-                                       <p class="float-left w-60"><input type="text"   v-model="company_title" name="co_title"   placeholder=" اسم الشركة" class="form-control form-input-md" /></p></li>
+                                       <p class="float-left w-60"><input type="text"   v-model="company_title" name="co_title"   placeholder=" اسم الشركة" class="form-control form-input-md text-left" /></p></li>
                                    <li class="list-group-item"><p class="float-right" style="float:right">{{ trans('em.question_6') }}</p>
-                                       <p class="float-left w-60"><input type="text"   v-model="whatsapp" name="whatsapp"  placeholder="رقم الواتس اب" class="form-control form-input-md" /></p></li>
+                                       <p class="float-left w-60"><input type="text"   v-model="whatsapp" name="whatsapp"  placeholder="رقم الواتس اب" class="form-control form-input-md text-left" /></p></li>
                                    <li class="list-group-item"><p class="float-right" style="float:right">{{ trans('em.question_2') }}</p>
                                        <p class="float-left w-60"><input type="radio"  v-model="wantsleep" :value="1" name="want_sleep"/> {{ trans('em.yes') }} <input type="radio" name="want_sleep" v-model="wantsleep" :value="0" />{{ trans('em.no') }}</p></li>
 
@@ -346,7 +346,7 @@ export default {
             em_count: null,
             prefer_date:null,
             company_title:null,
-            whatsapp:null,
+            whatsapp:+966,
             wantsleep: 1
         }
     },
