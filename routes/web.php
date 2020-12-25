@@ -13,4 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Eventmie::routes();
+    Eventmie::routes();

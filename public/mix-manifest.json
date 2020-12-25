@@ -1,12 +1,14 @@
 {
-    "/eventmie-pro/assets/js/manifest.js": "/eventmie-pro/assets/js/manifest.js",
-    "/eventmie-pro/assets/js/vendor.js": "/eventmie-pro/assets/js/vendor.js",
-    "/eventmie-pro/assets/js/auth.js": "/eventmie-pro/assets/js/auth.js",
-    "/eventmie-pro/assets/css/app.css": "/eventmie-pro/assets/css/app.css",
-    "/eventmie-pro/assets/css/vendor.css": "/eventmie-pro/assets/css/vendor.css",
-    "/eventmie-pro/assets/js/bookings_customer.js": "/eventmie-pro/assets/js/bookings_customer.js",
-    "/eventmie-pro/assets/js/events_listing.js": "/eventmie-pro/assets/js/events_listing.js",
-    "/eventmie-pro/assets/js/events_manage.js": "/eventmie-pro/assets/js/events_manage.js",
-    "/eventmie-pro/assets/js/events_show.js": "/eventmie-pro/assets/js/events_show.js",
-    "/eventmie-pro/assets/js/welcome_v1.5.js": "/eventmie-pro/assets/js/welcome_v1.5.js"
+    "/assets/js/manifest.js": "/assets/js/manifest.js",
+    "/assets/js/vendor.js": "/assets/js/vendor.js",
+    "/assets/js/auth.js": "/assets/js/auth.js",
+    "/assets/css/app.css": "/assets/css/app.css",
+    "/assets/css/vendor.css": "/assets/css/vendor.css",
+    "/assets/js/bookings_customer.js": "/assets/js/bookings_customer.js",
+    "/assets/js/bookings_organiser.js": "/assets/js/bookings_organiser.js",
+    "/assets/js/event_earning.js": "/assets/js/event_earning.js",
+    "/assets/js/events_listing.js": "/assets/js/events_listing.js",
+    "/assets/js/events_manage.js": "/assets/js/events_manage.js",
+    "/assets/js/events_show.js": "/assets/js/events_show.js",
+    "/assets/js/welcome.js": "/assets/js/welcome.js"
 }

@@ -19,8 +19,7 @@ class AddFieldToUsersTable extends Migration
             $table->integer('age')->nullable()->before('gender');
             $table->string('linkedin')->nullable()->before('age');
             $table->string('company')->nullable()->before('linkedin');
-
-            $table->date('preferred')->nullable()->after('linkedin');
+            $table->date('preferred')->nullable()->after('company');
 
 
 

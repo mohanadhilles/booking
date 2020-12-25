@@ -12,26 +12,32 @@ let mix = require('laravel-mix');
  */
 
 mix
-// common auth instance
-.js('eventmie-pro/resources/js/auth/index.js', 'eventmie-pro/assets/js/auth.js')
+    // common auth instance
+    .js('eventmie-pro/resources/js/auth/index.js', 'assets/js/auth_v1.5.js')
 
-// events create seperate vue js
-.js('eventmie-pro/resources/js/events_manage/index.js', 'eventmie-pro/assets/js/events_manage.js')
+    // events create seperate vue js
+    .js('eventmie-pro/resources/js/events_manage/index.js', 'assets/js/events_manage_v1.5.js')
 
-// events show seperate vue js
-.js('eventmie-pro/resources/js/events_show/index.js', 'eventmie-pro/assets/js/events_show.js')
+    // events show seperate vue js
+    .js('eventmie-pro/resources/js/events_show/index.js', 'assets/js/events_show_v1.5.js')
 
-// events listing seperate vue js
-.js('eventmie-pro/resources/js/events_listing/index.js', 'eventmie-pro/assets/js/events_listing.js')
+    // events listing seperate vue js
+    .js('eventmie-pro/resources/js/events_listing/index.js', 'assets/js/events_listing_v1.5.js')
 
-// customer bookings seperate vue js
-.js('eventmie-pro/resources/js/bookings_customer/index.js', 'eventmie-pro/assets/js/bookings_customer.js')
+    // events earning vue js
+    .js('eventmie-pro/resources/js/event_earning/index.js', 'assets/js/event_earning_v1.5.js')
 
-// events welcome seperate vue js
-.js('eventmie-pro/resources/js/welcome/index.js', 'eventmie-pro/assets/js/welcome_v1.5.js')
+    // customer bookings seperate vue js
+    .js('eventmie-pro/resources/js/bookings_customer/index.js', 'assets/js/bookings_customer_v1.5.js')
+
+    // bookings_organiser
+    .js('eventmie-pro/resources/js/bookings_organiser/index.js', 'assets/js/bookings_organiser_v1.5.js')
+
+    // events welcome seperate vue js
+.js('eventmie-pro/resources/js/welcome/index.js', 'assets/js/welcome_v1.5.js')
 
 // compile sass files
-.sass('eventmie-pro/resources/sass/app.scss', 'eventmie-pro/assets/css')
+.sass('eventmie-pro/resources/sass/app.scss', 'assets/css')
 .options({
     processCssUrls: false,
     autoprefixer: {
@@ -44,7 +50,7 @@ mix
 })
 
 // third-party css
-.sass('eventmie-pro/resources/sass/vendor.scss', 'eventmie-pro/assets/css')
+.sass('eventmie-pro/resources/sass/vendor.scss', 'assets/css')
 
 // compile node modules in seperate vendor.js file
 .extract();

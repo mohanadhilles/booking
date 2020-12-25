@@ -13,11 +13,12 @@ class AddFieldsToBookingsTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->boolean('answer_3')->nullable()->after('answer_2');
-            $table->boolean('answer_4')->nullable()->after('answer_3');
-            $table->boolean('answer_5')->nullable()->after('answer_4');
-
+        Schema::table('bookings', function (Blueprint $table) {
+            $table->integer('emp_count')->nullable();
+            $table->date('prefer_date')->nullable();
+            $table->string('co_title')->nullable();
+            $table->string('whatsapp')->nullable();
+            $table->string('want_sleep')->default(0);
         });
     }
 

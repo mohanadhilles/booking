@@ -1,11 +1,10 @@
 <template>
     <carousel
-        :autoplay="true"
-        :autoplayTimeout="2000"
+        :autoplay="false"
+        :autoplayTimeout="5000"
         :scrollPerPage="false"
-        :perPage="0"
+        :perPage="1"
         :paginationEnabled="false"
-        :adjustableHeight="false"
     >
         <slide
             v-for="(item, index) in banners"
@@ -26,7 +25,17 @@
                                         <h2 class="title lgx-delay lgx-fadeInDown">{{ item.title }}</h2>
 
                                         <div class="action-area">
-                                            <div class="lgx-video-area">
+                                            <div class="lgx-video-area" v-if="demo_mode">
+                                                <a class="lgx-btn lgx-btn-white" target="_blank" href="https://classiebit.com/eventmie"><i class="fas fa-cloud-download-alt"></i> Free Demo</a>
+
+                                                <a class="lgx-btn lgx-btn-success" target="_blank" href="https://classiebit.com/eventmie-pro"><i class="fas fa-shopping-cart"></i> Purchase PRO </a>
+
+                                                <a class="lgx-btn lgx-btn-white" target="_blank" href="https://eventmie-pro-docs.classiebit.com"><i class="fas fa-book"></i> Docs </a>
+
+                                                <a class="lgx-btn lgx-btn-primary" target="_blank" href="https://eventmie-pro-docs.classiebit.com/docs/1.5/changelog/changes"><i class="fas fa-book"></i> See What's New v1.5 </a>
+                                            </div>
+
+                                            <div class="lgx-video-area" v-else>
                                                 <a class="lgx-btn lgx-btn-red" :href="getRoute('eventmie.events_index')"><i class="fas fa-calendar-day"></i> {{ trans('em.browse_events') }}</a>
 
                                                 <!-- if guest -->
@@ -89,16 +98,16 @@ export default {
 
     data() {
         return {
-            check : 1
+            check: 1
         }
     },
 
     methods: {
         // return route with event slug
-        getRoute(name){
+        getRoute(name) {
             return route(name);
         },
-    },
 
+    }
 }
 </script>

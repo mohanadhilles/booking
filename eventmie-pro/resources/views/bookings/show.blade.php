@@ -139,6 +139,32 @@
 
                                 </table>
                             </div>
+                            <div class="col-md-12">
+                                <h3>@lang('eventmie-pro::em.answers')</h3>
+                                <table class="table table-striped table-hover">
+                                    <tr>
+                                        <th>@lang('eventmie-pro::em.question_1')</th>
+                                        <td>{{$booking['emp_count']}}</td>
+                                    </tr>     
+                                    <tr>
+                                        <th>@lang('eventmie-pro::em.question_2')</th>
+                                        <td>{{$booking['want_sleep'] == '1' ? "yes" : "no" }} </td>
+                                    </tr>     
+                                    <tr>
+                                        <th>@lang('eventmie-pro::em.question_3')</th>
+                                        <td>{{$booking['prefer_date']}}</td>
+                                    </tr>     
+                                    <tr>
+                                        <th>@lang('eventmie-pro::em.question_5')</th>
+                                        <td>{{$booking['co_title']}}</td>
+                                    </tr>     
+                                    <tr>
+                                        <th>@lang('eventmie-pro::em.question_6')</th>
+                                        <td>{{$booking['whatsapp']}}</td>
+                                    </tr>     
+                                                             
+                                </table>
+                            </div>
                         </div>
                         
                         {{-- payment information --}}

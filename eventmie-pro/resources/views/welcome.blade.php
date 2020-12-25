@@ -12,18 +12,18 @@
                 <div id="lgx-main-slider" class="owl-carousel lgx-slider-navbottom">
                     <!--Vue slider-->
                     @guest
-                    <banner-slider 
-                        :banners="{{ json_encode($banners, JSON_HEX_APOS) }}" 
-                        :is_logged="{{ 0 }}" 
+                    <banner-slider
+                        :banners="{{ json_encode($banners, JSON_HEX_APOS) }}"
+                        :is_logged="{{ 0 }}"
                         :is_customer="{{ 0 }}"
                         :is_organiser="{{ 0 }}"
                         :is_admin="{{ 0 }}"
                         :is_multi_vendor="{{ setting('multi-vendor.multi_vendor') ? 1 : 0 }}"
                     ></banner-slider>
                     @else
-                    <banner-slider 
-                        :banners="{{ json_encode($banners, JSON_HEX_APOS) }}" 
-                        :is_logged="{{ 1 }}" 
+                    <banner-slider
+                        :banners="{{ json_encode($banners, JSON_HEX_APOS) }}"
+                        :is_logged="{{ 1 }}"
                         :is_customer="{{ Auth::user()->hasRole('customer') ? 1 : 0 }}"
                         :is_organiser="{{ Auth::user()->hasRole('organiser') ? 1 : 0 }}"
                         :is_admin="{{ Auth::user()->hasRole('admin') ? 1 : 0 }}"
@@ -68,7 +68,7 @@
                                 <h3 class="title">3. @lang('eventmie-pro::em.customer_3')</h3>
                                 <p class="info">@lang('eventmie-pro::em.customer_3_info')</p>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                             <div class="video-container">
                                 <iframe src="https://www.youtube.com/embed/WnNfN1a6o34" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                               </div>
-                              
+
                     </div>
                 </div>
             </div>
@@ -212,11 +212,11 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="row">
                     <div class="offset-1 col-10 col-lg-offset-1 col-lg-10 section-m">
-                        <event-listing :events="{{ json_encode($upcomming_events, JSON_HEX_APOS) }}" 
-                            :currency="{{ json_encode($currency, JSON_HEX_APOS) }}"    
+                        <event-listing :events="{{ json_encode($upcomming_events, JSON_HEX_APOS) }}"
+                            :currency="{{ json_encode($currency, JSON_HEX_APOS) }}"
                         >
                         </event-listing>
                     </div>
@@ -225,7 +225,7 @@
                 <div class="section-btn-area">
                     <a class="lgx-btn lgx-btn-red" href="{{ eventmie_url('events') }}"><i class="fas fa-calendar-day"></i> @lang('eventmie-pro::em.view_all_events')</a>
                 </div>
-                
+
             </div><!-- //.CONTAINER -->
         </div><!-- //.INNER -->
     </div>
@@ -309,7 +309,7 @@
 @endif    --}}
 <!--cities_events END-->
 
-    
+
 <!--Blogs-->
 {{-- @if(!empty($posts))
 <section>
@@ -342,7 +342,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>    
+                    </div>
                     @endforeach
                 </div>
                 <div class="section-btn-area">
@@ -387,7 +387,7 @@
                                 <h3 class="title">3. @lang('eventmie-pro::em.organiser_3')</h3>
                                 <p class="info">@lang('eventmie-pro::em.organiser_3_info')</p>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
