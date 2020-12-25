@@ -180,6 +180,9 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
     border-radius: 2px !important;
     box-shadow:none !important;
 }
+.lgxmessage{
+    min-height: 100px !important;
+}
 .lgx-panel .lgx-single-schedule .schedule-info .time {
     color: #000000 !important;
     border-radius: 2px !important;

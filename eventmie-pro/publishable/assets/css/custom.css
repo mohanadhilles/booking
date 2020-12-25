@@ -190,6 +190,9 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 .invalid-feedback{
     color: #ffffff !important !important;
 }
+.lgxmessage{
+    min-height: 100px !important;
+}
 .lgx-panel .lgx-single-schedule .schedule-info:hover {
     transition-duration: .3s;
     background: #F15928 !important;
