@@ -36,7 +36,7 @@
                         <h3 class="footer-title">@lang('eventmie-pro::em.social')</h3>
                         <p class="text">@lang('eventmie-pro::em.social_find')</p>
                         <ul class="list-inline lgx-social-footer">
-                            <li><a href="{{ 'https://www.facebook.com/'.setting('social.facebook') }}" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                            <li><a href="{{ 'https://www.snapchat.com/add/'.setting('social.facebook') }}" target="_blank"><i class="fab fa-snapchat" aria-hidden="true"></i></a></li>
                             <li><a href="{{ 'https://twitter.com/'.setting('social.twitter') }}" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                             <li><a href="{{ setting('social.instagram') }}" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                             <li><a href="{{ setting('social.linkedin') }}" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
