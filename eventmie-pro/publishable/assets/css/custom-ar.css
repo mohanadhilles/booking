@@ -158,6 +158,9 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 .lgx-about-content-area .lgx-heading .subheading{
     color: #181b1c;
 }
+.invalid-feedback{
+    color: #ffffff !important;
+}
 .lgx-about-service .lgx-single-service-color{
     background: #f15928 !important;
     background-image: linear-gradient(to right top,#f15928,#3395f1,#F15928,#F15928,#F15928) !important;
