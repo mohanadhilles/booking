@@ -18,7 +18,7 @@ class AddFieldsToBookingsTable extends Migration
             $table->date('prefer_date')->nullable();
             $table->string('co_title')->nullable();
             $table->string('whatsapp')->nullable();
-            $table->string('want_sleep')->default(0);
+            $table->boolean('want_sleep')->default(0);
         });
     }
 
