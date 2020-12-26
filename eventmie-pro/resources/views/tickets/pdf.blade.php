@@ -81,9 +81,8 @@
                                     <img src="{{$img_path.'/storage/'.setting('site.logo')}}" style="width: 64px;">
                                 </td>
                                 <td style="padding: 10px;width: 60%;" class="text-left">
-                                    <p class="m-heading text-left" style="text-align: left">{{ (setting('site.site_name') ? setting('site.site_name') : config('app.name')) }}</p>
-                                    <p class="s-heading">{{ setting('site.site_slogan') }}</p>
-                                    <p class="s-heading">{{$booking['customer_id']}}</p>
+                                    <p class="m-heading">{{ (setting('site.site_name') ? setting('site.site_name') : config('app.name')) }}</p>
+                                    <p class="s-heading mr-5">{{$booking['customer_id']}}</p>
                                 </td>
                             </tr>
                         </table>
