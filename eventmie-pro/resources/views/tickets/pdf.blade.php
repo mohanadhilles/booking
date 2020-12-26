@@ -95,9 +95,9 @@
         <div>
             <table>
                 <tr>
-                    <td style="padding: 20px 10px 10px 10px;width: 30%;" class="text-right">
+                    {{-- <td style="padding: 20px 10px 10px 10px;width: 30%;" class="text-right">
                         <img style="width: 100%;border-radius: 12px;" src="{{$img_path.'/storage/'.$event->thumbnail}}">
-                    </td>
+                    </td> --}}
                     <td style="padding: 10px;width: 70%;" class="text-left">
                         <div>
                             <table>
