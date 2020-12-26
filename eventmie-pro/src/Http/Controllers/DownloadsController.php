@@ -70,7 +70,7 @@ class DownloadsController extends Controller
             'id'            => $booking['id'],
             'order_number'  => $booking['order_number'],
         ];
-        // $this->createQrcode($booking, $qrcode_data);
+        $this->createQrcode($booking, $qrcode_data);
 
         // get event data for ticket pdf
         $event      = $this->event->get_event(null, $booking['event_id']);
@@ -84,7 +84,7 @@ class DownloadsController extends Controller
         $img_path   = str_replace('https://', 'http://', url(''));
         $pdf_html   = (string) \View::make('eventmie::tickets.pdf', compact('booking', 'event', 'currency', 'img_path'));
         $pdf_name   = $booking['id'].'-'.$booking['order_number'];
-        // $this->generatePdf($pdf_html, $pdf_name, $booking);
+        $this->generatePdf($pdf_html, $pdf_name, $booking);
         
         // download PDF
         $path           = '/storage/ticketpdfs/'.$booking['customer_id'];
@@ -92,7 +92,7 @@ class DownloadsController extends Controller
         if (!\File::exists($pdf_file))
             abort('404');
 
-        return Eventmie::view('eventmie::tickets.pdf', compact('booking', 'event', 'currency', 'img_path'));
+        return response()->download($pdf_file);
         
     }
 
