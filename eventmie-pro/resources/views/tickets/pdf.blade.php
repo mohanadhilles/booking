@@ -95,53 +95,10 @@
         <div>
             <table>
                 <tr>
-                    {{-- <td style="padding: 20px 10px 10px 10px;width: 30%;" class="text-right">
+                    <td style="padding: 20px 10px 10px 10px;width: 30%;" class="text-right">
                         <img style="width: 100%;border-radius: 12px;" src="{{$img_path.'/storage/'.$event->thumbnail}}">
-                    </td> --}}
-                    <td style="padding: 10px;width: 70%;" class="text-left">
-                        <div>
-                            <table>
-                                <tr>
-                                    <td class="text-left">
-                                        <img src="{{ $img_path.'/storage/extras/red-carpet.png' }}" style="width: 24px;"> 
-                                        <p>{{$event->title}}</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left">
-                                        <img src="{{ $img_path.'/storage/extras/location.png' }}" style="width: 24px;">
-                                        <p>{{ucfirst($event->venue)}} | {{ucfirst($event->address)}}</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left">
-                                        <img src="{{ $img_path.'/storage/extras/calendar.png' }}" style="width: 24px;">
-                                        <p>
-                                        @if($booking['event_start_date'] == $booking['event_end_date'])
-                                        {{ date('d-M-Y', strtotime($booking['event_start_date'])) }}
-                                        @else
-                                        {{ date('d-M-Y', strtotime($booking['event_start_date'])).' - '.date('d-M-Y', strtotime($booking['event_end_date'])) }}
-                                        @endif
-
-                                        {{ ' ('.date('g:iA', strtotime($booking['event_start_time'])).' - '.date('g:iA', strtotime($booking['event_end_time'])).')' }}
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left">
-                                        <img src="{{ $img_path.'/storage/extras/identity.png' }}" style="width: 24px;">
-                                        <p>{{ ucfirst($booking['customer_name']) }}</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left">
-                                        <img src="{{ $img_path.'/storage/extras/ticket.png' }}" style="width: 24px;">
-                                        <p>{{ $booking['ticket_title'].' '.$booking['ticket_price'].' '.$currency }} <small>(x{{$booking['quantity']}})</small></p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
                     </td>
+                
                     
                 </tr>
             </table>
