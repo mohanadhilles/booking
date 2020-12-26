@@ -711,3 +711,8 @@ export default {
     },
 }
 </script>
+<style>
+.justify-content-between.lh-condensed{
+    text-align: right !important;
+}
+</style>

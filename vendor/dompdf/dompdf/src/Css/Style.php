@@ -3301,11 +3301,11 @@ class Style
         $this->_props_computed["z_index"] = null;
         $this->_prop_cache["z_index"] = null;
 
-        if (round($val) != $val && $val !== "auto") {
+        if (round((int)$val) != (int)$val && (int)$val !== "auto") {
             return;
         }
 
-        $this->_props_computed["z_index"] = $val;
+        $this->_props_computed["z_index"] = (int)$val;
     }
 
     /**
