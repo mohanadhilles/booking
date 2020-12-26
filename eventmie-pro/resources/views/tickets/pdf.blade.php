@@ -128,7 +128,7 @@
         <div>
             <table>
                 <tr>
-                    <td style="text-align: center;padding-top: 25px;">
+                    <td style="text-align: center;padding-top: 10%;">
                         @php $qrcode = $booking['customer_id'].'/'.$booking['id'].'-'.$booking['order_number'].'.png'; @endphp
                         <img src="{{$img_path.'/storage/qrcodes/'.$qrcode}}" style="width: 70%;">
                     </td>
