@@ -14,3 +14,11 @@
 <script type="text/javascript">
     var my_lang = {!! json_encode(session('my_lang', 'en')) !!};
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HX6816DQT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6HX6816DQT');
+</script>
