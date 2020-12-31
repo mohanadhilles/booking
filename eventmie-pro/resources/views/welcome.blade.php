@@ -38,7 +38,7 @@
 <!--Banner slider end-->
 <!--TRAVEL INFO-->
 <section>
-    <div id="lgx-travelinfo" class="lgx-travelinfo">
+    <div id="lgx-travelinfo" class="lgx-travelinfo  wow fadeInUp mt-5 owl-rtl owl-loaded owl-drag" data-wow-duration="1.5s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
         <div class="lgx-inner">
             <div class="container">
                 <div class="row">
@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 wow fadeInUp mt-5 owl-rtl owl-loaded owl-drag" data-wow-duration="1.5s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
                             <div class="video-container">
                                 <iframe src="https://www.youtube.com/embed/WnNfN1a6o34" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                               </div>
@@ -126,9 +126,41 @@
     </div>
 </section> --}}
 <!--Event Search end-->
+<section>
+    <div>
+        <div class="lgx-inner">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="lgx-heading">
+                            <h2 class="heading"><i class="fas fa-plus"></i> @lang('eventmie-pro::em.activity')</h2>
+                        </div>
+                    </div>
+                </div>
 
-
-
+                <div class="row">
+                    <div class="offset-1 col-10 col-lg-offset-1 col-lg-10 section-m">
+                        <section class="our-team-section">
+                            <div class="team_slider owl-carousel wow fadeInUp mt-5" data-wow-duration="1.5s" data-wow-delay=".3s">
+                                @foreach($activitis as $activity)
+                                <div class="item">
+                                    <div class="team-item">
+                                        <div class="img">
+                                            <img src="{{env('APP_URL/') . $activity->image }}" class="img-fluid" alt="">
+                                        </div>
+                                        <h3>{{$activity->title}}</h3>
+                                        <p>{{$activity->subtitle}}</p>
+                                    </div>
+                                </div>
+                            @endforeach
+                            </div>
+                        </section> 
+                    </div>
+                </div>
+            </div><!-- //.CONTAINER -->
+        </div><!-- //.INNER -->
+    </div>
+</section>
 
 
 <!--Event Featured Start-->
@@ -146,7 +178,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="offset-1 col-10 col-lg-offset-1 col-lg-10 section-m">
+                    <div class="offset-1 col-10 col-lg-offset-1 col-lg-10 section-m  wow fadeInUp mt-5 owl-rtl owl-loaded owl-drag" data-wow-duration="1.5s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <event-listing :events="{{ json_encode($featured_events, JSON_HEX_APOS) }}"
                                         :currency="{{ json_encode($currency, JSON_HEX_APOS) }}"
                         >

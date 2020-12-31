@@ -619,5 +619,7 @@ return [
     'question_5'                         => "There is a special discount for the corporate employees! mention your company name!",
     'question_6'                         => "Do you prefer to contact you through, WhatsApp?",
 'answers'                               => "Client Answers",
+
+'activity' => 'Activity'
 ];
 

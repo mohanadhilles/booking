@@ -4,7 +4,7 @@
         <div class="lgx-inner-footer">
             <div class="container">
                 <div class="lgx-footer-area">
-                    <div class="lgx-footer-single footer-brand">
+                    <div class="lgx-footer-single footer-brand  wow fadeInUp mt-5 owl-rtl owl-loaded owl-drag" data-wow-duration="1.5s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <img class="footer-brand-logo" src="/storage/{{ setting('site.logo') }}" alt="{{ (setting('site.site_name') ? setting('site.site_name') : config('app.name')) }}"/>
                         <p class="footer-brand-name">{{ (setting('site.site_name') ? setting('site.site_name') : config('app.name')) }}</p>
                         <p class="footer-brand-slogan">{{ setting('site.site_slogan') }}</p>

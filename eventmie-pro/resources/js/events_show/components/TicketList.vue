@@ -101,8 +101,8 @@
                                        <p class="float-left w-60"><input type="text"   v-model="company_title" name="co_title"   placeholder=" اسم الشركة" class="form-control form-input-md text-left" /></p></li>
                                    <li class="list-group-item"><p class="float-right" style="float:right">{{ trans('em.question_6') }}</p>
                                        <p class="float-left w-60"><input type="text"   v-model="whatsapp" name="whatsapp"  placeholder="رقم الواتس اب" class="form-control form-input-md text-left" /></p></li>
-                                   <li class="list-group-item"><p class="float-right" style="float:right">{{ trans('em.question_2') }}</p>
-                                       <p class="float-left w-60"><input type="radio"  v-model="wantsleep" :value="1" name="want_sleep"/> {{ trans('em.yes') }} <input type="radio" name="want_sleep" v-model="wantsleep" :value="0" />{{ trans('em.no') }}</p></li>
+                                   <!-- <li class="list-group-item"><p class="float-right" style="float:right">{{ trans('em.question_2') }}</p>
+                                       <p class="float-left w-60"><input type="radio"  v-model="wantsleep" :value="1" name="want_sleep"/> {{ trans('em.yes') }} <input type="radio" name="want_sleep" v-model="wantsleep" :value="0" />{{ trans('em.no') }}</p></li> -->
 
 
                                 </ul>

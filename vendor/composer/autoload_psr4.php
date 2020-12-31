@@ -11,6 +11,7 @@ return array(
     'XdgBaseDir\\' => array($vendorDir . '/dnoegel/php-xdg-base-dir/src'),
     'TijsVerkoyen\\CssToInlineStyles\\' => array($vendorDir . '/tijsverkoyen/css-to-inline-styles/src'),
     'Tightenco\\Ziggy\\' => array($vendorDir . '/tightenco/ziggy/src'),
+    'Tests\\' => array($baseDir . '/tests'),
     'TCG\\Voyager\\' => array($vendorDir . '/tcg/voyager/src'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Php73\\' => array($vendorDir . '/symfony/polyfill-php73'),

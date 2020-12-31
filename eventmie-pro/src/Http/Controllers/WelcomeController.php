@@ -42,16 +42,17 @@ class WelcomeController extends Controller
         $featured_events     = $this->get_featured_events();
         $top_selling_events  = $this->get_top_selling_events();
         $upcomming_events    = $this->get_upcomming_events();
-        $banners             = $this->banner->get_banners();
+        $banners             = $this->banner->get_banners()->where('status' ,1);
         $categories          = $this->category->get_categories();
         $currency            = setting('regional.currency_default');
         $cities_events       = $this->event->get_cities_events();
-        // dd($cities_events);
+        $activitis            = $this->banner->get_banners()->where('status', 0);
         //get blog for welcome page
         $posts               = $this->post->index();
         
         return Eventmie::view($view, 
             compact(
+                'activitis',
                 'featured_events', 'top_selling_events', 
                 'upcomming_events', 'banners',
                 'categories', 'posts', 'currency', 'cities_events', 
