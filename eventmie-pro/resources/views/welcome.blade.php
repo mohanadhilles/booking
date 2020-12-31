@@ -146,7 +146,7 @@
                                 <div class="item">
                                     <div class="team-item">
                                         <div class="img">
-                                            <img src="{{env('APP_URL/storage/') . $activity->image }}" class="img-fluid" alt="">
+                                            <img src="{{env('APP_URL').'/storage/' . $activity->image }}" class="img-fluid" alt="">
                                         </div>
                                         <h3>{{$activity->title}}</h3>
                                         <p>{{$activity->subtitle}}</p>
