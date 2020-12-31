@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta name="google-site-verification" content="RSqvclQGRBvlEFuS9ybWLPjgFsADh_wJpcWZa1o3Djk" />
+
     @include('eventmie::layouts.meta')
 
     @include('eventmie::layouts.favicon')
