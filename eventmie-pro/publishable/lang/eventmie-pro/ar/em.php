@@ -315,8 +315,8 @@ return [
     'camera_access_required'           => "مطلوب الوصول إلى الكاميرا !" ,
     'camera_not_detected'              => "لم يتم الكشف عن الكاميرا!" ,
     'camera_https_required'            => "كاميرا الوصول تتطلب HTTPS!" ,
-    'offline'                          => "غير متصل على الانترنت",
-    'cash_on_arrival'                  => "الدفع عند الوصول" ,
+    'offline'                          => "الدفع بعد التحقق",
+    'cash_on_arrival'                  => "الدفع بعد التحقق" ,
     'cart'                             => "عربة التسوق",
     'user_disabled'                    => 'تم تعطيل الحساب مؤقتًا! اتصل بالدعم!',
 

@@ -1,5 +1,6 @@
 @extends('eventmie::layouts.app')
-
+<link rel="stylesheet" type="text/css" href="owl/plugins/owlslider/assets/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="owl/css/style.css">
 @section('title') @lang('eventmie-pro::em.home') @endsection
 
 @section('content')
@@ -126,42 +127,6 @@
     </div>
 </section> --}}
 <!--Event Search end-->
-<section>
-    <div>
-        <div class="lgx-inner">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="lgx-heading">
-                            <h2 class="heading"><i class="fas fa-plus"></i> @lang('eventmie-pro::em.activity')</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="offset-1 col-10 col-lg-offset-1 col-lg-10 section-m">
-                        <section class="our-team-section">
-                            <div class="team_slider owl-carousel wow fadeInUp mt-5" data-wow-duration="1.5s" data-wow-delay=".3s">
-                                @foreach($activitis as $activity)
-                                <div class="item">
-                                    <div class="team-item">
-                                        <div class="img">
-                                            <img src="{{env('APP_URL').'/storage/' . $activity->image }}" class="img-fluid" alt="">
-                                        </div>
-                                        <h3>{{$activity->title}}</h3>
-                                        <p>{{$activity->subtitle}}</p>
-                                    </div>
-                                </div>
-                            @endforeach
-                            </div>
-                        </section> 
-                    </div>
-                </div>
-            </div><!-- //.CONTAINER -->
-        </div><!-- //.INNER -->
-    </div>
-</section>
-
 
 <!--Event Featured Start-->
 @if(!empty($featured_events))
@@ -195,6 +160,43 @@
     </div>
 </section>
 @endif
+
+<section>
+    <div>
+        <div class="lgx-inner">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="lgx-heading">
+                            <h2 class="heading"><i class="fas fa-plus"></i> @lang('eventmie-pro::em.activity')</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="offset-1 col-10 col-lg-offset-1 col-lg-10 section-m">
+                        <section class="our-team-section">
+                            <div class="team_slider owl-carousel wow fadeInUp mt-5" data-wow-duration="1.5s" data-wow-delay=".3s">
+                                @foreach($activitis as $activity)
+                                    <div class="item">
+                                        <div class="team-item">
+                                            <div class="img">
+                                                <img src="{{env('APP_URL').'/storage/' . $activity->image }}" class="img-fluid" alt="">
+                                            </div>
+                                            <h3>{{$activity->title}}</h3>
+                                            <p>{{$activity->subtitle}}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div><!-- //.CONTAINER -->
+        </div><!-- //.INNER -->
+    </div>
+</section>
+
 <!--Event Featured END-->
 
 <!--Event Top-selling Start-->
@@ -442,3 +444,53 @@
 </script>
 <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
 @stop
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="owl/js/jquery-3.4.1.min.js"></script>
+<script src="owl/js/wow.min.js"></script>
+<script src="owl/plugins/owlslider/owl.carousel.min.js"></script>
+<script src="owl/js/main.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.team_slider').owlCarousel({
+            // center: true,
+            items: 3,
+            loop:true,
+            autoplay:true,
+            autoplayTimeout:1000,
+            autoplayHoverPause:true,
+            rtl: true,
+            nav:false,
+            navText: ["<i class='fas fa-arrow-right' title='السابق'></i>","<i class='fas fa-arrow-left' title='التالي'></i>"],
+            dots:false,
+            navSpeed: 2000,
+            autoplaySpeed: 1500,
+            // animateOut: 'fadeOut',
+            // animateIn: 'fadeIn',
+            margin:10,
+            smartSpeed:450,
+            responsive : {
+                // breakpoint from 0 up
+                0 : {
+                    items:1.25,
+                    center: true,
+                },
+                // breakpoint from 480 up
+                480 : {
+                    items:2,
+                },
+                // breakpoint from 768 up
+                768 : {
+                    items:3,
+                },
+                // breakpoint from 768 up
+                992 : {
+                    items:4,
+                }
+            }
+        });
+    });
+</script>
+

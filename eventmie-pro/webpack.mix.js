@@ -18,7 +18,7 @@ mix
 // .js('resources/js/auth/index.js', 'publishable/assets/js/auth_v1.5.js')
 
 // // events create seperate vue js
-// .js('resources/js/events_manage/index.js', 'publishable/assets/js/events_manage_v1.5.js')
+.js('resources/js/events_manage/index.js', 'publishable/assets/js/events_manage_v1.5.js')
 
 // // events show seperate vue js
 .js('resources/js/events_show/index.js', 'publishable/assets/js/events_show_v1.5.js')

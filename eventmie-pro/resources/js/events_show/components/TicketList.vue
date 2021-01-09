@@ -260,9 +260,7 @@
                                         v-if="
                                             (is_organiser > 0 && is_offline_payment_organizer > 0) ||
                                             (is_customer > 0 && is_offline_payment_customer > 0) ||
-                                            (is_admin > 0)
-                                        "
-                                    >
+                                            (is_admin > 0)">
                                         <input type="radio" class="custom-control-input" id="payment_method_offline" name="payment_method" v-model="payment_method" value="offline">
                                         <label class="custom-control-label" for="payment_method_offline"> &nbsp;<i class="fas fa-suitcase-rolling"></i> {{ trans('em.offline') }} <small>({{ trans('em.cash_on_arrival') }})</small></label>
                                     </div>
@@ -346,7 +344,7 @@ export default {
             em_count: null,
             prefer_date:null,
             company_title:null,
-            whatsapp:+966,
+            whatsapp:966,
             wantsleep: 1
         }
     },

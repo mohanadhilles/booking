@@ -128,7 +128,7 @@ return [
     "Tag"                       => "بطاقة شعار",
     "Tags"                      => "العلامات",
     "Blog Posts"                => "مشاركة مدونة",
-    
+
     "Dashboard"                 => "لوحة القيادة",
     "Media"                     => "وسائل الإعلام",
     "Menu Builder"              => "منشئ القائمة" ,
@@ -142,7 +142,7 @@ return [
     'refunded'                  => "تم رد الأموال" ,
     'enabled'                   => "ممكّن" ,
     'disabled'                  => "معاق",
-    'offline'                   => "غير متصل على الانترنت",
+    'offline'                   => "الدفع بعد التحقق",
     'online'                    => "عبر الانترنت",
     'total'                     => "مجموع",
     'Notifications'             => "إشعارات",
@@ -159,11 +159,11 @@ return [
     'Order'                     => "طلب",
     'Payout'                    => "سيصرف",
     'Grand Total'               => "المبلغ الإجمالي",
-    
+
     'Set Callback URL on your Google App Dashboard'    => "تعيين عنوان URL لرد الاتصال على لوحة تحكم تطبيقات Google" ,
     'Set Callback URL on your Facebook App Dashboard'  => "تعيين عنوان URL لرد الاتصال على لوحة تحكم تطبيق Facebook" ,
     'Set Callback URL on your PayPal Dashboard'        => "تعيين عنوان URL لرد الاتصال على لوحة تحكم PayPal" ,
-    
+
     "ID"                        => "هوية شخصية",
     "Name"                      => "اسم",
     "Created At"                => "أنشئت في",
