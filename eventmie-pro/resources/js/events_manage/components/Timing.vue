@@ -5,16 +5,16 @@
                 <div class="panel-heading">
                     <form ref="form" @submit.prevent="validateForm" method="POST" enctype="multipart/form-data"  class="lgx-contactform">
                         <input type="hidden" name="event_id" v-model="event_id">
-                        
+
                         <div class="row">
 
                             <div class="col-xs-12 col-sm-4 col-md-6">
                                 <div class="form-group">
                                     <label for="start_date">{{ trans('em.start_date') }}</label>
-                                    <date-picker 
-                                        v-model="start_date" 
-                                        type="date" 
-                                        format="YYYY-MM-DD" 
+                                    <date-picker
+                                        v-model="start_date"
+                                        type="date"
+                                        format="YYYY-MM-DD"
                                         :placeholder="trans('em.start_date')"
                                         :class="'form-control'"
                                         :lang="$vue2_datepicker_lang"
@@ -27,10 +27,10 @@
                             <div class="col-xs-12 col-sm-4 col-md-6">
                                 <div class="form-group">
                                     <label for="start_time">{{ trans('em.start_time') }}</label>
-                                    <date-picker 
-                                        v-model="start_time" 
-                                        type="time" 
-                                        format="HH:mm" 
+                                    <date-picker
+                                        v-model="start_time"
+                                        type="time"
+                                        format="HH:mm"
                                         :placeholder="trans('em.start_time')"
                                         :class="'form-control'"
                                         :lang="$vue2_datepicker_lang"
@@ -43,9 +43,9 @@
                             <div class="col-xs-12 col-sm-4 col-md-6">
                                 <div class="form-group">
                                     <label for="end_date">{{ trans('em.end_date') }}</label>
-                                    <date-picker 
-                                        v-model="end_date" 
-                                        type="date" 
+                                    <date-picker
+                                        v-model="end_date"
+                                        type="date"
                                         format="YYYY-MM-DD"
                                         :placeholder="trans('em.end_date')"
                                         :class="'form-control'"
@@ -59,16 +59,16 @@
                             <div class="col-xs-12 col-sm-4 col-md-6">
                                 <div class="form-group">
                                     <label for="end_time">{{ trans('em.end_time') }}</label>
-                                    <date-picker 
-                                        v-model="end_time" 
-                                        type="time" 
-                                        format="HH:mm" 
+                                    <date-picker
+                                        v-model="end_time"
+                                        type="time"
+                                        format="HH:mm"
                                         :placeholder="trans('em.end_time')"
                                         :class="'form-control'"
                                         :lang="$vue2_datepicker_lang"
                                     ></date-picker>
                                     <input type="hidden" class="form-control"  :value="convert_time(end_time)" name="end_time" 	 v-validate="'required'">
-                                    <span v-show="errors.has('end_time')" class="help text-danger">{{ errors.first('end_time') }}</span> 
+                                    <span v-show="errors.has('end_time')" class="help text-danger">{{ errors.first('end_time') }}</span>
                                 </div>
                             </div>
 
@@ -80,20 +80,20 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-12" 
+                            <div class="col-md-12"
                                 v-if="!repetitive && check_date(start_date) && check_date(end_date) && check_time(start_time) && check_time(end_time)"
                             >
                                 <p class="text">{{ trans('em.start') }} {{ changeDateFormat(start_date, "YYYY-MM-DD") }} {{ trans('em.end') }} {{ changeDateFormat(end_date, "YYYY-MM-DD") }}</p>
-                                
+
                                 <!-- In case of simple : total hours (from start date to end date) -->
                                 <h4 class="location">
-                                    <strong>{{ trans('em.duration') }} </strong> 
+                                    <strong>{{ trans('em.duration') }} </strong>
                                     {{ countDays(start_date, end_date)+(countDays(start_date, end_date) > 1 ? ' days' : ' day')  }}
                                     &nbsp;&nbsp;|&nbsp;&nbsp;
-                                   
-                                    {{ 
+
+                                    {{
                                         counthours(moment(start_date).format('YYYY-MM-DD') +' '+ moment(start_time).format('HH:mm:ss '),
-                                                moment(end_date).format('YYYY-MM-DD')+' '+ moment(end_time).format('HH:mm:ss ')) + 
+                                                moment(end_date).format('YYYY-MM-DD')+' '+ moment(end_time).format('HH:mm:ss ')) +
                                         (counthours(moment(start_date).format('YYYY-MM-DD') +' '+ moment(start_time).format('HH:mm:ss '),
                                                 moment(end_date).format('YYYY-MM-DD')+' '+ moment(end_time).format('HH:mm:ss ')) > 1 ? ' hours' : ' hour')
                                     }}
@@ -110,33 +110,33 @@
                                 </div>
                             </div>
 
-                            
+
                             <div class="col-xs-12 col-sm-6 col-md-6" v-if="repetitive && repetitive_type.value != 1 && repetitive_type_temp != 1">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" v-model="merge_schedule" value = "1"  name="merge_schedule"> 
+                                        <input type="checkbox" v-model="merge_schedule" value = "1"  name="merge_schedule">
                                         {{ trans('em.merge_schedule') }}
                                     </label>
                                 </div>
                                 <p v-if="!merge_schedule">{{ trans('em.merge_false')}}</p>
                                 <p v-if="merge_schedule">{{ trans('em.merge_true')}}</p>
                             </div>
-                           
+
 
                             <div class="col-xs-12 col-sm-8 col-md-8">
-                                <div class="form-group" v-if="repetitive" >  
+                                <div class="form-group" v-if="repetitive" >
                                     <label>{{ trans('em.repetitive_type') }}</label>
-                                    <multiselect 
-                                        v-model="repetitive_type" 
+                                    <multiselect
+                                        v-model="repetitive_type"
                                         :options="repetitive_type_options"
-                                        :placeholder="'-- '+trans('em.select_repetitive_type')" 
-                                        label="text" 
-                                        track-by="value" 
+                                        :placeholder="'-- '+trans('em.select_repetitive_type')"
+                                        label="text"
+                                        track-by="value"
                                         :multiple="false"
-                                        :close-on-select="true" 
-                                        :clear-on-select="false" 
-                                        :hide-selected="false" 
-                                        :preserve-search="true" 
+                                        :close-on-select="true"
+                                        :clear-on-select="false"
+                                        :hide-selected="false"
+                                        :preserve-search="true"
                                         :preselect-first="true"
                                         :allow-empty="false"
                                         @input="event_type"
@@ -147,10 +147,10 @@
                         </div>
 
                         <div class="row"
-                            v-if="validDate()" 
+                            v-if="validDate()"
                         >
                             <div class="col-md-12">
-                                <div 
+                                <div
                                     v-for="(item, index) in calculate_months" :key="index">
                                     <schedule-component
                                         :sch_index="index"
@@ -167,13 +167,13 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-md-12">
                                 <button type="submit" class="btn lgx-btn btn-block"><i class="fas fa-sd-card"></i> {{ trans('em.save') }}</button>
                             </div>
                         </div>
-                        
+
                     </form>
                 </div>
             </div>
@@ -199,7 +199,7 @@ DatePicker.methods.displayPopup = function () {
 
 export default {
     props: [
-        
+
     ],
 
     mixins:[
@@ -207,7 +207,7 @@ export default {
     ],
 
     components: {
-        DatePicker, 
+        DatePicker,
         Multiselect,
         ScheduleComponent
     },
@@ -220,13 +220,13 @@ export default {
             // local variable
             calculate_months    : [],
             r_type              : null,
-                
+
             // important!!! declare all form fields
             start_time          : null,
             end_time            : null,
             start_date          : null,
             end_date            : null,
-            repetitive          : 0, 
+            repetitive          : 0,
             merge_schedule      : 0,
 
             repetitive_type     : [],
@@ -262,12 +262,12 @@ export default {
 
         // reset schedule data on check box and repetitive type
         reset_schedule(){
-            this.add({ 
+            this.add({
                 v_repetitive         : this.repetitive,
             });
 
         },
-       
+
         event_type(){
             // repetitive_type
             this.r_type         = this.repetitive_type ? this.repetitive_type.value : this.r_type;
@@ -288,10 +288,10 @@ export default {
                 this.repetitive  = this.event.repetitive;
                 this.merge_schedule = this.event.merge_schedule;
                 // set selected repetitive type
-               
+
                 this.repetitive_type.push(this.repetitive_type_options[this.schedules[0].repetitive_type-1]);
-                this.r_type      = this.repetitive_type[0].value; 
-                
+                this.r_type      = this.repetitive_type[0].value;
+
             })
             .catch(error => {
                 let serrors = Vue.helpers.axiosErrors(error);
@@ -300,7 +300,7 @@ export default {
                 }
             });
         },
-        
+
         editEvent() {
             // server timezone change to local timezone
             this.convert_to_local_tz();
@@ -309,24 +309,24 @@ export default {
             this.end_date    = this.setDateTime(this.local_end_date);
             this.start_time  = this.setDateTime(this.local_start_time);
             this.end_time    = this.setDateTime(this.local_end_time);
-            
+
             // getSchedule if event is repetitive and in case of edit event
             if(this.event.repetitive == 1 && this.event_id)
             {
                 this.getSchedule();
-                
+
                 // merge schedule
                 this.repetitive_type_temp = this.event.repetitive_type;
-                
+
             }
-            
+
         },
 
         // validate data on form submit
         validateForm(event) {
             this.$validator.validateAll().then((result) => {
                 if (result) {
-                    this.formSubmit(event);            
+                    this.formSubmit(event);
                 }
             });
         },
@@ -344,19 +344,19 @@ export default {
             var  v_repetitive_dates = [];
             var  date_number;
             var  count;
-            
+
             data.forEach(function(value, key){
-                
+
                 v_repetitive_dates[key] = [];
                 date_number             = value.split(',');
                 count                   = date_number.length;
-                
+
                 date_number.forEach(function(date_number, key1){
-                
+
                     // 1.make date by number
                     // 2.convert local date to server side date
                     // 3.convert server side to number_date
-                  
+
 
                     v_repetitive_dates[key] += moment(this.convert_date(this.dateToFullDate(date_number, this.calculate_months[key])),"YYYY-MM-DD").locale('en').format('DD');
 
@@ -365,7 +365,7 @@ export default {
                         v_repetitive_dates[key] += ',';
 
                 }.bind(this));
-                
+
             }.bind(this));
             return  v_repetitive_dates;
         },
@@ -373,7 +373,7 @@ export default {
         // submit form
         formSubmit(event) {
             var  schedule_ids = []
-       
+
             if(this.schedules.length > 0)
             {
                 this.schedules.forEach(function (value, key) {
@@ -383,19 +383,15 @@ export default {
 
             var v_repetitive_dates = [];
             var v_repetitive_days  = [];
-            
-            // v_repetitive_dates 
-            if(this.v_repetitive_dates.length > 0)
-            {   
+
+            // v_repetitive_dates
                 v_repetitive_dates  = this.convertToServerDate(this.v_repetitive_dates);
-            }    
-            // v_repetitive_days 
-            if(this.v_repetitive_days.length > 0)    
+            // v_repetitive_days
                 v_repetitive_days   = this.convertToServerDate(this.v_repetitive_days);
-            
+
             // prepare form data for post request
             let post_url = route('eventmie.myevents_store_timing');
-   
+
             let post_data = {
                 // start_date
                 'start_date'       : moment(this.convert_date(this.start_date),"YYYY-MM-DD").locale('en').format('YYYY-MM-DD'),
@@ -405,7 +401,7 @@ export default {
                 'repetitive'       : Number(this.repetitive),
                 'merge_schedule'   : Number(this.merge_schedule),
                 'repetitive_type'  : this.r_type,
-                
+
                 // schedule data (vuex data)
                 'repetitive_days'  : v_repetitive_days,
                 'repetitive_dates' : v_repetitive_dates,
@@ -415,20 +411,20 @@ export default {
                 'organiser_id'     : this.organiser_id,
                 'schedule_ids'     : schedule_ids,
             };
-            
+
             // axios post request
             axios.post(post_url, post_data)
             .then(res => {
-                
+
                 if(res.data.status)
                 {
                     this.showNotification('success', trans('em.timings')+' '+trans('em.event_save_success'));
                 }
-                // reload page   
+                // reload page
                 setTimeout(function() {
                     location.reload(true);
                 }, 1000);
-                
+
             })
             .catch(error => {
                 let serrors = Vue.helpers.axiosErrors(error);
@@ -441,8 +437,8 @@ export default {
         //calculate months between two dates
         calculateMonth() {
             // reset/empty schedules vuex data
-            
-            this.add({ 
+
+            this.add({
                 v_repetitive_days   : [],
                 v_repetitive_dates  : [],
                 v_from_time         : [],
@@ -461,31 +457,31 @@ export default {
             this.local_end_time     = this.convert_time_to_local(this.event.end_date, this.event.end_time);
         },
 
-        // check valid date 
+        // check valid date
 
         validDate(){
             var status = false;
 
             if(this.convert_date_to_local(this.event.start_date) != this.convert_date_to_local(this.start_date)) {
-                if(this.repetitive && 
-                    this.check_date(this.start_date) && 
+                if(this.repetitive &&
+                    this.check_date(this.start_date) &&
                     this.check_date(this.end_date) &&
-                    this.check_time(this.start_time) && 
-                    this.check_time(this.end_time) && 
+                    this.check_time(this.start_time) &&
+                    this.check_time(this.end_time) &&
                     !moment(this.start_date).isSame(this.moment(this.end_date), 'date') &&
                     moment(this.start_date).format('YYYY-MM-DD') >= moment().format('YYYY-MM-DD') &&
-                    moment(this.start_date).format('YYYY-MM-DD') < moment(this.end_date).format('YYYY-MM-DD') 
+                    moment(this.start_date).format('YYYY-MM-DD') < moment(this.end_date).format('YYYY-MM-DD')
                 ) {
-                
+
                     status = true
-                    
+
 
                 }
                 else {
-                
+
                     this.repetitive = 0;
                     this.merge_schedule = 0;
-                    
+
                     status = false;
                 }
             } else {
@@ -496,12 +492,12 @@ export default {
             if(!this.repetitive || this.repetitive == 0){
                 this.repetitive     = 0;
                 this.merge_schedule = 0;
-                
+
                 status = false;
             }
-            
+
             return status;
-            
+
         },
 
         // edit date validation
@@ -510,15 +506,15 @@ export default {
             if(this.convert_date_to_local(this.event.start_date) != this.convert_date_to_local(this.start_date)) {
                 if(
                     moment(this.start_date).format('YYYY-MM-DD') <= moment().format('YYYY-MM-DD') ||
-                    moment(this.start_date).format('YYYY-MM-DD') > moment(this.end_date).format('YYYY-MM-DD') 
+                    moment(this.start_date).format('YYYY-MM-DD') > moment(this.end_date).format('YYYY-MM-DD')
                 ) {
-                    
+
                     return true;
-                    
+
 
                 }
                 else {
-                
+
                     return false;
                 }
             } else {
@@ -529,10 +525,10 @@ export default {
 
 
     },
-    
+
     watch: {
         end_date : function () {
-            this.calculateMonth();     
+            this.calculateMonth();
 
         },
         start_date : function () {
@@ -542,18 +538,18 @@ export default {
         repetitive: function () {
             this.reset_schedule();
         },
-        r_type : function() {   
+        r_type : function() {
             this.reset_schedule();
         },
 
         repetitive_type: function () {
-            
-            // merge schedule is not for daily event 
+
+            // merge schedule is not for daily event
             if(this.repetitive_type)
             {
                 if(this.repetitive_type.value == 1)
                     this.merge_schedule = 0;
-                
+
 
                 if(this.repetitive_type.value == 2 || this.repetitive_type.value == 3 )
                     this.repetitive_type_temp = 0;
@@ -565,7 +561,7 @@ export default {
     mounted(){
         // if user have no event_id then redirect to details page
         let event_step  = this.eventStep();
-        
+
         if(event_step)
         {
             var $this = this;
@@ -576,6 +572,6 @@ export default {
         }
 
     }
-    
+
 }
 </script>

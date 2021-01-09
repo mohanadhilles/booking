@@ -27,7 +27,7 @@
                         :hide-selected="false"
                         :preserve-search="true"
                         :preselect-first="schedules  ? false : true"
-                        :allow-empty="false"
+                        :allow-empty="true"
                         :disabled="sch_r_type == 3 || sch_r_type == 1 ? true : false "
                         :class="'form-control'"
                         @input="schedules ? schedules.repetitive_type = null : ''"
@@ -128,7 +128,9 @@
                         changeDateFormat(moment(month, 'YYYY-MM').startOf('month').format('YYYY-MM-DD hh:mm'), "YYYY-MM-DD")
                     }}
 
-                    {{ trans('em.end') }} {{(moment(months[months.length -1 ], 'YYYY-MM')).isSame(moment(month, 'YYYY-MM')) ?
+                    {{ trans('em.end') }}                     {{
+
+                        (moment(months[months.length -1 ], 'YYYY-MM')).isSame(moment(month, 'YYYY-MM')) ?
                         changeDateFormat(convert_date_to_local(local_end_date), "YYYY-MM-DD") :
                         changeDateFormat(moment(month, 'YYYY-MM').endOf('month').format('YYYY-MM-DD hh:mm'), "YYYY-MM-DD")
                     }}
@@ -189,8 +191,9 @@ export default {
             //end
 
             moment         : moment,
-            repetitive_days: [],
+            repetitive_days: [{value : 8, text : 'لايوجد' }],
             repetitive_days_options: [
+                {value : 8, text :'لايوجد' },
                 {value : 1, text : trans('em.sunday') },
                 {value : 2, text : trans('em.monday') },
                 {value : 3, text : trans('em.tuesday') },
@@ -201,7 +204,7 @@ export default {
 
             ],
 
-            repetitive_dates : [],
+            repetitive_dates : [{value : 1,   text : "1"}],
             repetitive_dates_options : [],
 
 
@@ -243,7 +246,7 @@ export default {
 
                 schedules        = this.schedules.repetitive_dates.split(',');
 
-                if(schedules.length >= 0)
+                if(schedules.length > 0)
                 {
                     schedules.forEach(function (value, key) {
                         $_this.repetitive_dates.push($_this.repetitive_dates_options[value-1]);
@@ -259,7 +262,7 @@ export default {
 
                 schedules        = this.schedules.repetitive_dates.split(',');
 
-                if(schedules.length >= 0)
+                if(schedules.length > 0)
                 {
                     schedules.forEach(function (value, key) {
                         $_this.repetitive_dates.push($_this.repetitive_dates_options[value-1]);
@@ -268,13 +271,13 @@ export default {
             }
 
             // it is already selected weekly days
-            if(Object.keys(this.schedules).length >= 0 && this.schedules.repetitive_type == 2)
+            if(Object.keys(this.schedules).length > 0 && this.schedules.repetitive_type == 2)
             {
                 // empty pre select
                 this.repetitive_days    = [],
                 schedules               = this.schedules.repetitive_days.split(',');
 
-                if(schedules.length >= 0)
+                if(schedules.length > 0)
                 {
                     schedules.forEach(function (value, key) {
                         $_this.repetitive_days.push($_this.repetitive_days_options[value-1]);
@@ -339,10 +342,10 @@ export default {
         convert_to_local_tz(){
             this.local_start_date   = this.convert_date_to_local(this.start_date);
             this.local_end_date     = this.convert_date_to_local(this.end_date);
-            this.local_from_time    = Object.keys(this.schedules).length >= 0 ? this.convert_time_to_local(this.start_date, this.schedules.from_time) :                                          this.start_time;
-            this.local_to_time      = Object.keys(this.schedules).length >= 0 ? this.convert_time_to_local(this.end_date, this.schedules.to_time)     :                                          this.end_time;
-            this.local_from_date    = Object.keys(this.schedules).length >= 0 ? this.convert_date_to_local(this.schedules.from_date) : this.start_date;
-            this.local_to_date      = Object.keys(this.schedules).length >= 0 ? this.convert_date_to_local(this.schedules.to_date) : this.end_date;
+            this.local_from_time    = Object.keys(this.schedules).length > 0 ? this.convert_time_to_local(this.start_date, this.schedules.from_time) :                                          this.start_time;
+            this.local_to_time      = Object.keys(this.schedules).length > 0 ? this.convert_time_to_local(this.end_date, this.schedules.to_time)     :                                          this.end_time;
+            this.local_from_date    = Object.keys(this.schedules).length > 0 ? this.convert_date_to_local(this.schedules.from_date) : this.start_date;
+            this.local_to_date      = Object.keys(this.schedules).length > 0 ? this.convert_date_to_local(this.schedules.to_date) : this.end_date;
 
         },
 
@@ -357,7 +360,7 @@ export default {
             // use this condition when user create event
             // total event's dates in daily event
 
-            if(this.sch_r_type == 1 && this.repetitive_dates.length >= 0 && ( Object.keys(this.schedules).length >= 0 ? !this.schedules.repetitive_type : true ))
+            if(this.sch_r_type == 1 && this.repetitive_dates.length > 0 && ( Object.keys(this.schedules).length > 0 ? !this.schedules.repetitive_type : true ))
             {
 
                 // first schedule total day because start date can start form between
@@ -426,7 +429,7 @@ export default {
             }
             // use this condition when user create event
             // total event's dates in monthly event
-            if(this.sch_r_type == 3 && this.repetitive_dates.length >= 0 && (Object.keys(this.schedules).length >= 0 ? !this.schedules.repetitive_type : true))
+            if(this.sch_r_type == 3 && this.repetitive_dates.length > 0 && (Object.keys(this.schedules).length > 0 ? !this.schedules.repetitive_type : true))
             {
                 total  = this.repetitive_dates.length;
 
@@ -485,7 +488,7 @@ export default {
 
            // use this condition when user create event
             // total event's dates in weekly event
-            if(this.sch_r_type == 2 && this.repetitive_days.length >= 0 && (Object.keys(this.schedules).length >= 0 ? !this.schedules.repetitive_type : true))
+            if(this.sch_r_type == 2 && this.repetitive_days.length > 0 && (Object.keys(this.schedules).length > 0 ? !this.schedules.repetitive_type : true))
             {
                 var all_dates = [];
                 var i         = 1;
@@ -551,7 +554,7 @@ export default {
 
              // use this condition when user edit event
             // total event's dates in daily event
-            if(Object.keys(this.schedules).length >= 0)
+            if(Object.keys(this.schedules).length > 0)
             {
                 // total event's dates in daily event
                 if(this.schedules.repetitive_type == 1  && this.schedules.repetitive_type)
@@ -705,7 +708,8 @@ export default {
                     var repetitive_days          = []
 
                     repetitive_days_temp.forEach(function(v, key){
-
+                        if(Number(v)==8)
+                        repetitive_days[key]     = "لايوجد";
                         if(Number(v)==1)
                         repetitive_days[key]     = "Sunday";
                         if(Number(v)==2)
