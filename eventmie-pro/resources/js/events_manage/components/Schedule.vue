@@ -27,7 +27,7 @@
                         :hide-selected="false"
                         :preserve-search="true"
                         :preselect-first="schedules  ? false : true"
-                        :allow-empty="true"
+                        :allow-empty="false"
                         :disabled="sch_r_type == 3 || sch_r_type == 1 ? true : false "
                         :class="'form-control'"
                         @input="schedules ? schedules.repetitive_type = null : ''"
@@ -191,9 +191,8 @@ export default {
             //end
 
             moment         : moment,
-            repetitive_days: [{value : 8, text : 'لايوجد' }],
+            repetitive_days: [{value : 1, text : trans('em.sunday') }],
             repetitive_days_options: [
-                {value : 8, text :'لايوجد' },
                 {value : 1, text : trans('em.sunday') },
                 {value : 2, text : trans('em.monday') },
                 {value : 3, text : trans('em.tuesday') },
@@ -708,8 +707,7 @@ export default {
                     var repetitive_days          = []
 
                     repetitive_days_temp.forEach(function(v, key){
-                        if(Number(v)==8)
-                        repetitive_days[key]     = "لايوجد";
+
                         if(Number(v)==1)
                         repetitive_days[key]     = "Sunday";
                         if(Number(v)==2)

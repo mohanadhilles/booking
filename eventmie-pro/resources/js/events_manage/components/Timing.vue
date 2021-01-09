@@ -385,8 +385,12 @@ export default {
             var v_repetitive_days  = [];
 
             // v_repetitive_dates
+            if(this.v_repetitive_dates.length > 0)
+            {
                 v_repetitive_dates  = this.convertToServerDate(this.v_repetitive_dates);
+            }
             // v_repetitive_days
+            if(this.v_repetitive_days.length > 0)
                 v_repetitive_days   = this.convertToServerDate(this.v_repetitive_days);
 
             // prepare form data for post request
