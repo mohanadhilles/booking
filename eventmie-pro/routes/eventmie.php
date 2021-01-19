@@ -16,12 +16,12 @@ Route::get('/assets/js/eventmie_lang', function () {
     // user lang
     if(session('my_lang'))
         \App::setLocale(session('my_lang'));
-    
+
     $strings['em'] = \Lang::get('eventmie-pro::em');
-        
+
     header('Content-Type: text/javascript; charset=UTF-8');
     echo('window.i18n = ' . json_encode($strings) . ';');
-    
+
     exit();
 })->name('eventmie.eventmie_lang');
 
@@ -70,10 +70,10 @@ Route::group([
     Route::get('/home', function() {
         return redirect()->route('eventmie.welcome');
     });
-    
+
     /* Static Pages */
-    Route::get('/page/{page}', $namespace."\PagesController@view")->name('page'); 
-    
+    Route::get('/page/{page}', $namespace."\PagesController@view")->name('page');
+
     /* Tags */
     Route::prefix('/mytags')->group(function () use ($namespace)  {
         $controller = $namespace.'\TagsController';
@@ -87,7 +87,7 @@ Route::group([
         Route::post('/api/selected/tags', "$controller@selected_event_tags")->name('selected_tags');
         Route::post('/api/search/tags', "$controller@search_tags")->name('search_tags');
     });
-    
+
     /* Tickets */
     Route::prefix('/tickets')->group(function () use ($namespace)  {
         $controller = $namespace.'\TicketsController';
@@ -95,10 +95,10 @@ Route::group([
         // API
         Route::post('/api', "$controller@tickets")->name('tickets');
         Route::get('/api/taxes', "$controller@taxes")->name('tickets_taxes');
-        Route::post('/api/store', "$controller@store")->name('tickets_store');   
+        Route::post('/api/store', "$controller@store")->name('tickets_store');
         Route::post('/api/delete', "$controller@delete")->name('tickets_delete');
     });
-    
+
     /* Schedules */
     Route::prefix('/schedules')->group(function () use ($namespace)  {
         $controller = $namespace.'\SchedulesController';
@@ -107,29 +107,29 @@ Route::group([
         Route::post('/api', "$controller@schedules")->name('schedules');
         Route::post('/api/event_schedule', "$controller@event_schedule")->name('event_schedule');
     });
-    
+
     /* Events */
     Route::prefix('/events')->group(function () use ($namespace) {
         $controller = $namespace.'\EventsController';
-        
+
         Route::get('/', "$controller@index")->name('events_index');
-        
+
         // Wildcard
         Route::get('/{event}', "$controller@show")->name('events_show');
         Route::get('/{event}/tag/{tag_title}', "$controller@tag")->name('events_tags');
-        
+
         // API
         Route::get('/api/get_events', "$controller@events")->name('events');
         Route::get('/api/categories', "$controller@categories")->name('myevents_categories');
         Route::post('/api/check/session', "$controller@check_session")->name('check_session');
     });
-    
+
     /* Bookings */
     Route::prefix('/bookings')->group(function () use ($namespace)  {
         $controller = $namespace.'\BookingsController';
 
         // Paypal Checkout
-        Route::match(['get', 'post'], '/paypal/callback', "$controller@paypal_callback")->name('bookings_paypal_callback');  
+        Route::match(['get', 'post'], '/paypal/callback', "$controller@paypal_callback")->name('bookings_paypal_callback');
 
         // Redirect back to event
         Route::get('/login-first', "$controller@login_first")->name('login_first');
@@ -138,53 +138,53 @@ Route::group([
         Route::post('/api/get_tickets', "$controller@get_tickets")->name('bookings_get_tickets');
         Route::post('/api/book_tickets', "$controller@book_tickets")->name('bookings_book_tickets');
     });
-    
+
     /* My Bookings (customers) */
     Route::prefix('/mybookings')->group(function () use($namespace) {
         $controller = $namespace.'\MyBookingsController';
 
         Route::get('/', "$controller@index")->name('mybookings_index');
-        
+
         // API
         Route::get('/api/get_mybookings', "$controller@mybookings")->name('mybookings');
         Route::post('/api/cancel', "$controller@cancel")->name('mybookings_cancel');
     });
-    
+
     /* My Bookings (organizer) */
     Route::prefix('/bookings')->group(function () use ($namespace)  {
         $controller = $namespace.'\OBookingsController';
-        
-        Route::get('/', "$controller@index")->name('obookings_index');  
-        Route::get('/booking/{id}', "$controller@organiser_bookings_show")->name('obookings_organiser_bookings_show');     
-        Route::get('/delete/{id}', "$controller@delete_booking")->name('obookings_organiser_booking_delete'); 
-        
+
+        Route::get('/', "$controller@index")->name('obookings_index');
+        Route::get('/booking/{id}', "$controller@organiser_bookings_show")->name('obookings_organiser_bookings_show');
+        Route::get('/delete/{id}', "$controller@delete_booking")->name('obookings_organiser_booking_delete');
+
         // API
         Route::get('/api/organiser_bookings', "$controller@organiser_bookings")->name('obookings_organiser_bookings');
         Route::post('/api/organiser_bookings_edit', "$controller@organiser_bookings_edit")->name('obookings_organiser_bookings_edit');
 
         Route::post('/api/booking_customers', "$controller@get_customers")->name('get_customers');
     });
-    
+
     /* My Earnings (organiser) */
     Route::prefix('/myearning')->group(function () use ($namespace)  {
         $controller     = $namespace.'\MyEarningsController';
-        
+
         Route::get('/', "$controller@index")->name('event_earning_index');
         Route::get('/organiser/earning', "$controller@organiser_event_earning")->name('organiser_event_earning');
         Route::get('/organiser/total/earning', "$controller@organiser_total_earning")->name('organiser_total_earning');
     });
-    
+
     /* My Events (organiser) */
     Route::prefix('/myevents')->group(function () use ($namespace) {
         $controller = $namespace.'\MyEventsController';
-        
+
         Route::get('/', "$controller@index")->name('myevents_index');
-        Route::get('/manage/{slug?}', "$controller@form")->name('myevents_form');  
+        Route::get('/manage/{slug?}', "$controller@form")->name('myevents_form');
         Route::get('/delete/{slug}', "$controller@delete_event")->name('delete_event');
         Route::get('/export_attendees/{slug}', "$controller@export_attendees")->name('export_attendees');
-        
+
         // API
-        Route::get('/api/get_myevents', "$controller@get_myevents")->name('myevents'); 
+        Route::get('/api/get_myevents', "$controller@get_myevents")->name('myevents');
         Route::get('/api/get_all_myevents', "$controller@get_all_myevents")->name('all_myevents');
         Route::post('/api/store', "$controller@store")->name('myevents_store');
         Route::post('/api/store_media', "$controller@store_media")->name('myevents_store_media');
@@ -192,16 +192,16 @@ Route::group([
         Route::post('/api/store_timing', "$controller@store_timing")->name('myevents_store_timing');
         Route::post('/api/store_event_tags', "$controller@store_event_tags")->name('myevents_store_event_tags');
         Route::post('/api/store_seo', "$controller@store_seo")->name('myevents_store_seo');
-        Route::get('/api/countries', "$controller@countries")->name('myevents_countries'); 
+        Route::get('/api/countries', "$controller@countries")->name('myevents_countries');
         Route::post('/api/get_myevent', "$controller@get_user_event")->name('get_myevent');
         Route::post('/api/publish_myevent', "$controller@event_publish")->name('publish_myevent');
 
         Route::post('/api/myevent_organizers', "$controller@get_organizers")->name('get_organizers');
     });
-    
+
     /* Notification */
     Route::prefix('/notifications')->group(function () use ($namespace)  {
-        
+
         // read notification
         Route::get('/read/{n_type}', function($n_type) {
             if($n_type) {
@@ -209,7 +209,7 @@ Route::group([
                 $user = \Classiebit\Eventmie\Models\User::find($id);
                 $user->unreadNotifications->where('n_type', $n_type)->markAsRead();
             }
-            
+
             // Admin: redirect to admin-panel
             if(\Auth::user()->hasRole('admin')) {
                 if($n_type == "user")
@@ -227,10 +227,10 @@ Route::group([
                 // create events notification
                 if($n_type == "events")
                     return redirect()->route('eventmie.myevents_index');
-                
+
                 // create booking notification
                 if($n_type == "bookings" || $n_type == "cancel" )
-                    return redirect()->route('eventmie.obookings_index');    
+                    return redirect()->route('eventmie.obookings_index');
             }
 
             // Customer: redirect to notification related page
@@ -238,41 +238,41 @@ Route::group([
                 // create events notification
                 if($n_type == "user")
                     return redirect()->route('eventmie.profile');
-                
+
                 // create booking notification
                 if($n_type == "bookings" || $n_type == "cancel" )
-                    return redirect()->route('eventmie.mybookings_index');    
+                    return redirect()->route('eventmie.mybookings_index');
             }
-            
+
             // Default: redirect to homepage
             return redirect()->route('eventmie.welcome');
         })->name('notify_read');
-        
+
     });
-    
+
     /* Profile */
     Route::prefix('/profile')->group(function () use ($namespace) {
         $controller = $namespace.'\ProfileController';
-        
+
         Route::get('/', "$controller@index")->name('profile');
         Route::post('/updateAuthUser',"$controller@updateAuthUser")->name('updateAuthUser');
         Route::post('/updateAuthUserRole',"$controller@updateAuthUserRole")->name('updateAuthUserRole');
     });
-    
+
     /* Blogs */
     Route::prefix('/blogs')->group(function () use ($namespace) {
         $controller = $namespace.'\BlogsController';
-        
+
         Route::get('/', "$controller@get_posts")->name('get_posts');
-        
+
         // Wildcard
         Route::get('/{slug}',"$controller@view")->name('post_view');
     });
-    
+
     /* Contact */
     Route::prefix('/contact')->group(function () use ($namespace) {
         $controller = $namespace.'\ContactController';
-        
+
         Route::get('/', "$controller@index")->name('contact');
         Route::post('/save', "$controller@store_contact")->name('store_contact');
     });
@@ -284,10 +284,10 @@ Route::group([
     /* Download Ticket */
     Route::prefix('/download')->group(function () use ($namespace)  {
         $controller = $namespace.'\DownloadsController';
-        
-        Route::get('/ticket/{id}/{order_number}', "$controller@index")->name('downloads_index');  
+
+        Route::get('/ticket/{id}/{order_number}', "$controller@index")->name('downloads_index');
     });
-        
+
     /* Commission */
     Route::post('/commission/update', $namespace.'\Voyager\CommissionsController@commission_update')->name('commission_update');
     Route::post('/commission/settlement_update', $namespace.'\Voyager\CommissionsController@settlement_update')->name('settlement_update');
@@ -295,7 +295,7 @@ Route::group([
     /* QrCode Scanner */
     Route::prefix('/ticket-scan')->group(function () use ($namespace)  {
         $controller = $namespace.'\TicketScanController';
-        
+
         Route::get('/', "$controller@index")->name('ticket_scan');
         Route::post('/verify-ticket', "$controller@verify_ticket")->name('verify_ticket');
         Route::post('/get-booking', "$controller@get_booking")->name('get_booking');
@@ -312,11 +312,11 @@ Route::group([
     'prefix' => config('eventmie.route.prefix').'/'.config('eventmie.route.admin_prefix'),
 ], function () use ($namespace) {
     $controller     = $namespace.'\Voyager\DashboardController';
-    
+
     \Voyager::routes();
-    
+
     /* Override Voyager Default Routes */
-    Route::get('/', "$controller@index")->name('voyager.dashboard');  
+    Route::get('/', "$controller@index")->name('voyager.dashboard');
     Route::post('sales/report', "$controller@sales_report")->name('voyager.sales_report');
 });
 

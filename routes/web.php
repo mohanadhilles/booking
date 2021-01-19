@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
     Eventmie::routes();
+    Route::get('payment/{id}/{amount}','HomeController@payment')->name('pay.tap');
+    Route::get('redirect/payment/{id}','HomeController@redirect')->name('pay.redirect');

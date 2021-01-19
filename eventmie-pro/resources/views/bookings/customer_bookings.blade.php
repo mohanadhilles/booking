@@ -13,14 +13,13 @@
         </section>
     </div>
 </main>
-         
-@endsection
 
+@endsection
 
 @section('javascript')
 
 
-<script>    
+<script>
     var path = {!! json_encode($path, JSON_HEX_TAG) !!};
 </script>
 

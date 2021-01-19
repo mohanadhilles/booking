@@ -1,21 +1,14 @@
 <?php
 
 namespace Classiebit\Eventmie\Http\Controllers;
-use App\Http\Controllers\Controller; 
+use App\Http\Controllers\Controller;
 use Facades\Classiebit\Eventmie\Eventmie;
-
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Carbon;
-use Carbon\CarbonPeriod;
-
-use Auth;
-
+use Illuminate\Support\Facades\Auth;
 use Classiebit\Eventmie\Models\Event;
 use Classiebit\Eventmie\Models\Ticket;
-use Classiebit\Eventmie\Models\Category;
-use Classiebit\Eventmie\Models\Country;
-use Classiebit\Eventmie\Models\Schedule;
 use Classiebit\Eventmie\Models\Booking;
 use Classiebit\Eventmie\Models\Transaction;
 use Classiebit\Eventmie\Models\Commission;
@@ -26,7 +19,7 @@ use Classiebit\Eventmie\Notifications\MailNotification;
 
 class MyBookingsController extends Controller
 {
-    
+
     /**
      * Create a new controller instance.
      *
@@ -46,7 +39,7 @@ class MyBookingsController extends Controller
         $this->commission   = new Commission;
 
     }
-    
+
     /**
      * Show my booking
      *
@@ -60,9 +53,9 @@ class MyBookingsController extends Controller
             $path = config('eventmie.route.prefix');
 
         // if have booking email data then send booking notification
-        $is_success = !empty(session('booking_email_data')) ? 1 : 0;    
+        $is_success = !empty(session('booking_email_data')) ? 1 : 0;
 
-        return Eventmie::view($view, compact('path', 'is_success','extra'));    
+        return Eventmie::view($view, compact('path', 'is_success','extra'));
     }
 
     // get bookings by customer id
@@ -76,7 +69,7 @@ class MyBookingsController extends Controller
 
         if($bookings->isEmpty())
             return error(__('eventmie-pro::em.booking').' '.__('eventmie-pro::em.not_found'), Response::HTTP_BAD_REQUEST );
-        
+
         return response([
             'bookings'  => $bookings->jsonSerialize(),
             'currency'  => setting('regional.currency_default'),
@@ -108,22 +101,22 @@ class MyBookingsController extends Controller
 
         // check booking id in booking table for login user
         $check_booking     = $this->booking->check_booking($params);
-        
+
         if(empty($check_booking))
             return error(__('eventmie-pro::em.booking').' '.__('eventmie-pro::em.not_found'), Response::HTTP_BAD_REQUEST );
 
         $start_date              = Carbon::parse($check_booking['event_start_date'].' '.$check_booking['event_start_time']);
         $end_date                = Carbon::parse(Carbon::now());
-        
+
         // check date expired or not
         if($end_date > $start_date)
             return error(__('eventmie-pro::em.booking_cancellation_fail'), Response::HTTP_BAD_REQUEST );
 
-        // pre booking time cancellation check    
-        $pre_cancellation_time  = (float) setting('booking.pre_cancellation_time'); 
+        // pre booking time cancellation check
+        $pre_cancellation_time  = (float) setting('booking.pre_cancellation_time');
         $min                    = number_format((float)($start_date->diffInMinutes($end_date) ), 2, '.', '');
         $hour_difference        = (float)sprintf("%d.%02d", floor($min/60), $min%60);
-        
+
         if($pre_cancellation_time > $hour_difference)
             return error(__('eventmie-pro::em.booking_cancellation_fail'), Response::HTTP_BAD_REQUEST );
 
@@ -133,8 +126,8 @@ class MyBookingsController extends Controller
         if(empty($booking_cancel))
             return error(__('eventmie-pro::em.booking_cancellation_fail'), Response::HTTP_BAD_REQUEST );
 
-        
-        // ====================== Notification ====================== 
+
+        // ====================== Notification ======================
         //send notification after bookings
         $msg[]                  = __('eventmie-pro::em.customer').' - '.$check_booking->customer_name;
         $msg[]                  = __('eventmie-pro::em.email').' - '.$check_booking->customer_email;
@@ -163,21 +156,21 @@ class MyBookingsController extends Controller
         $mail['n_type']       =  "cancel";
 
         $notification_ids       = [1, Auth::id(), $check_booking->organiser_id];
-        
+
         $users = User::whereIn('id', $notification_ids)->get();
         try {
             \Notification::locale(\App::getLocale())->send($users, new MailNotification($mail, $extra_lines));
         } catch (\Exception $e) {}
         // ====================== Notification ======================
-        
+
 
         return response([
             'status'=> true,
         ], Response::HTTP_OK);
-        
+
     }
 
-    
+
 
 
 }

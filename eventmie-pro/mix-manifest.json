@@ -1,5 +1,7 @@
 {
+    "/publishable/assets/js/bookings_customer_v1.5.js": "/publishable/assets/js/bookings_customer_v1.5.js",
     "/publishable/assets/js/bookings_organiser_v1.5.js": "/publishable/assets/js/bookings_organiser_v1.5.js",
     "/publishable/assets/js/events_manage_v1.5.js": "/publishable/assets/js/events_manage_v1.5.js",
-    "/publishable/assets/js/events_show_v1.5.js": "/publishable/assets/js/events_show_v1.5.js"
+    "/publishable/assets/js/events_show_v1.5.js": "/publishable/assets/js/events_show_v1.5.js",
+    "/publishable/assets/js/myevents_v1.5.js": "/publishable/assets/js/myevents_v1.5.js"
 }

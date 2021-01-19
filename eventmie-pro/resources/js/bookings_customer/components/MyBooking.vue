@@ -12,12 +12,13 @@
                             <th class="col-xs-2">{{ trans('em.payment') }} </th>
                             <th class="col-xs-2">{{ trans('em.checked_in') }}</th>
                             <th class="col-xs-2">{{ trans('em.status') }}</th>
-                            <th class="col-xs-2">{{ trans('em.cancellation') }}</th>    
+                            <th class="col-xs-2">{{ trans('em.cancellation') }}</th>
                             <th class="col-xs-2">{{ trans('em.download') }}</th>
+                            <!-- <th class="col-xs-2">{{ trans('em.payment') }}</th> -->
                         </tr>
                     </thead>
                     <tbody>
-                    
+
                         <tr v-for="(booking, index) in bookings" :key="index" >
                             <td>
                                 <a :href="eventSlug(booking.event_slug)">{{ booking.event_title+' ('+booking.event_category+')' }}</a>
@@ -37,7 +38,7 @@
                             <td>{{ moment(convert_date_to_local(booking.created_at)).format('MMM DD,YYYY') }}</td>
                             <td class="text-capitalize">
                                 <span class="lgx-badge lgx-badge-small lgx-badge-mute" v-if="booking.payment_type == 'offline'">
-                                    {{ booking.payment_type }} 
+                                    {{ booking.payment_type }}
                                     <hr class="small">
                                     <small class="text-small text-success" v-if="booking.is_paid">{{ trans('em.paid') }}</small>
                                     <small class="text-small text-danger" v-else>{{ trans('em.unpaid') }}</small>
@@ -56,8 +57,6 @@
                                 <span class="lgx-badge lgx-badge-small lgx-badge-success" v-if="booking.status == 1">{{ trans('em.enabled') }}</span>
                                 <span class="lgx-badge lgx-badge-small lgx-badge-mute" v-else>{{ trans('em.disabled') }}</span>
                             </td>
-
-                            
                             <td v-if="booking.booking_cancel == 0 && booking.status == 1 && booking.checked_in == 0">
                                 <button type="button" class="lgx-btn lgx-btn-sm lgx-btn-danger" @click="bookingCancel(booking.id, booking.ticket_id, booking.event_id )">{{ trans('em.cancel') }}</button>
                             </td>
@@ -74,13 +73,20 @@
                                     <small v-else class="text-small">{{ trans('em.disabled') }}</small>
                                 </span>
 
-                                <div v-if="booking.online_location != null"> 
+                                <div v-if="booking.online_location != null">
                                     <button type="button" class="lgx-btn lgx-btn-sm" @click="booking_id = booking.id">{{ trans('em.online') +' '+ trans('em.event') }}</button>
                                     <online-event  v-if="booking_id == booking.id" :online_location="booking.online_location" :booking_id="booking.id" ></online-event>
                                 </div>
                             </td>
+
+                            <!-- <td v-if="booking.booking_cancel == 0 && booking.status == 1 && booking.checked_in == 0 && booking.is_paid == 0">
+                                <button type="button" class="lgx-btn lgx-btn-sm lgx-btn-success" @click="postPay(booking.id, booking.net_price)">{{ trans('em.payment') }}</button>
+                            </td> -->
+                            <td v-else>
+                                <small class="text-small">{{ trans('em.disabled') }}</small>
+                            </td>
                         </tr>
-                
+
                     </tbody>
                 </table>
             </div>
@@ -104,7 +110,7 @@ var moment = require('moment');
 import OnlineEvent from './OnlineEvent.vue';
 
 export default {
-    
+
     mixins:[
         mixinsFilters
     ],
@@ -113,15 +119,15 @@ export default {
         // pagination query string
         'page',
         'is_success'
-        
+
     ],
-    
+
     components: {
         PaginationComponent,
         OnlineEvent,
     },
 
-    
+
     data() {
         return {
             bookings : [],
@@ -131,6 +137,7 @@ export default {
             },
             currency : null,
             booking_id : 0,
+            payment: null,
         }
     },
 
@@ -138,7 +145,7 @@ export default {
         // get global variables
         ...mapState( []),
 
-        
+
         current_page() {
             // get page from route
             if(typeof this.page === "undefined")
@@ -150,7 +157,7 @@ export default {
     methods:{
           // get all events
         getMyBookings() {
-            
+
             axios.get(route('eventmie.mybookings')+'?page='+this.current_page)
             .then(res => {
                 this.currency   = res.data.currency;
@@ -165,7 +172,7 @@ export default {
                 };
             })
             .catch(error => {
-                
+
             });
         },
 
@@ -183,7 +190,7 @@ export default {
                         {
                             this.showNotification('success', trans('em.booking_cancel_success'));
                             this.getMyBookings();
-                        }    
+                        }
                     })
                     .catch(error => {});
                 }
@@ -203,10 +210,18 @@ export default {
                 return route('eventmie.downloads_index',[id, order_number]);
             }
         },
+        postPay(id,amount){
+            if(id && amount) {
+                axios.get('payment/'+id+'/'+amount).then(response => {
+                console.log(this.payment)
+                console.log(amount,id)
+                })
+            }
+        }
     },
     mounted() {
         this.getMyBookings();
-        
+
         // send email after successful bookings
         this.sendEmail();
     }

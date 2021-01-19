@@ -167,7 +167,6 @@ class BookingsController extends Controller
             'booking_date'      => 'date_format:Y-m-d|required',
             'start_time'        => 'date_format:H:i:s|required',
             'end_time'          => 'date_format:H:i:s|required',
-            'want_sleep'        => 'required',
         ]);
 
         if(!empty($request->merge_schedule))
@@ -331,12 +330,6 @@ class BookingsController extends Controller
             $booking[$key]['ticket_title']      = $value['ticket_title'];
             $booking[$key]['item_sku']          = $data['event']['item_sku'];
             $booking[$key]['currency']          = setting('regional.currency_default');
-
-            $booking[$key]['emp_count']         = $request['emp_count'];
-            $booking[$key]['prefer_date']       = carbon::parse($request['prefer_date']);
-            $booking[$key]['co_title']          = $request['co_title'];
-            $booking[$key]['whatsapp']          = $request['whatsapp'];
-            $booking[$key]['want_sleep']        = $request['want_sleep'];
             
             $booking[$key]['event_repetitive']  = $data['event']->repetitive > 0 ? 1 : 0;
 

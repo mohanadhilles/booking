@@ -27,10 +27,10 @@ mix
 // .js('resources/js/events_listing/index.js', 'publishable/assets/js/events_listing_v1.5.js')
 
 // // organiser events
-// .js('resources/js/myevents/index.js', 'publishable/assets/js/myevents_v1.5.js')
+.js('resources/js/myevents/index.js', 'publishable/assets/js/myevents_v1.5.js')
 
 // // customer bookings seperate vue js
-// .js('resources/js/bookings_customer/index.js', 'publishable/assets/js/bookings_customer_v1.5.js')
+.js('resources/js/bookings_customer/index.js', 'publishable/assets/js/bookings_customer_v1.5.js')
 
 // // organiser bookings seperate vue js
 .js('resources/js/bookings_organiser/index.js', 'publishable/assets/js/bookings_organiser_v1.5.js')

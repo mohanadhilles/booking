@@ -151,8 +151,9 @@ class ProfileController extends Controller
             return [
                 'riyadh'  => 'الرياض',
                 'jadda'   => 'جدة',
-                'maddena' => 'المدينة المنوره',
-                'sharqya' => 'الشرقية',
+                'damam' =>  'الدمام',
+                'alkharj ' => 'الخرج',
+                '0' => 'آخرى',
         ];
         }
 }

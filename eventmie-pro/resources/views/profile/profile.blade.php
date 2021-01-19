@@ -49,9 +49,9 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label class="col-md-3">@lang('eventmie-pro::em.phone')</label>
+                                        <label class="col-md-3">@lang('eventmie-pro::em.whatapp')</label>
                                         <div class="col-md-9">
-                                            <input class="form-control" name="phone" type="text"  value="{{$user->phone}}">
+                                            <input class="form-control" name="phone" type="text" placeholder="00966000000000"  value="{{$user->phone}}">
                                             @if ($errors->has('phone'))
                                                 <div class="error">{{ $errors->first('phone') }}</div>
                                             @endif
@@ -98,7 +98,7 @@
                                         <label class="col-md-3">@lang('eventmie-pro::em.cities')</label>
                                         <div class="col-md-9">
                                             <select class="form-control" name="cities" type="text">
-                                                <option value="">@lang('eventmie-pro::em.choose_cities')</option>
+                                                <option value="">@lang('eventmie-pro::em.cities')</option>
                                                 @foreach($cities as $key => $value)
                                             <option value={{$key}} @if(isset($user->cities) && $user->cities == $key) selected @endif>{{$value}}</option>
                                                 @endforeach
@@ -108,7 +108,7 @@
                                             @endif
                                         </div>
                                     </div>
-
+<!-- 
                                     <div class="form-group row">
                                         <label class="col-md-3">@lang('eventmie-pro::em.company')</label>
                                         <div class="col-md-9">
@@ -117,8 +117,8 @@
                                                 <div class="error">{{ $errors->first('company') }}</div>
                                             @endif
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
+                                    </div> -->
+                                    <!-- <div class="form-group row">
                                         <label class="col-md-3">@lang('eventmie-pro::em.preferred')</label>
                                         <div class="col-md-9">
                                             <input class="form-control" name="preferred" type="date"  value="{{$user->preferred}}">
@@ -126,9 +126,9 @@
                                                 <div class="error">{{ $errors->first('preferred') }}</div>
                                             @endif
                                         </div>
-                                    </div>
+                                    </div> -->
 
-                                    <div class="form-group row">
+                                    <!-- <div class="form-group row">
                                         <label class="col-md-9">@lang('eventmie-pro::em.question_1')</label>
                                         <div class="col-md-3">
                                             <input  name="answer_1" type="radio" value="1" @if($user->answer_1 == 1) checked @endif > 
@@ -144,9 +144,9 @@
                                                 <div class="error">{{ $errors->first('answer_1') }}</div>
                                             @endif
                                         </div>
-                                    </div>
+                                    </div> -->
 
-                                    <div class="form-group row">
+                                    <!-- <div class="form-group row">
                                         <label class="col-md-9">@lang('eventmie-pro::em.question_2')</label>
                                         <div class="col-md-3">
                                             <input  name="answer_2" type="radio" value="1" @if($user->answer_2 == 1) checked @endif> 
@@ -162,7 +162,7 @@
                                                 <div class="error">{{ $errors->first('answer_2') }}</div>
                                             @endif
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <hr>
                                     <h4>@lang('eventmie-pro::em.update_password') </h4>
