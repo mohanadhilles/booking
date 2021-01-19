@@ -80,7 +80,7 @@
     </div>
 </section>
 <!--TRAVEL INFO END-->
-<section class="main-search-container">
+<!-- <section class="main-search-container">
     <div >
         <div class="lgx-inner">
             <div class="container">
@@ -102,7 +102,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!--Event Search start-->
 {{-- <section class="main-search-container">
