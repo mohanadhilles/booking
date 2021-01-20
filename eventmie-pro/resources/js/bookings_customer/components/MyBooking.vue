@@ -2,6 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 table-responsive">
+                 <h3 class="text-center">{{trans('em.we_will_contact')}}</h3>
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>

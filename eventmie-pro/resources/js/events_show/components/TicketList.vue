@@ -90,7 +90,17 @@
                                 </ul>
 
                             </div>
-                                <div class="col-md-12">  </div>
+                                <div class="col-md-12"> 
+                                <p class="mb-0 lead lead-caption text-center">{{ trans('em.questions') }}</p>
+                                <ul class="list-group m-0">
+                                   <li class="list-group-item"><p class="float-right" style="float:right">{{ trans('em.question_1') }}</p>
+                                       <p class="float-left w-60"><textarea v-model="spical_orders" name="co_title"  placeholder=" الطلبات الخاصة " class="form-control form-input-md text-left" ></textarea></p></li>
+                                   <!-- <li class="list-group-item"><p class="float-right" style="float:right">{{ trans('em.question_2') }}</p>
+                                       <p class="float-left w-60"><input type="radio"  v-model="wantsleep" :value="1" name="want_sleep"/> {{ trans('em.yes') }} <input type="radio" name="want_sleep" v-model="wantsleep" :value="0" />{{ trans('em.no') }}</p></li> -->
+
+
+                                </ul>
+                                     </div>
 
                             <!-- Tickets -->
                             <div class="col-md-12">
@@ -324,11 +334,8 @@ export default {
             customer            : null,
             yes                 : 1,
             no                  : 0,
-            em_count: null,
-            prefer_date:null,
-            company_title:null,
-            whatsapp:966,
-            wantsleep: 1
+            spical_orders:null,
+        
         }
     },
 

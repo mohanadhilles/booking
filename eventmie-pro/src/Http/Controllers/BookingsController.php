@@ -327,6 +327,7 @@ class BookingsController extends Controller
            
 
             $booking[$key]['event_category']    = $data['event']['category_name'];
+
             $booking[$key]['ticket_title']      = $value['ticket_title'];
             $booking[$key]['item_sku']          = $data['event']['item_sku'];
             $booking[$key]['currency']          = setting('regional.currency_default');
@@ -338,6 +339,7 @@ class BookingsController extends Controller
             $booking[$key]['event_end_date']    = $data['event']->end_date;
             $booking[$key]['event_start_time']  = $data['event']->start_time;
             $booking[$key]['event_end_time']    = $data['event']->end_time;
+            $booking[$key]['co_title']          = $request->co_title;
 
             // repetitive event
             if($data['event']->repetitive)
