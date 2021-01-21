@@ -12,6 +12,9 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Classiebit\Eventmie\Models\User;
 use Classiebit\Eventmie\Notifications\MailNotification;
 
+use App\Rules\PhoneNumber;
+
+
 class RegisterController extends Controller
 {
     /*
@@ -66,10 +69,11 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'name'     => ['required', 'string', 'max:255'],
+            'email'    => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8'],
-            'accept' => ['required'],
+            'accept'   => ['required'],
+            'phone'    => ['required', new PhoneNumber],
         ]);
     }
 
@@ -84,6 +88,7 @@ class RegisterController extends Controller
         $user   = User::create([
                     'name'      => $data['name'],
                     'email'     => $data['email'],
+                    'phone'     => $data['phone'],
                     'password'  => Hash::make($data['password']),
                     'role_id'  => 2,
                 ]);

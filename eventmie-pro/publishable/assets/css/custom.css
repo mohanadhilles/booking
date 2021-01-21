@@ -253,13 +253,13 @@ h1,h2,h3,h4,h5,h6,span,li,td,th, a, button, input,textarea, select, label, p{
 }
 
 .lgx-registration-form-box input.form-control, .lgx-registration-form-box input.wpcf7-form-control{
-    background: #e8e8e8 !important;
-    color: #251d1d !important;
+    background: #251d1d !important;
+    color: #ffffff !important;
 }
 
 .lgx-registration-form-box input.form-control, .lgx-registration-form-box input.wpcf7-form-control:active{
-    background: #e8e8e8 !important;
-    color: #251d1d !important;
+    background: #251d1d !important;
+    color: #ffffff !important;
 }
 
 .sponsors-area-colorfull-border > .single > a > img{

@@ -8,16 +8,8 @@
 
 
 <h2 class="title">@lang('eventmie-pro::em.login')</h2>
-
-@if(config('voyager.demo_mode'))
-<div class="alert alert-info">
-    <a href="https://eventmie-pro-docs.classiebit.com/docs/1.4/demo-accounts" target="_blank">Visit here for Demo Accounts</a>    
-</div>
-@endif
-
 <div class="lgx-registration-form">
     <form method="POST" action="{{ route('eventmie.login_post') }}">
-        
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <input id="email" type="email" class="wpcf7-form-control form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus placeholder="@lang('eventmie-pro::em.email')">
         @if ($errors->has('email'))

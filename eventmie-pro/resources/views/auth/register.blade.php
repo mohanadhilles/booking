@@ -3,9 +3,7 @@
 @section('title')
     @lang('eventmie-pro::em.register')
 @endsection
-
 @section('authcontent')
-
 <h2 class="title">@lang('eventmie-pro::em.register')</h2>
 <div class="lgx-registration-form">
     <form method="POST" action="{{ route('eventmie.register') }}">
@@ -14,6 +12,14 @@
         @if ($errors->has('name'))
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $errors->first('name') }}</strong>
+            </span>
+        @endif
+        
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <input id="phone" type="text" class="wpcf7-form-control form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}" required autofocus placeholder="@lang('eventmie-pro::em.whatapp')">
+        @if ($errors->has('phone'))
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $errors->first('phone') }}</strong>
             </span>
         @endif
 
