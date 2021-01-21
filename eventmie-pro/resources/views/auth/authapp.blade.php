@@ -6,7 +6,7 @@
 <section>
     <div id="lgx-schedule" class="lgx-schedule lgx-schedule-dark">
         <div class="lgx-inner" style="background-image: url({{ eventmie_asset('img/bg-pattern.png') }});">
-            <div class="login-wrapper">
+            <div class="login-wrapper" style="margin-top: 14rem;">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 offset-sm-2 col-sm-8 col-lg-offset-3 col-lg-6">

@@ -90,7 +90,7 @@
                                 </ul>
 
                             </div>
-                                <div class="col-md-12"> 
+                                < div class="col-md-12"> 
                                 <p class="mb-0 lead lead-caption text-center">{{ trans('em.questions') }}</p>
                                 <ul class="list-group m-0">
                                    <li class="list-group-item"><p class="float-right" style="float:right">{{ trans('em.question_1') }}</p>
