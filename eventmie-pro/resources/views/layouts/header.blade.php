@@ -200,7 +200,7 @@
                             </li>
                         
                             <li>
-                                <a class="lgx-scroll" href="{{ env('APP_URL').'/events'}}">@lang('eventmie-pro::em.prodcuts')</a>
+                                <a class="lgx-scroll" href="{{url('blogs')}}">@lang('eventmie-pro::em.prodcuts')</a>
                             </li>
                             <li>
                                 <a class="lgx-scroll" href="https://dabliu.typeform.com/to/zWz4sfQN" target="__blank">@lang('eventmie-pro::em.vendors')</a>

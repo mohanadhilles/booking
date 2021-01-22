@@ -122,7 +122,7 @@ return [
     'message_sent'                      => "تم إرسال الرسالة بنجاح" ,
     'message_sent_fail'                 => "فشل إرسال الرسائل" ,
     'blog'                              => "مدونة" ,
-    'blogs'                             => "المدونات" ,
+    'blogs'                             => "منتجاتنا" ,
     'booking'                           => "الحجز" ,
     'bookings'                          => "الحجوزات" ,
     'booked'                            => 'حجز' ,
@@ -505,7 +505,7 @@ return [
     'hide_info'                         => "إخفاء المعلومات",
     'show_info'                         => "عرض المعلومات",
     'total_tickets'                     => "إجمالي التذاكر شامل الضريبة",
-    'total_order'                       => "اجمالي الطلبات",
+    'total_order'                       => "اجمالي الفاتورة شامل الضريبة",
     'create_event'                      => "انشاء فعالية",
     'add_tag'                           => "إضافة علامة",
     'profile_page'                      => "الصفحة الشخصية",
@@ -552,7 +552,7 @@ return [
     'top_selling_events'                => "الفعاليات الأكثر مبيعًا",
     'upcoming_events'                   => "الفعاليات القادمة",
     'event_categories'                  => "تصنيفات الفعاليات",
-    'view_all_blogs'                    => "عرض كل المدونات",
+    'view_all_blogs'                    => "عرض كل المنتجات",
     'for_event_organisers'              => "لمنظمي الفعالية",
     'for_customers'                     => "للعملاء",
     'cities_events'                     => "اكتشف فعاليات المدن",
@@ -594,6 +594,7 @@ return [
     'bus'                               => 'حافلة نقل سابتكو \رسوم مجانية حجز المجموعات',
     'contact_us'                        => 'اتصل بنا',
     'vendors'                           => 'المستثمرين',
-    'prodcuts'                          => 'منتجاتنا'
+    'prodcuts'                          => 'منتجاتنا',
+    'total_invoice'                     => 'اجمالي الفاتورة شامل الضريبة'
 ];
 

@@ -202,7 +202,7 @@
                                         <strong :class="{'ticket-selected-text': bookedTicketsTotal() > 0 }">{{ bookedTicketsTotal() }}</strong>
                                     </li>
                                     <li class="list-group-item d-flex justify-content-between">
-                                        <h6 class="my-0"><strong>{{ trans('em.total_order') }}</strong></h6>
+                                        <h6 class="my-0"><strong>{{trans('em.total_invoice')}}</strong></h6>
                                         <strong :class="{'ticket-selected-text': bookedTicketsTotal() > 0 }">{{ total }} <small>{{currency}}</small></strong>
                                     </li>
                                 </ul>

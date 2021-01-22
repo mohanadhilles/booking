@@ -13,7 +13,7 @@
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-12 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6">
+                        <div class="col-12 col-sm-12 col-lg-6">
                             @if (\Session::has('msg'))
                                 <div class="alert alert-success">
                                     {{ \Session::get('msg') }}
@@ -58,6 +58,21 @@
                             </form>
 
                         </div> <!--//.COL-->
+                     <div class="col-12 col-sm-12 col-lg-6 text-center">
+                     <div class="lgx-footer-single">
+                        <h3  style="color:black !important;">@lang('eventmie-pro::em.social')</h3>
+                        <p   style="color:black !important;">@lang('eventmie-pro::em.social_find')</p>
+                        <ul class="list-inline lgx-social-footer">
+                            <li><a href="{{ 'https://www.snapchat.com/add/'.setting('social.facebook') }}" target="_blank"><i class="fab fa-snapchat" aria-hidden="true"></i></a></li>
+                            <li><a href="{{ 'https://twitter.com/'.setting('social.twitter') }}" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="{{ setting('social.instagram') }}" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="{{ setting('social.linkedin') }}" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                        </ul>
+                        <p style="color:black !important;">  الرقم الموحد : <a href="tel:920035444" class="text gry">920035444</a></p>
+                    </div>
+                
+                     </div>
+                
                     </div>
                 </div><!-- //.CONTAINER -->
             </section>

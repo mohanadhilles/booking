@@ -1,7 +1,7 @@
 @extends('eventmie::layouts.app')
 
 @section('title')
-    @lang('eventmie-pro::em.blogs')
+    @lang('eventmie-pro::em.prodcuts')
 @endsection
 
 @section('content')

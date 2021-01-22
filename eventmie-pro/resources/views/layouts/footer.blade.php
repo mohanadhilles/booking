@@ -42,7 +42,7 @@
                             <li><a href="{{ setting('social.linkedin') }}" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
-                  
+                
                 </div>
                 
                 <div class="lgx-footer-bottom">
