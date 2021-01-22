@@ -198,6 +198,16 @@
                             <li>
                                 <a class="lgx-scroll" href="{{ route('eventmie.page', ['page' => 'privacy']) }}">@lang('eventmie-pro::em.privacy')</a>
                             </li>
+                        
+                            <li>
+                                <a class="lgx-scroll" href="{{ env('APP_URL').'/events'}}">@lang('eventmie-pro::em.prodcuts')</a>
+                            </li>
+                            <li>
+                                <a class="lgx-scroll" href="https://dabliu.typeform.com/to/zWz4sfQN" target="__blank">@lang('eventmie-pro::em.vendors')</a>
+                            </li>
+                            <li>
+                                <a class="lgx-scroll" href="{{ route('eventmie.contact') }}">@lang('eventmie-pro::em.contact_us')</a>
+                            </li>
 
                             <li>
                                 @if (config('app.locale') == 'en')

@@ -261,6 +261,7 @@ class BookingsController extends Controller
     // book tickets
     public function book_tickets(Request $request)
     {
+    
         // check login user role
         $status = $this->is_admin_organiser($request);
 
@@ -340,6 +341,7 @@ class BookingsController extends Controller
             $booking[$key]['event_start_time']  = $data['event']->start_time;
             $booking[$key]['event_end_time']    = $data['event']->end_time;
             $booking[$key]['co_title']          = $request->co_title;
+            $booking[$key]['want_sleep']          = $request->want_sleep;
 
             // repetitive event
             if($data['event']->repetitive)

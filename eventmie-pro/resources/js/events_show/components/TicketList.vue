@@ -90,18 +90,7 @@
                                 </ul>
 
                             </div>
-                                < div class="col-md-12"> 
-                                <p class="mb-0 lead lead-caption text-center">{{ trans('em.questions') }}</p>
-                                <ul class="list-group m-0">
-                                   <li class="list-group-item"><p class="float-right" style="float:right">{{ trans('em.question_1') }}</p>
-                                       <p class="float-left w-60"><textarea v-model="spical_orders" name="co_title"  placeholder=" الطلبات الخاصة " class="form-control form-input-md text-left" ></textarea></p></li>
-                                   <!-- <li class="list-group-item"><p class="float-right" style="float:right">{{ trans('em.question_2') }}</p>
-                                       <p class="float-left w-60"><input type="radio"  v-model="wantsleep" :value="1" name="want_sleep"/> {{ trans('em.yes') }} <input type="radio" name="want_sleep" v-model="wantsleep" :value="0" />{{ trans('em.no') }}</p></li> -->
-
-
-                                </ul>
-                                     </div>
-
+                            
                             <!-- Tickets -->
                             <div class="col-md-12">
                                 <p class="mb-0 lead lead-caption text-center">{{ trans('em.tickets') }}</p>
@@ -218,6 +207,24 @@
                                     </li>
                                 </ul>
                             </div>
+                              <div class="col-md-12"> 
+                                <p class="mb-0 lead lead-caption text-center">{{ trans('em.questions') }}</p>
+                                <ul class="list-group m-0">
+                                   <li class="list-group-item"><p class="float-right" style="float:right;font-weight: bold;">{{ trans('em.question_1') }}</p>
+                                       <p class="float-left w-60"><textarea v-model="spical_orders" name="co_title"  placeholder=" الطلبات الخاصة " class="form-control form-input-md text-left" ></textarea></p></li>
+                                   <li class="list-item" style="list-style: none;"><p class="float-right" style="float:right;font-weight: bold;">{{ trans('em.question_2') }}</p></li>
+                                      <li class="list-item" style="list-style: none;"><p class="float-right" style="float:right">
+                                       <span class="text-center">
+                                            <input type="radio"  v-model="wantsleep" :value="1" name="want_sleep"/> {{ trans('em.self_car') }}
+                                       </span>
+                                       <span class="text-center" style="margin-right: 10px;">
+                                             <input type="radio" name="want_sleep" v-model="wantsleep" :value="0" />{{ trans('em.bus') }}
+                                       </span>
+                                       </p>
+                                      </li>
+                                </ul>
+                                     </div>
+
 
                             <!-- If not logged in -->
                             <div class="col-md-12" v-if="!login_user_id">
@@ -237,11 +244,10 @@
                                         <input id="free_order" name="free_order" type="radio" class="custom-control-input" checked>
                                         <label class="custom-control-label" for="free_order"> &nbsp;<i class="fas fa-glass-cheers"></i> {{ trans('em.free') }} <small class="text-lowercase">({{ trans('em.checkout') }}-{{ trans('em.free') }} )</small></label>
                                     </div>
+                                
                                 </div>
-
                                 <!-- Paid -->
                                 <div class="d-block my-3 pl-3" v-else>
-
                                     <!-- For Organizer & Customer -->
                                     <!-- <div class="radio-inline" v-if="is_admin <= 0 && is_paypal > 0">
                                         <input type="radio" class="custom-control-input" id="payment_method_paypal" name="payment_method" v-model="payment_method" value="1" >
@@ -258,7 +264,12 @@
                                         <label class="custom-control-label" for="payment_method_offline"> &nbsp;<i class="fas fa-suitcase-rolling"></i> {{ trans('em.offline') }} <small>({{ trans('em.cash_on_arrival') }})</small></label>
                                     </div>
                                 </div>
-
+                                <div class="d-block my-3 pl-3">
+                                    <div class="radio-inline">
+                                    <input id="free_order" name="free_order" type="radio" class="custom-control-input" checked>
+                                <label class="custom-control-label" for="free_order"> &nbsp;<i class="fas fa-glass-cheers"></i> <a href="https://dabliu.co/page/terms" target="__blank">{{ trans('em.accept_terms') }}</a></label>
+                                </div>
+                                </div>
                             </div>
 
                         </div>
@@ -335,6 +346,7 @@ export default {
             yes                 : 1,
             no                  : 0,
             spical_orders:null,
+            wantsleep:null,
         
         }
     },

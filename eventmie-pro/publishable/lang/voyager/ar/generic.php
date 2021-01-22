@@ -158,7 +158,7 @@ return [
     'Ticket'                    => "تذكرة",
     'Order'                     => "طلب",
     'Payout'                    => "سيصرف",
-    'Grand Total'               => "المبلغ الإجمالي",
+    'Grand Total'               => "المبلغ الإجمالي شامل الضريبة",
 
     'Set Callback URL on your Google App Dashboard'    => "تعيين عنوان URL لرد الاتصال على لوحة تحكم تطبيقات Google" ,
     'Set Callback URL on your Facebook App Dashboard'  => "تعيين عنوان URL لرد الاتصال على لوحة تحكم تطبيق Facebook" ,
