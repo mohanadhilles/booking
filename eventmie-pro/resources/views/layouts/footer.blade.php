@@ -33,8 +33,8 @@
                         </a>
                     </div>
                     <div class="lgx-footer-single">
-                        <h3 class="footer-title">@lang('eventmie-pro::em.social')</h3>
-                        <p class="text">@lang('eventmie-pro::em.social_find')</p>
+                        <h3 class="footer-title">@lang('eventmie-pro::em.social_meida')</h3>
+                        <p class="text">@lang('eventmie-pro::em.social_meida_find')</p>
                         <ul class="list-inline lgx-social-footer">
                             <li><a href="{{ 'https://www.snapchat.com/add/'.setting('social.facebook') }}" target="_blank"><i class="fab fa-snapchat" aria-hidden="true"></i></a></li>
                             <li><a href="{{ 'https://twitter.com/'.setting('social.twitter') }}" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>

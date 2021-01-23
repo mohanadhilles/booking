@@ -198,10 +198,13 @@
                             <li>
                                 <a class="lgx-scroll" href="{{ route('eventmie.page', ['page' => 'privacy']) }}">@lang('eventmie-pro::em.privacy')</a>
                             </li>
-                        
                             <li>
                                 <a class="lgx-scroll" href="{{url('blogs')}}">@lang('eventmie-pro::em.prodcuts')</a>
                             </li>
+                            <li>
+                                <a class="lgx-scroll" href="https://dabliu.typeform.com/to/ySEZERW0" tarhet="__blank">@lang('eventmie-pro::em.happy_day')</a>
+                            </li>
+
                             <li>
                                 <a class="lgx-scroll" href="https://dabliu.typeform.com/to/zWz4sfQN" target="__blank">@lang('eventmie-pro::em.vendors')</a>
                             </li>

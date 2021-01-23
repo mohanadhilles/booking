@@ -261,7 +261,7 @@
                                             (is_customer > 0 && is_offline_payment_customer > 0) ||
                                             (is_admin > 0)">
                                         <input type="radio" class="custom-control-input" id="payment_method_offline" name="payment_method" v-model="payment_method" value="offline">
-                                        <label class="custom-control-label" for="payment_method_offline"> &nbsp;<i class="fas fa-suitcase-rolling"></i> {{ trans('em.offline') }} <small>({{ trans('em.cash_on_arrival') }})</small></label>
+                                        <label class="custom-control-label" for="payment_method_offline"> &nbsp;<i class="fas fa-suitcase-rolling"></i> {{ trans('em.aprove_ticket') }}</label>
                                     </div>
                                 </div>
                                 <div class="d-block my-3 pl-3">

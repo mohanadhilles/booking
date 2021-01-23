@@ -20,7 +20,7 @@
                                     <div class="form-group row">
                                         <label class="col-md-3">@lang('eventmie-pro::em.name')</label>
                                         <div class="col-md-9">
-                                            <input class="form-control" name="name" type="text" value="{{$user->name}}">
+                                            <input class="form-control" name="name" type="text" value="{{$user->name}}" require autocomplete="off" />
                                             
                                             @if ($errors->has('name'))
                                                 <div class="error">{{ $errors->first('name') }}</div>
@@ -30,7 +30,7 @@
                                     <div class="form-group row">
                                         <label class="col-md-3">@lang('eventmie-pro::em.email')</label>
                                         <div class="col-md-9">
-                                            <input class="form-control"  name="email" type="email" value="{{$user->email}}">
+                                            <input class="form-control"  name="email" type="email" value="{{$user->email}}" require autocomplete="off"/>
                                             @if ($errors->has('email'))
                                                 <div class="error">{{ $errors->first('email') }}</div>
                                             @endif
@@ -38,7 +38,7 @@
                                     </div>
 
                                     
-                                    <div class="form-group row">
+                                    <!-- <div class="form-group row">
                                         <label class="col-md-3">@lang('eventmie-pro::em.address')</label>
                                         <div class="col-md-9">
                                             <input class="form-control" name="address" type="text"  value="{{$user->address}}" >
@@ -46,12 +46,21 @@
                                                 <div class="error">{{ $errors->first('address') }}</div>
                                             @endif
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="form-group row">
                                         <label class="col-md-3">@lang('eventmie-pro::em.whatapp')</label>
                                         <div class="col-md-9">
-                                            <input class="form-control" name="phone" type="text" placeholder="00966000000000"  value="{{$user->phone}}">
+                                            <input class="form-control" name="whatsapp" type="text" placeholder="00966000000000"  value="{{$user->whatsapp}}" require autocomplete="off"/>
+                                            @if ($errors->has('whatsapp'))
+                                                <div class="error">{{ $errors->first('whatsapp') }}</div>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-3">@lang('eventmie-pro::em.mobile')</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control" name="phone" type="text" placeholder="00966000000000"  value="{{$user->phone}}" require autocomplete="off" />
                                             @if ($errors->has('phone'))
                                                 <div class="error">{{ $errors->first('phone') }}</div>
                                             @endif
@@ -78,7 +87,7 @@
                                     <div class="form-group row">
                                         <label class="col-md-3">@lang('eventmie-pro::em.age')</label>
                                         <div class="col-md-9">
-                                            <input class="form-control" name="age" type="number"  value="{{$user->age}}">
+                                            <input class="form-control" name="age" type="number"  value="{{$user->age}}" require autocomplete="off" />
                                             @if ($errors->has('age'))
                                                 <div class="error">{{ $errors->first('age') }}</div>
                                             @endif
@@ -88,7 +97,7 @@
                                     <div class="form-group row">
                                         <label class="col-md-3">@lang('eventmie-pro::em.linkedin')</label>
                                         <div class="col-md-9">
-                                            <input class="form-control" name="linkedin" type="text"  value="{{$user->linkedin}}">
+                                            <input class="form-control" name="linkedin" type="url"  value="{{$user->linkedin}}" require autocomplete="off"/>
                                             @if ($errors->has('linkedin'))
                                                 <div class="error">{{ $errors->first('linkedin') }}</div>
                                             @endif

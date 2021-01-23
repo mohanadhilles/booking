@@ -48,12 +48,12 @@
                         <div class="lgx-banner-info-area">
                             <div class="lgx-banner-info-circle lgx-info-circle">
                                 <div class="info-circle-inner" style="background-image: url({{ eventmie_asset('img/bg-wave-circle.png') }});">
-                                    <h3 class="date">
+                                    <!-- <h3 class="date">
                                         {{ \Carbon\Carbon::createFromFormat('Y-m-d', $event->start_date)->translatedFormat('d')}} 
                                         <span>
                                             {{\Carbon\Carbon::createFromFormat('Y-m-d', $event->start_date)->translatedFormat('M-Y')}}
                                         </span>
-                                    </h3>
+                                    </h3> -->
                                     <div class="lgx-countdown-area">
                                         <!-- Date Format :"Y/m/d" || For Example: 1017/10/5  -->
                                         <div id="lgx-countdown" 
@@ -106,7 +106,7 @@
                                 <h3 class="subheading mt-5">
                                     <span><strong>@lang('eventmie-pro::em.share_event') &nbsp;</strong></span>
 
-                                    <span><a class="btn btn-sm" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}"><i class="fab fa-facebook-square fa-2x"></i></a></span>
+                                    <!-- <span><a class="btn btn-sm" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}"><i class="fab fa-facebook-square fa-2x"></i></a></span> -->
                                     <span><a class="btn btn-sm" target="_blank" href="https://twitter.com/intent/tweet?text={{ urlencode($event->title) }}&url={{ url()->current() }}"><i class="fab fa-twitter fa-2x"></i></a></span>
                                     <span><a class="btn btn-sm" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url={{ url()->current() }}&title={{ urlencode($event->title) }}"><i class="fab fa-linkedin fa-2x"></i></a></span>
                                     <span><a class="btn btn-sm" target="_blank" href="https://wa.me/?text={{ url()->current() }}"><i class="fab fa-whatsapp fa-2x"></i></a></span>

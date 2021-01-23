@@ -262,6 +262,7 @@ class BookingsController extends Controller
     public function book_tickets(Request $request)
     {
     
+        $user = Auth::user();
         // check login user role
         $status = $this->is_admin_organiser($request);
 
@@ -275,6 +276,15 @@ class BookingsController extends Controller
             ], Response::HTTP_OK);
         }
 
+        if(!$user->phone || !$user->whatsapp){
+
+            return response([
+                'status'    => false,
+                'url'       => route('eventmie.profile'),
+                'message'   => __('عذرا قم باكمال البوفيل اولا رقم الواتس اب والموبيل'),
+            ], Response::HTTP_OK);
+
+        }
         // 1. General validation and get selected ticket and event id
         $data = $this->general_validation($request);
         if(!$data['status'])

@@ -47,12 +47,9 @@ class ProfileController extends Controller
             'name' => 'required|string',
             'gender' => 'required',
             'age' => 'required',
-
             'linkedin' => 'required',
-            'company' => 'required|string',
-            'answer_1' => 'required',
-            'answer_2' => 'required',
-            'preferred' => 'required',
+            'whatsapp' => 'required',
+            'cities' => 'required',
             'email' => 'required|email|unique:users,email,'.Auth::id()
         ]);
         
@@ -74,12 +71,11 @@ class ProfileController extends Controller
         $user->gender                = $request->gender;
         $user->age                   = $request->age;
         $user->linkedin              = $request->linkedin;
-        $user->company               = $request->company;
-        $user->answer_1              = $request->answer_1;
-        $user->answer_2              = $request->answer_2;
-        $user->preferred             = $request->preferred;
         $user->cities                = $request->cities;
         $user->phone                 = $request->phone;
+        $user->whatsapp              = $request->whatsapp;
+        $user->phone                 = $request->phone;
+
         $this->updatebankDetails($request, $user);
         $user->save();
 

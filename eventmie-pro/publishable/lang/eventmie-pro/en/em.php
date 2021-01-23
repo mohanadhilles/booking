@@ -625,6 +625,8 @@ return [
     'contact_us'                        => 'Contact Us',
     'vendors'                           => 'Vendors',
     'prodcuts'                          => 'Prodcuts',
-    'total_invoice'                     => 'Total Amounts and Vat'
+    'total_invoice'                     => 'Total Amounts and Vat',
+    'happy_day'                         => 'Happy Day',
+    'mobile'                            => 'Mobile'
 ];
 
