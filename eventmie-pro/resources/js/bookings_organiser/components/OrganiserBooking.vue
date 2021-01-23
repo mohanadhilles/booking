@@ -23,7 +23,7 @@
                     <thead>
                         <tr>
                             <th class="col-xs-3">{{ trans('em.event') }}</th>
-                            <th class="col-xs-2">{{ trans('em.customer_email') }} </th>
+                            <th class="col-xs-2">{{ trans('em.mobile') }} </th>
                             <th class="col-xs-2">{{ trans('em.ticket') }}</th>
                             <th class="col-xs-2">{{ trans('em.order_total') }} </th>
                             <th class="col-xs-2">{{ trans('em.booked_on') }} </th>

@@ -326,7 +326,7 @@ class BookingsController extends Controller
         {
             $booking[$key]['customer_id']       = $this->customer_id;
             $booking[$key]['customer_name']     = $customer['name'];
-            $booking[$key]['customer_email']    = $customer['email'];
+            $booking[$key]['customer_email']    = $customer['whatsapp'];
             $booking[$key]['organiser_id']      = $this->organiser_id;
             $booking[$key]['event_id']          = $request->event_id;
             $booking[$key]['ticket_id']         = $value['ticket_id'];
