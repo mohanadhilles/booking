@@ -20,7 +20,7 @@
                                     <div class="form-group row">
                                         <label class="col-md-3">@lang('eventmie-pro::em.name')</label>
                                         <div class="col-md-9">
-                                            <input class="form-control" name="name" type="text" value="{{$user->name}}" require autocomplete="off" />
+                                            <input class="form-control" name="name" type="text" value="{{$user->name}}" required autocomplete="off" />
                                             
                                             @if ($errors->has('name'))
                                                 <div class="error">{{ $errors->first('name') }}</div>
@@ -30,7 +30,7 @@
                                     <div class="form-group row">
                                         <label class="col-md-3">@lang('eventmie-pro::em.email')</label>
                                         <div class="col-md-9">
-                                            <input class="form-control"  name="email" type="email" value="{{$user->email}}" require autocomplete="off"/>
+                                            <input class="form-control"  name="email" type="email" value="{{$user->email}}" required autocomplete="off"/>
                                             @if ($errors->has('email'))
                                                 <div class="error">{{ $errors->first('email') }}</div>
                                             @endif
@@ -51,7 +51,7 @@
                                     <div class="form-group row">
                                         <label class="col-md-3">@lang('eventmie-pro::em.whatapp')</label>
                                         <div class="col-md-9">
-                                            <input class="form-control" name="whatsapp" type="text" placeholder="00966000000000"  value="{{$user->whatsapp}}" require autocomplete="off"/>
+                                            <input class="form-control" name="whatsapp" type="text" placeholder="00966000000000"  value="{{$user->whatsapp}}" required autocomplete="off"/>
                                             @if ($errors->has('whatsapp'))
                                                 <div class="error">{{ $errors->first('whatsapp') }}</div>
                                             @endif
@@ -60,7 +60,7 @@
                                     <div class="form-group row">
                                         <label class="col-md-3">@lang('eventmie-pro::em.mobile')</label>
                                         <div class="col-md-9">
-                                            <input class="form-control" name="phone" type="text" placeholder="00966000000000"  value="{{$user->phone}}" require autocomplete="off" />
+                                            <input class="form-control" name="phone" type="text" placeholder="00966000000000"  value="{{$user->phone}}" required autocomplete="off" />
                                             @if ($errors->has('phone'))
                                                 <div class="error">{{ $errors->first('phone') }}</div>
                                             @endif
@@ -97,7 +97,7 @@
                                     <div class="form-group row">
                                         <label class="col-md-3">@lang('eventmie-pro::em.linkedin')</label>
                                         <div class="col-md-9">
-                                            <input class="form-control" name="linkedin" type="url"  value="{{$user->linkedin}}" require autocomplete="off"/>
+                                            <input class="form-control" name="linkedin" type="url"  value="{{$user->linkedin}}" autocomplete="off"/>
                                             @if ($errors->has('linkedin'))
                                                 <div class="error">{{ $errors->first('linkedin') }}</div>
                                             @endif
@@ -107,7 +107,7 @@
                                     <div class="form-group row">
                                         <label class="col-md-3">@lang('eventmie-pro::em.cities')</label>
                                         <div class="col-md-9">
-                                            <select class="form-control" name="cities" type="text">
+                                            <select class="form-control" name="cities" type="text" required>
                                                 <option value="">@lang('eventmie-pro::em.cities')</option>
                                                 @foreach($cities as $key => $value)
                                             <option value={{$key}} @if(isset($user->cities) && $user->cities == $key) selected @endif>{{$value}}</option>
