@@ -103,6 +103,10 @@
                                     @endif
                                 </h3>
 
+
+
+                                
+
                                 <h3 class="subheading mt-5">
                                     <span><strong>@lang('eventmie-pro::em.share_event') &nbsp;</strong></span>
 
