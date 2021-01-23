@@ -108,7 +108,7 @@
 
 
 
-                                
+
 
                                 <h3 class="subheading mt-5">
                                     <span><strong>@lang('eventmie-pro::em.share_event') &nbsp;</strong></span>
@@ -209,7 +209,7 @@
                         <div class="lgx-registration-area-simple">
                             <div class="lgx-heading lgx-heading-white">
                                 <h2 class="heading">@lang('eventmie-pro::em.get_tickets')</h2>
-                                <h3 class="subheading">@lang('eventmie-pro::em.select_schedule')</h3>
+                                <h3 class="subheading">@lang('eventmie-pro::em.select_schedule_new')</h3>
                             </div>
                         </div>
                     </div>
