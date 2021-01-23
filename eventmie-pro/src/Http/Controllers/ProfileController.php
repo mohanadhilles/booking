@@ -47,7 +47,6 @@ class ProfileController extends Controller
             'name' => 'required|string',
             'gender' => 'required',
             'age' => 'required',
-            'linkedin' => 'required',
             'whatsapp' => 'required',
             'cities' => 'required',
             'email' => 'required|email|unique:users,email,'.Auth::id()
