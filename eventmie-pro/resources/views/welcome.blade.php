@@ -94,8 +94,7 @@
                 <div class="row">
                     <div class="col-12 wow fadeInUp mt-5 owl-rtl owl-loaded owl-drag" data-wow-duration="1.5s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInUp;">
                             <div class="video-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7mxBntUCLWs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                              </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/OTaPJiP6-c0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                              </div>
 
                     </div>
                 </div>
